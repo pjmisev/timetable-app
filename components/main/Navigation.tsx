@@ -27,7 +27,7 @@ export function Navigation() {
             <NavigationMenuList className="bg-gradient-to-r from-foreground/5 via-foreground/10 to-foreground/5 backdrop-blur-md px-6 py-2 rounded-full border border-foreground/10">
               <NavigationMenuItem className="px-4">
                 <Link
-                  href="#top"
+                  href="/home"
                   className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors font-bold"
                 >
                   <span>Timetable App</span>
@@ -36,7 +36,7 @@ export function Navigation() {
 
               <NavigationMenuItem className="px-4">
                 <Link
-                  href="#top"
+                  href="/class"
                   className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
                 >
                   <GraduationCap className="w-4 h-4" /> <span>Class</span>
@@ -44,7 +44,7 @@ export function Navigation() {
               </NavigationMenuItem>
               <NavigationMenuItem className="px-4">
                 <Link
-                  href="#top"
+                  href="/room"
                   className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
                 >
                   <School className="w-4 h-4" /> <span>Room</span>

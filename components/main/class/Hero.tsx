@@ -30,9 +30,7 @@ export async function Hero({ id }: AnimatedProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Welcome back,
-            <br />
-            <span className="break-words">{session?.user?.name}</span>.
+            Class Timetable
           </motion.h1>
           <motion.div
             className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-transparent via-foreground/30 to-transparent rounded-full"
@@ -47,44 +45,8 @@ export async function Hero({ id }: AnimatedProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          Which type of timetable are you looking for today?
+          Class timetables are currently unavailable. Please check back later.
         </motion.p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto"
-          >
-            <Button className="w-full sm:w-auto bg-gradient-to-r from-foreground via-foreground to-foreground/90 text-background hover:opacity-90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-all duration-300">
-              <Link href="/class" className="flex items-center gap-3">
-                <GraduationCap className="w-5 h-5" />
-                <span>Class Timetable</span>
-              </Link>
-            </Button>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto"
-          >
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto border-foreground/20 text-foreground hover:bg-foreground/10 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-all duration-300"
-            >
-              <Link href="/room" className="flex items-center gap-3">
-                <School className="w-5 h-5" />
-                <span>Room Timetable</span>
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
       </div>
     </section>
   );
