@@ -5,12 +5,13 @@ import type { AnimatedProps } from "@/types/motion";
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Hero({ id }: AnimatedProps) {
   return (
     <section
       id={id}
-      className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-1/4 -left-1/4 w-[1000px] h-[1000px] bg-gradient-to-r from-blue-500/30 via-cyan-500/30 to-emerald-500/30 dark:from-blue-500/20 dark:via-cyan-500/20 dark:to-emerald-500/20 rounded-full blur-3xl animate-slow-spin"></div>
@@ -20,10 +21,10 @@ export function Hero({ id }: AnimatedProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background"></div>
         <div className="absolute inset-0 opacity-30 mix-blend-overlay"></div>
       </div>
-      <div className="relative max-w-4xl mx-auto text-center">
+      <div className="relative w-full max-w-4xl mx-auto text-center px-4">
         <div className="relative">
           <motion.h1
-            className="text-6xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground/90 to-foreground/80 pb-2"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground/90 to-foreground/80 pb-2"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -40,7 +41,7 @@ export function Hero({ id }: AnimatedProps) {
           ></motion.div>
         </div>
         <motion.p
-          className="text-lg md:text-xl text-foreground/70 mb-8 max-w-2xl mx-auto mt-12"
+          className="text-base sm:text-lg md:text-xl text-foreground/70 mb-8 w-full max-w-2xl mx-auto mt-8 sm:mt-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -49,22 +50,20 @@ export function Hero({ id }: AnimatedProps) {
           provided at everyone's favourite Louth university ;)
         </motion.p>
 
-        <div className="flex items-center justify-center gap-4 relative">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="w-full sm:w-auto"
           >
-            <Button className="bg-gradient-to-r from-foreground via-foreground to-foreground/90 text-background hover:opacity-90 px-8 py-6 text-lg transition-all duration-300">
-              <a
-                href="/login"
-                className="flex items-center gap-3" // 👈 flexbox for side-by-side layout
-              >
+            <Button className="w-full sm:w-auto bg-gradient-to-r from-foreground via-foreground to-foreground/90 text-background hover:opacity-90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-all duration-300">
+              <Link href="/login" className="flex items-center gap-3">
                 <span>Get Started</span>
-                <ArrowRight />
-              </a>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </Button>
           </motion.div>
           <motion.div
@@ -73,25 +72,27 @@ export function Hero({ id }: AnimatedProps) {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="w-full sm:w-auto"
           >
             <Button
               variant="outline"
-              className="border-foreground/20 text-foreground hover:bg-foreground/10 px-8 py-6 text-lg transition-all duration-300"
+              className="w-full sm:w-auto border-foreground/20 text-foreground hover:bg-foreground/10 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-all duration-300"
             >
-              <a
-                href="https://github.com/anibalalpizar/nextjs-shadcn-landing"
+              <Link
+                href="https://github.com/pjmisev/timetable-app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3" // 👈 flexbox for side-by-side layout
+                className="flex items-center gap-3"
               >
                 <Image
                   src="/img/auth/github.svg"
                   height={20}
                   width={20}
                   alt="Github Logo"
+                  className="w-5 h-5"
                 />
                 <span>Source Code</span>
-              </a>
+              </Link>
             </Button>
           </motion.div>
         </div>

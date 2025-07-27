@@ -73,9 +73,9 @@ export function FAQ({ id }: AnimatedProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Frequently Asked{" "}
+            Questions That{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-pink-600 dark:from-cyan-600 dark:to-cyan-700">
-              Questions
+              Nobody Asked
             </span>
           </motion.h2>
 
@@ -85,7 +85,7 @@ export function FAQ({ id }: AnimatedProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Everything you need to know about the services I provide
+            But here they are anyway.
           </motion.p>
         </div>
 

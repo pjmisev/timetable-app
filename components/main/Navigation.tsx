@@ -4,8 +4,19 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { BookOpen, Briefcase, Home, Image, User } from "lucide-react";
+import {
+  BookOpen,
+  Briefcase,
+  GraduationCap,
+  Home,
+  Image,
+  LogOut,
+  School,
+  User,
+} from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
+import Link from "next/link";
+import { signOut } from "@/lib/auth";
 
 export function Navigation() {
   return (
@@ -15,92 +26,81 @@ export function Navigation() {
           <NavigationMenu className="hidden md:block">
             <NavigationMenuList className="bg-gradient-to-r from-foreground/5 via-foreground/10 to-foreground/5 backdrop-blur-md px-6 py-2 rounded-full border border-foreground/10">
               <NavigationMenuItem className="px-4">
-                <NavigationMenuLink
+                <Link
+                  href="#top"
+                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors font-bold"
+                >
+                  <span>Timetable App</span>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem className="px-4">
+                <Link
                   href="#top"
                   className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
                 >
-                  <Home className="w-4 h-4" /> <span>Top</span>
-                </NavigationMenuLink>
+                  <GraduationCap className="w-4 h-4" /> <span>Class</span>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem className="px-4">
-                <NavigationMenuLink
-                  href="#benefits"
+                <Link
+                  href="#top"
                   className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
                 >
-                  <User className="w-4 h-4" /> <span>Benefits</span>
-                </NavigationMenuLink>
+                  <School className="w-4 h-4" /> <span>Room</span>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem className="px-4">
-                <NavigationMenuLink
-                  href="#investors"
-                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
+                <div
+                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors cursor-pointer"
+                  style={{ color: "#ff5757" }}
                 >
-                  <Briefcase className="w-4 h-4" /> <span>Investors</span>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem className="px-4">
-                <NavigationMenuLink
-                  href="#testimonials"
-                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
-                >
-                  <BookOpen className="w-4 h-4" /> <span>Testimonials</span>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem className="px-4">
-                <NavigationMenuLink
-                  href="#faq"
-                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
-                >
-                  {/* eslint-disable-next-line jsx-a11y/alt-text */}
-                  <Image className="w-4 h-4" /> <span>Faq</span>
-                </NavigationMenuLink>
+                  <span
+                    onClick={async () => {
+                      "use server";
+                      await signOut();
+                    }}
+                    className="flex"
+                  >
+                    <LogOut className="w-6 h-6 me-2" />
+                    Log Out
+                  </span>
+                </div>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-
           <NavigationMenu className="md:hidden flex items-center justify-center bg-gradient-to-r from-foreground/5 via-foreground/10 to-foreground/5 backdrop-blur-md px-6 py-2 rounded-full border border-foreground/10">
             <NavigationMenuList className="flex items-center gap-4">
-              <NavigationMenuItem>
-                <NavigationMenuLink
+              <NavigationMenuItem className="px-4">
+                <Link
                   href="#top"
                   className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
                 >
-                  <Home className="w-6 h-6" />
-                </NavigationMenuLink>
+                  <GraduationCap className="w-6 h-6" /> <span>Class</span>
+                </Link>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#benefits"
+              <NavigationMenuItem className="px-4">
+                <Link
+                  href="#top"
                   className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
                 >
-                  <User className="w-6 h-6" />
-                </NavigationMenuLink>
+                  <School className="w-6 h-6" /> <span>Room</span>
+                </Link>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#investors"
-                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
+              <div
+                className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors cursor-pointer"
+                style={{ color: "#ff5757" }}
+              >
+                <span
+                  onClick={async () => {
+                    "use server";
+                    await signOut();
+                  }}
+                  className="flex"
                 >
-                  <Briefcase className="w-6 h-6" />
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#testimonials"
-                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
-                >
-                  <BookOpen className="w-6 h-6" />
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#faq"
-                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
-                >
-                  {/* eslint-disable-next-line jsx-a11y/alt-text */}
-                  <Image className="w-6 h-6" />
-                </NavigationMenuLink>
-              </NavigationMenuItem>
+                  <LogOut className="w-6 h-6 me-2" />
+                </span>
+              </div>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
