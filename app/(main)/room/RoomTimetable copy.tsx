@@ -1,19 +1,11 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-  DialogFooter,
-} from "@/components/ui/dialog";
 
 interface TimetableEntry {
   Day: string;
@@ -29,26 +21,39 @@ interface TimetableEntry {
 export default function RoomTimetable({
   initialData,
 }: {
-  initialData?: TimetableEntry[]; // make optional
+  initialData: TimetableEntry[];
 }) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const [selectedDepartment, setSelectedDepartment] = useState(
-    searchParams.get("departmentId") || ""
-  );
-  const [selectedRoom, setSelectedRoom] = useState(
-    searchParams.get("roomId") || ""
-  );
+  const [roomId, setRoomId] = useState(searchParams.get("roomId") || "");
   const [week, setWeek] = useState(searchParams.get("week") || "");
 
-  const [isDeptModalOpen, setIsDeptModalOpen] = useState(false);
-  const [isRoomModalOpen, setIsRoomModalOpen] = useState(false);
-  const [isWeekModalOpen, setIsWeekModalOpen] = useState(false);
+  const groupedData = initialData.reduce(
+    (acc: Record<string, TimetableEntry[]>, entry) => {
+      if (!acc[entry.Day]) acc[entry.Day] = [];
+      acc[entry.Day].push(entry);
+      return acc;
+    },
+    {}
+  );
 
-  const [deptSearchTerm, setDeptSearchTerm] = useState("");
-  const [roomSearchTerm, setRoomSearchTerm] = useState("");
-  const [weekSearchTerm, setWeekSearchTerm] = useState("");
+  const daysOrder = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+
+  const handleSearch = () => {
+    const params = new URLSearchParams();
+    if (roomId) params.set("roomId", roomId);
+    if (week) params.set("week", week);
+    router.push(`?${params.toString()}`);
+  };
 
   const departments = [
     { id: "hospitality", name: "Hospitality Building" },
@@ -326,314 +331,35 @@ export default function RoomTimetable({
     { id: "NW228b", name: "NW228b (18)", departmentId: "west" },
   ];
 
-  // Filter departments by search
-  const filteredDepartments = useMemo(() => {
-    if (!deptSearchTerm) return departments;
-    return departments.filter((d) =>
-      d.name.toLowerCase().includes(deptSearchTerm.toLowerCase())
-    );
-  }, [deptSearchTerm]);
-
-  // Filter rooms by selected department and search
-  const filteredRooms = useMemo(() => {
-    let filtered = selectedDepartment
-      ? rooms.filter((r) => r.departmentId === selectedDepartment)
-      : rooms;
-
-    if (!roomSearchTerm) return filtered;
-
-    return filtered.filter((r) =>
-      r.name.toLowerCase().includes(roomSearchTerm.toLowerCase())
-    );
-  }, [selectedDepartment, roomSearchTerm]);
-
-  // Group timetable data by day, safely handle undefined initialData
-  const groupedData = useMemo(() => {
-    if (!initialData || initialData.length === 0) return {};
-    return initialData.reduce(
-      (acc: Record<string, TimetableEntry[]>, entry) => {
-        if (!acc[entry.Day]) acc[entry.Day] = [];
-        acc[entry.Day].push(entry);
-        return acc;
-      },
-      {}
-    );
-  }, [initialData]);
-
-  const daysOrder = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ];
-
-  // Helper to generate weeks dynamically
-  function getMondaysForWeeks(
-    startDate: Date,
-    numberOfWeeks: number
-  ): { value: number; label: string }[] {
-    const weeks = [];
-
-    const options = {
-      weekday: "short",
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-    };
-
-    for (let i = 1; i <= numberOfWeeks; i++) {
-      const monday = new Date(startDate);
-      monday.setDate(startDate.getDate() + (i - 1) * 7);
-
-      const labelDate = monday.toLocaleDateString("en-GB", options); // e.g. "Mon 19 Aug 2024"
-      weeks.push({
-        value: i,
-        label: `w/c ${labelDate} (Wk ${i})`,
-      });
-    }
-
-    return weeks;
-  }
-
-  // Compute Monday of current week
-  const weeksList = useMemo(() => {
-    const today = new Date();
-    const day = today.getDay();
-    const diffToMonday = day === 0 ? -6 : 1 - day; // Sunday=0 so back 6 days else back day-1 days
-    const mondayThisWeek = new Date(today);
-    mondayThisWeek.setHours(0, 0, 0, 0);
-    mondayThisWeek.setDate(today.getDate() + diffToMonday);
-
-    return getMondaysForWeeks(mondayThisWeek, 52);
-  }, []);
-
-  // Add special options "This Week" and "Next Week"
-  const extendedWeeksList = useMemo(() => {
-    return [
-      { value: "", label: "This Week" },
-      { value: "51", label: "Next Week" },
-      ...weeksList,
-    ];
-  }, [weeksList]);
-
-  // Filter weeks based on search input
-  const filteredWeeks = useMemo(() => {
-    if (!weekSearchTerm) return extendedWeeksList;
-    return extendedWeeksList.filter((w) =>
-      w.label.toLowerCase().includes(weekSearchTerm.toLowerCase())
-    );
-  }, [weekSearchTerm, extendedWeeksList]);
-
-  // URL update helper
-  function updateUrlParams(
-    departmentId: string,
-    roomId: string,
-    weekVal: string
-  ) {
-    const params = new URLSearchParams();
-    if (departmentId) params.set("departmentId", departmentId);
-    if (roomId) params.set("roomId", roomId);
-    if (weekVal) params.set("week", weekVal);
-    router.push(`?${params.toString()}`);
-  }
-
-  // Handlers for selecting department, room, week
-  function onSelectDepartment(deptId: string) {
-    setSelectedDepartment(deptId);
-    setSelectedRoom("");
-    setIsDeptModalOpen(false);
-    setDeptSearchTerm("");
-    updateUrlParams(deptId, "", week);
-  }
-
-  function onSelectRoom(roomId: string) {
-    setSelectedRoom(roomId);
-    setIsRoomModalOpen(false);
-    setRoomSearchTerm("");
-    updateUrlParams(selectedDepartment, roomId, week);
-  }
-
-  function onSelectWeek(weekVal: string) {
-    setWeek(weekVal);
-    updateUrlParams(selectedDepartment, selectedRoom, weekVal);
-    setIsWeekModalOpen(false);
-    setWeekSearchTerm("");
-  }
-
-  // Display names for buttons
-  const selectedDepartmentName =
-    departments.find((d) => d.id === selectedDepartment)?.name ||
-    "Select Department";
-
-  const selectedRoomName =
-    rooms.find((r) => r.id === selectedRoom)?.name || "Select Room";
-
-  const selectedWeekLabel =
-    extendedWeeksList.find((w) => w.value.toString() === week)?.label ||
-    "Select Week";
-
   return (
     <div className="container mx-auto px-4 py-6">
-      <div className="grid grid-cols-1 sm:grid-cols-[max-content_max-content_max-content] gap-4 mb-8 items-end">
-        {/* Department Modal */}
-        <Dialog open={isDeptModalOpen} onOpenChange={setIsDeptModalOpen}>
-          <DialogTrigger asChild>
-            <Button variant="outline">{selectedDepartmentName}</Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-md max-h-[500px] overflow-auto">
-            <DialogHeader>
-              <DialogTitle>Select Department</DialogTitle>
-            </DialogHeader>
-
-            <Input
-              placeholder="Search departments..."
-              value={deptSearchTerm}
-              onChange={(e) => setDeptSearchTerm(e.target.value)}
-              autoFocus
-              className="mb-4"
-            />
-
-            <ul className="max-h-72 overflow-auto border rounded-md border-gray-200">
-              {filteredDepartments.length === 0 && (
-                <li className="px-3 py-2 text-muted-foreground">
-                  No departments found
-                </li>
-              )}
-              {filteredDepartments.map((dept) => (
-                <li
-                  key={dept.id}
-                  onClick={() => onSelectDepartment(dept.id)}
-                  className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
-                    dept.id === selectedDepartment ? "font-bold" : ""
-                  }`}
-                >
-                  {dept.name}
-                </li>
-              ))}
-            </ul>
-
-            <DialogFooter>
-              <Button
-                variant="outline"
-                onClick={() => setIsDeptModalOpen(false)}
-              >
-                Close
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-
-        {/* Room Modal */}
-        <Dialog open={isRoomModalOpen} onOpenChange={setIsRoomModalOpen}>
-          <DialogTrigger asChild>
-            <Button variant="outline" disabled={!selectedDepartment}>
-              {selectedRoomName}
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-md max-h-[500px] overflow-auto">
-            <DialogHeader>
-              <DialogTitle>Select Room</DialogTitle>
-            </DialogHeader>
-
-            <Input
-              placeholder={
-                selectedDepartment
-                  ? "Search rooms..."
-                  : "Select a department first"
-              }
-              value={roomSearchTerm}
-              onChange={(e) => setRoomSearchTerm(e.target.value)}
-              autoFocus
-              disabled={!selectedDepartment}
-              className="mb-4"
-            />
-
-            <ul className="max-h-72 overflow-auto border rounded-md border-gray-200">
-              {filteredRooms.length === 0 && (
-                <li className="px-3 py-2 text-muted-foreground">
-                  No rooms found
-                </li>
-              )}
-              {filteredRooms.map((room) => (
-                <li
-                  key={room.id}
-                  onClick={() => onSelectRoom(room.id)}
-                  className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
-                    room.id === selectedRoom ? "font-bold" : ""
-                  }`}
-                >
-                  {room.name}
-                </li>
-              ))}
-            </ul>
-
-            <DialogFooter>
-              <Button
-                variant="outline"
-                onClick={() => setIsRoomModalOpen(false)}
-              >
-                Close
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-
-        {/* Week Modal */}
-        <Dialog open={isWeekModalOpen} onOpenChange={setIsWeekModalOpen}>
-          <DialogTrigger asChild>
-            <Button variant="outline">{selectedWeekLabel}</Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-md max-h-[500px] overflow-auto">
-            <DialogHeader>
-              <DialogTitle>Select Week</DialogTitle>
-            </DialogHeader>
-
-            <Input
-              placeholder="Search weeks..."
-              value={weekSearchTerm}
-              onChange={(e) => setWeekSearchTerm(e.target.value)}
-              autoFocus
-              className="mb-4"
-            />
-
-            <ul className="max-h-72 overflow-auto border rounded-md border-gray-200">
-              {filteredWeeks.length === 0 && (
-                <li className="px-3 py-2 text-muted-foreground">
-                  No weeks found
-                </li>
-              )}
-              {filteredWeeks.map((w) => (
-                <li
-                  key={w.value || "empty"}
-                  onClick={() => onSelectWeek(w.value.toString())}
-                  className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
-                    w.value.toString() === week ? "font-bold" : ""
-                  }`}
-                >
-                  {w.label}
-                </li>
-              ))}
-            </ul>
-
-            <DialogFooter>
-              <Button
-                variant="outline"
-                onClick={() => setIsWeekModalOpen(false)}
-              >
-                Close
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+      <div className="grid sm:grid-cols-3 gap-4 mb-8">
+        <div>
+          <Label htmlFor="roomId">Room ID</Label>
+          <Input
+            id="roomId"
+            value={roomId}
+            onChange={(e) => setRoomId(e.target.value)}
+          />
+        </div>
+        <div>
+          <Label htmlFor="week">Week</Label>
+          <Input
+            id="week"
+            value={week}
+            onChange={(e) => setWeek(e.target.value)}
+          />
+        </div>
+        <div className="flex items-end">
+          <Button className="w-full" onClick={handleSearch}>
+            Search
+          </Button>
+        </div>
       </div>
 
-      {/* Timetable display */}
       {daysOrder.map((day) => {
         const entries = groupedData[day];
-        if (!entries || entries.length === 0) return null;
+        if (!entries) return null;
 
         return (
           <div key={day} className="mb-6">
