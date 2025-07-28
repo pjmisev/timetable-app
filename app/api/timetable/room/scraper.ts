@@ -1,6 +1,6 @@
 // lib/scraper.ts
 import puppeteer from 'puppeteer';
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 
 interface TimetableEntry {
     [key: string]: string;

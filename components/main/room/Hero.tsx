@@ -12,7 +12,7 @@ export async function Hero({ id }: AnimatedProps) {
   return (
     <section
       id={id}
-      className="relative min-h-screen flex items-start pt-20 justify-center px-4 sm:px-6 overflow-hidden"
+      className="relative flex items-start pt-20 justify-center px-4 sm:px-6 overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-1/4 -left-1/4 w-[1000px] h-[1000px] bg-gradient-to-r from-blue-500/30 via-cyan-500/30 to-emerald-500/30 dark:from-blue-500/20 dark:via-cyan-500/20 dark:to-emerald-500/20 rounded-full blur-3xl animate-slow-spin"></div>
