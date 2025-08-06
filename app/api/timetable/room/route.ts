@@ -1,4 +1,3 @@
-// app/api/protected/timetable/route.ts
 import { auth } from "@/lib/auth";
 import { NextResponse } from "next/server";
 import { fetchRoomTimetable } from "./scraper";
@@ -33,7 +32,7 @@ export async function GET(request: Request) {
         // Fetch the timetable data
         const timetable = await fetchRoomTimetable(roomId, week);
 
-        // Log successful access (optional)
+        // Log successful access
         console.log(`Timetable accessed by ${session?.user?.email ?? ""}`);
 
         return NextResponse.json(timetable);

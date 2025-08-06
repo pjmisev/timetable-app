@@ -1,4 +1,3 @@
-// lib/scraper.ts
 import puppeteer from 'puppeteer';
 import * as cheerio from 'cheerio';
 

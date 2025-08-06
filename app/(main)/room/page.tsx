@@ -1,4 +1,3 @@
-// app/(protected)/room/page.tsx
 import { Hero } from "@/components/main/room/Hero";
 import { Footer } from "@/components/main/sections/Footer";
 import { auth } from "@/lib/auth";
