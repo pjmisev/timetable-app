@@ -2,9 +2,12 @@
 import { auth } from "@/lib/auth";
 import { NextResponse } from "next/server";
 import { fetchRoomTimetable } from "./scraper";
+import { headers } from "next/headers";
 
 export async function GET(request: Request) {
     const session = await auth();
+
+    console.log("BACKEND SESSION: ", session);
 
     // Authentication check
     if (!session?.user) {
