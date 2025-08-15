@@ -1,12 +1,9 @@
 import { auth } from "@/lib/auth";
 import { NextResponse } from "next/server";
 import { fetchRoomTimetable } from "./scraper";
-import { headers } from "next/headers";
 
 export async function GET(request: Request) {
     const session = await auth();
-
-    console.log("BACKEND SESSION: ", session);
 
     // Authentication check
     if (!session?.user) {
@@ -31,9 +28,6 @@ export async function GET(request: Request) {
 
         // Fetch the timetable data
         const timetable = await fetchRoomTimetable(roomId, week);
-
-        // Log successful access
-        console.log(`Timetable accessed by ${session?.user?.email ?? ""}`);
 
         return NextResponse.json(timetable);
     } catch (error) {
