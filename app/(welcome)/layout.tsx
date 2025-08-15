@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import { Navigation } from "@/components/welcome/Navigation";
 
 export const metadata: Metadata = {
   title: "Timetable App | PJmisev",

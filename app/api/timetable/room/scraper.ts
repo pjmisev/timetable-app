@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer';
+import puppeteer, { Page, Target } from 'puppeteer';
 import * as cheerio from 'cheerio';
 
 interface TimetableEntry {
@@ -33,8 +33,8 @@ export async function fetchRoomTimetable(
         page.on('dialog', async (dialog) => await dialog.accept());
 
         // Set up promise to catch the new tab
-        const newPagePromise = new Promise<puppeteer.Page>((resolve) =>
-            browser!.once('targetcreated', async (target) => {
+        const newPagePromise = new Promise<Page>((resolve) =>
+            browser!.once('targetcreated', async (target: Target) => {
                 const newPage = await target.page();
                 await newPage!.bringToFront();
                 resolve(newPage!);
