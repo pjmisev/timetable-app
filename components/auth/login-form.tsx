@@ -18,11 +18,7 @@ export function LoginForm({
 }: React.ComponentProps<"div">) {
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
+      <div>
         <Card className="bg-gradient-to-r from-foreground/5 via-foreground/10 to-foreground/5 backdrop-blur-md rounded-xl border border-foreground/10">
           <CardHeader className="text-center">
             <CardTitle className="text-xl">Welcome</CardTitle>
@@ -76,17 +72,12 @@ export function LoginForm({
             </div>
           </CardContent>
         </Card>
-      </motion.div>
+      </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4"
-      >
+      <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
         By clicking continue, you agree to this app storing your name, email and
         profile picture.
-      </motion.div>
+      </div>
     </div>
   );
 }

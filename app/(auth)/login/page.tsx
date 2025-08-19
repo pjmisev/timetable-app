@@ -24,16 +24,11 @@ export default async function LoginPage() {
       </div>
 
       <div className="relative w-full max-w-sm flex flex-col items-center justify-center gap-6 z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          className="flex items-center gap-2 self-center font-medium"
-        >
+        <div className="flex items-center gap-2 self-center font-medium">
           <Link href="/" className="text-lg font-semibold">
             Timetable App by PJmisev
           </Link>
-        </motion.div>
+        </div>
 
         <LoginForm />
       </div>

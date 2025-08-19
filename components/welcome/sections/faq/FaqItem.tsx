@@ -10,15 +10,8 @@ export function FAQItem({ question, answer, category }: FAQItemProps) {
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
-    <motion.div
-      layout
-      className="relative"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-    >
-      <motion.div
-        layout
+    <div className="relative">
+      <div
         className="relative overflow-hidden rounded-xl border p-6 transition-all duration-300
           dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-700/50"
       >
@@ -45,22 +38,18 @@ export function FAQItem({ question, answer, category }: FAQItemProps) {
           </div>
           <h3 className="text-xl font-semibold flex-1">{question}</h3>
         </button>
-        <AnimatePresence initial={false}>
+        <div>
           {isOpen && (
-            <motion.div
+            <div
               id={`faq-answer-${question.replace(/\s+/g, "-").toLowerCase()}`}
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               <p className="mt-4 ml-12 leading-relaxed dark:text-slate-300">
                 {answer}
               </p>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </motion.div>
-    </motion.div>
+        </div>
+      </div>
+    </div>
   );
 }

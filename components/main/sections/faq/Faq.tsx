@@ -57,64 +57,37 @@ export function FAQ({ id }: AnimatedProps) {
       </div>
       <div className="container relative z-10 mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <motion.div
-            className="inline-block mb-4"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <motion.div
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 dark:bg-cyan-800/30 mx-auto mb-4"
-              initial={{ rotate: -15 }}
-              animate={{ rotate: 0 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
+          <div className="inline-block mb-4">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 dark:bg-cyan-800/30 mx-auto mb-4">
               <Sparkles className="w-6 h-6 text-cyan-600 dark:text-cyan-400" />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
-          <motion.h2
-            className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">
             Frequently Asked{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-pink-600 dark:from-cyan-600 dark:to-cyan-700">
               Questions
             </span>
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            className="text-xl text-slate-600 dark:text-slate-400"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <p className="text-xl text-slate-600 dark:text-slate-400">
             Everything you need to know about the services I provide
-          </motion.p>
+          </p>
         </div>
 
-        <motion.div
-          className="flex flex-wrap justify-center gap-2 mb-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delayChildren: 0.2 }}
-        >
-          <motion.button
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          <button
             onClick={() => setSelectedCategory("all")}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
               selectedCategory === "all"
                 ? "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400"
                 : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-cyan-50 dark:hover:bg-cyan-900/20"
             }`}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
           >
             All
-          </motion.button>
+          </button>
           {categories.map((category) => (
-            <motion.button
+            <button
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
@@ -122,21 +95,19 @@ export function FAQ({ id }: AnimatedProps) {
                   ? "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400"
                   : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-cyan-50 dark:hover:bg-cyan-900/20"
               }`}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
             >
               {category}
-            </motion.button>
+            </button>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.div layout className="max-w-3xl mx-auto space-y-4">
-          <AnimatePresence mode="popLayout">
+        <div className="max-w-3xl mx-auto space-y-4">
+          <div>
             {filteredFaqs.map((faq, index) => (
               <FAQItem key={index} {...faq} />
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

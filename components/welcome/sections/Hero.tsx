@@ -23,57 +23,28 @@ export function Hero({ id }: AnimatedProps) {
       </div>
       <div className="relative w-full max-w-4xl mx-auto text-center px-4">
         <div className="relative">
-          <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground/90 to-foreground/80 pb-2"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground/90 to-foreground/80 pb-2">
             Timetable App
             <br />
             by PJmisev
-          </motion.h1>
-          <motion.div
-            className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-transparent via-foreground/30 to-transparent rounded-full"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          ></motion.div>
+          </h1>
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-transparent via-foreground/30 to-transparent rounded-full"></div>
         </div>
-        <motion.p
-          className="text-base sm:text-lg md:text-xl text-foreground/70 mb-8 w-full max-w-2xl mx-auto mt-8 sm:mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
+        <p className="text-base sm:text-lg md:text-xl text-foreground/70 mb-8 w-full max-w-2xl mx-auto mt-8 sm:mt-12">
           A free, easy to use, better designed alternative to the timetable app
           provided at everyone's favourite Louth university ;)
-        </motion.p>
+        </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto"
-          >
+          <div className="w-full sm:w-auto">
             <Button className="w-full sm:w-auto bg-gradient-to-r from-foreground via-foreground to-foreground/90 text-background hover:opacity-90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-all duration-300">
               <Link href="/login" className="flex items-center gap-3">
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto"
-          >
+          </div>
+          <div className="w-full sm:w-auto">
             <Button
               variant="outline"
               className="w-full sm:w-auto border-foreground/20 text-foreground hover:bg-foreground/10 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-all duration-300"
@@ -94,7 +65,7 @@ export function Hero({ id }: AnimatedProps) {
                 <span>Source Code</span>
               </Link>
             </Button>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
