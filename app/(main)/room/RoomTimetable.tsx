@@ -17,7 +17,21 @@ import { Badge } from "@/components/ui/badge";
 import departments from "./data/departments.json";
 import rooms from "./data/rooms.json";
 import Swal from "sweetalert2";
-import { Building, Calendar, CalendarX, CircleAlert, Cuboid } from "lucide-react";
+import {
+  Building,
+  Calendar,
+  CalendarX,
+  CircleAlert,
+  Cuboid,
+} from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 interface TimetableEntry {
   Day: string;
@@ -185,8 +199,8 @@ export default function RoomTimetable() {
     setIsDeptModalOpen(false);
     updateUrlParams(deptId, "", week);
     setTimeout(() => {
-    setDeptSearchTerm("");
-  }, 1000);
+      setDeptSearchTerm("");
+    }, 1000);
   }
 
   function onSelectRoom(roomId: string) {
@@ -303,160 +317,389 @@ export default function RoomTimetable() {
     [groupedData]
   );
 
+  function useIsDesktop(breakpoint = 640) {
+    const [isDesktop, setIsDesktop] = React.useState(false);
+
+    React.useEffect(() => {
+      const mql = window.matchMedia(`(min-width: ${breakpoint}px)`);
+      const onChange = (e: MediaQueryListEvent | MediaQueryList) =>
+        setIsDesktop(
+          "matches" in e ? e.matches : (e as MediaQueryList).matches
+        );
+
+      // set initial
+      setIsDesktop(mql.matches);
+
+      // subscribe (support older Safari)
+      if (mql.addEventListener) mql.addEventListener("change", onChange as any);
+      else mql.addListener(onChange as any);
+
+      return () => {
+        if (mql.removeEventListener)
+          mql.removeEventListener("change", onChange as any);
+        else mql.removeListener(onChange as any);
+      };
+    }, [breakpoint]);
+
+    return isDesktop;
+  }
+
+  const isDesktop = useIsDesktop(); // true for ≥640px
+
   return (
     <div className="container mx-auto px-4 py-6">
       <div className="grid grid-cols-1 sm:grid-cols-[max-content_max-content_max-content] gap-4 mb-8 items-end justify-center">
         {/* Department Modal */}
-        <Dialog open={isDeptModalOpen} onOpenChange={setIsDeptModalOpen}>
-          <DialogTrigger className="fade-in-bottom-05s" asChild>
-            <Button variant="outline" className="font-bold"><Building />{selectedDepartmentName}</Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-md max-h-[500px] overflow-auto">
-            <DialogHeader>
-              <DialogTitle>Select Department</DialogTitle>
-            </DialogHeader>
-
-            <Input
-              placeholder="Search departments..."
-              value={deptSearchTerm}
-              onChange={(e) => setDeptSearchTerm(e.target.value)}
-              autoFocus
-              className="mb-4"
-            />
-
-            <ul className="max-h-72 overflow-auto border rounded-md border-gray-200">
-              {filteredDepartments.length === 0 && (
-                <li className="px-3 py-2 text-muted-foreground">
-                  No departments found
-                </li>
-              )}
-              {filteredDepartments.map((dept) => (
-                <li
-                  key={dept.id}
-                  onClick={() => onSelectDepartment(dept.id)}
-                  className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
-                    dept.id === selectedDepartment ? "font-bold" : ""
-                  }`}
-                >
-                  {dept.name}
-                </li>
-              ))}
-            </ul>
-
-            <DialogFooter>
+        {isDesktop ? (
+          <Dialog open={isDeptModalOpen} onOpenChange={setIsDeptModalOpen}>
+            <DialogTrigger asChild>
               <Button
                 variant="outline"
-                onClick={() => setIsDeptModalOpen(false)}
+                className="font-bold fade-in-bottom-05s"
               >
-                Close
+                <Building />
+                {selectedDepartmentName}
               </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+            </DialogTrigger>
+            <DialogContent className="max-w-md max-h-[500px] overflow-auto">
+              <DialogHeader>
+                <DialogTitle>Select Department</DialogTitle>
+              </DialogHeader>
+
+              <Input
+                placeholder="Search departments..."
+                value={deptSearchTerm}
+                onChange={(e) => setDeptSearchTerm(e.target.value)}
+                autoFocus
+                className="mb-4"
+              />
+
+              <ul className="max-h-72 overflow-auto border rounded-md border-gray-200">
+                {filteredDepartments.length === 0 && (
+                  <li className="px-3 py-2 text-muted-foreground">
+                    No departments found
+                  </li>
+                )}
+                {filteredDepartments.map((dept) => (
+                  <li
+                    key={dept.id}
+                    onClick={() => onSelectDepartment(dept.id)}
+                    className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
+                      dept.id === selectedDepartment ? "font-bold" : ""
+                    }`}
+                  >
+                    {dept.name}
+                  </li>
+                ))}
+              </ul>
+
+              <DialogFooter>
+                <Button
+                  variant="outline"
+                  onClick={() => setIsDeptModalOpen(false)}
+                >
+                  Close
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        ) : (
+          <Sheet open={isDeptModalOpen} onOpenChange={setIsDeptModalOpen}>
+            <SheetTrigger asChild>
+              <Button
+                variant="outline"
+                className="font-bold fade-in-bottom-05s"
+              >
+                <Building />
+                {selectedDepartmentName}
+              </Button>
+            </SheetTrigger>
+
+            <SheetContent side="bottom" className="h-[85vh] w-full p-0">
+              <div className="flex h-full flex-col">
+                <SheetHeader className="px-4 pt-4 pb-2 shrink-0">
+                  <SheetTitle>Select Department</SheetTitle>
+                </SheetHeader>
+
+                <div className="flex flex-1 flex-col overflow-hidden px-4 pt-2">
+                  <Input
+                    placeholder="Search departments..."
+                    value={deptSearchTerm}
+                    onChange={(e) => setDeptSearchTerm(e.target.value)}
+                    className="mb-4 shrink-0"
+                  />
+
+                  <ul className="flex-1 min-h-0 overflow-auto border rounded-md border-gray-200">
+                    {filteredDepartments.length === 0 && (
+                      <li className="px-3 py-2 text-muted-foreground">
+                        No departments found
+                      </li>
+                    )}
+                    {filteredDepartments.map((dept) => (
+                      <li
+                        key={dept.id}
+                        onClick={() => onSelectDepartment(dept.id)}
+                        className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
+                          dept.id === selectedDepartment ? "font-bold" : ""
+                        }`}
+                      >
+                        {dept.name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="px-4 pb-4 pt-3 mb-4 shrink-0 pb-[env(safe-area-inset-bottom)]">
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => setIsDeptModalOpen(false)}
+                  >
+                    Close
+                  </Button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        )}
 
         {/* Room Modal */}
-        <Dialog open={isRoomModalOpen} onOpenChange={setIsRoomModalOpen}>
-          <DialogTrigger asChild className="fade-in-bottom-07s">
-            <Button variant="outline" className="font-bold"><Cuboid />{selectedRoomName}</Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-md max-h-[500px] overflow-auto">
-            <DialogHeader>
-              <DialogTitle>Select Room</DialogTitle>
-            </DialogHeader>
+        {isDesktop ? (
+          <Dialog open={isRoomModalOpen} onOpenChange={setIsRoomModalOpen}>
+            <DialogTrigger asChild className="fade-in-bottom-07s">
+              <Button variant="outline" className="font-bold">
+                <Cuboid />
+                {selectedRoomName}
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-md max-h-[500px] overflow-auto">
+              <DialogHeader>
+                <DialogTitle>Select Room</DialogTitle>
+              </DialogHeader>
 
-            <Input
-              placeholder={
-                selectedDepartment
-                  ? "Search rooms..."
-                  : "Select a department first"
-              }
-              value={roomSearchTerm}
-              onChange={(e) => setRoomSearchTerm(e.target.value)}
-              autoFocus
-              className="mb-4"
-            />
+              <Input
+                placeholder={
+                  selectedDepartment
+                    ? "Search rooms..."
+                    : "Select a department first"
+                }
+                value={roomSearchTerm}
+                onChange={(e) => setRoomSearchTerm(e.target.value)}
+                autoFocus
+                className="mb-4"
+              />
 
-            <ul className="max-h-72 overflow-auto border rounded-md border-gray-200">
-              {filteredRooms.length === 0 && (
-                <li className="px-3 py-2 text-muted-foreground">
-                  No rooms found
-                </li>
-              )}
-              {filteredRooms.map((room) => (
-                <li
-                  key={room.id}
-                  onClick={() => onSelectRoom(room.id)}
-                  className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
-                    room.id === selectedRoom ? "font-bold" : ""
-                  }`}
+              <ul className="max-h-72 overflow-auto border rounded-md border-gray-200">
+                {filteredRooms.length === 0 && (
+                  <li className="px-3 py-2 text-muted-foreground">
+                    No rooms found
+                  </li>
+                )}
+                {filteredRooms.map((room) => (
+                  <li
+                    key={room.id}
+                    onClick={() => onSelectRoom(room.id)}
+                    className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
+                      room.id === selectedRoom ? "font-bold" : ""
+                    }`}
+                  >
+                    {room.name}
+                  </li>
+                ))}
+              </ul>
+
+              <DialogFooter>
+                <Button
+                  variant="outline"
+                  onClick={() => setIsRoomModalOpen(false)}
                 >
-                  {room.name}
-                </li>
-              ))}
-            </ul>
-
-            <DialogFooter>
+                  Close
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        ) : (
+          <Sheet open={isRoomModalOpen} onOpenChange={setIsRoomModalOpen}>
+            <SheetTrigger asChild>
               <Button
                 variant="outline"
-                onClick={() => setIsRoomModalOpen(false)}
+                className="font-bold fade-in-bottom-07s"
               >
-                Close
+                <Cuboid />
+                {selectedRoomName}
               </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+            </SheetTrigger>
 
-        {/* Week Modal */}
-        <Dialog open={isWeekModalOpen} onOpenChange={setIsWeekModalOpen}>
-          <DialogTrigger asChild className="fade-in-bottom-10s">
-            <Button variant="outline" className="font-bold"><Calendar />{selectedWeekLabel}</Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-md max-h-[500px] overflow-auto">
-            <DialogHeader>
-              <DialogTitle>Select Week</DialogTitle>
-            </DialogHeader>
+            <SheetContent side="bottom" className="h-[85vh] w-full p-0">
+              <div className="flex h-full flex-col">
+                <SheetHeader className="px-4 pt-4 pb-2 shrink-0">
+                  <SheetTitle>Select Room</SheetTitle>
+                </SheetHeader>
 
-            <Input
-              placeholder="Search weeks..."
-              value={weekSearchTerm}
-              onChange={(e) => setWeekSearchTerm(e.target.value)}
-              autoFocus
-              className="mb-4"
-            />
+                <div className="flex flex-1 flex-col overflow-hidden px-4 pt-2">
+                  <Input
+                    placeholder={
+                      selectedDepartment
+                        ? "Search rooms..."
+                        : "Select a department first"
+                    }
+                    value={roomSearchTerm}
+                    onChange={(e) => setRoomSearchTerm(e.target.value)}
+                    className="mb-4 shrink-0"
+                  />
 
-            <ul className="max-h-72 overflow-auto border rounded-md border-gray-200">
-              {filteredWeeks.length === 0 && (
-                <li className="px-3 py-2 text-muted-foreground">
-                  No weeks found
-                </li>
-              )}
-              {filteredWeeks.map((w) => (
-                <li
-                  key={w.value}
-                  onClick={() => onSelectWeek(w.value)}
-                  className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
-                    w.value === `week-${week}` ||
-                    (week === "1" && w.value === "current") ||
-                    (week === "2" && w.value === "next")
-                      ? "font-bold"
-                      : ""
-                  }`}
+                  <ul className="flex-1 min-h-0 overflow-auto border rounded-md border-gray-200">
+                    {filteredRooms.length === 0 && (
+                      <li className="px-3 py-2 text-muted-foreground">
+                        No rooms found
+                      </li>
+                    )}
+                    {filteredRooms.map((room) => (
+                      <li
+                        key={room.id}
+                        onClick={() => onSelectRoom(room.id)}
+                        className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
+                          room.id === selectedRoom ? "font-bold" : ""
+                        }`}
+                      >
+                        {room.name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="px-4 pb-4 pt-3 shrink-0 pb-[env(safe-area-inset-bottom)]">
+                  <Button
+                    variant="outline"
+                    className="w-full mb-4"
+                    onClick={() => setIsDeptModalOpen(false)}
+                  >
+                    Close
+                  </Button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        )}
+
+        {isDesktop ? (
+          <Dialog open={isWeekModalOpen} onOpenChange={setIsWeekModalOpen}>
+            <DialogTrigger asChild className="fade-in-bottom-10s">
+              <Button variant="outline" className="font-bold">
+                <Calendar />
+                {selectedWeekLabel}
+              </Button>
+            </DialogTrigger>
+
+            <DialogContent className="max-w-md max-h-[500px] overflow-auto">
+              <DialogHeader>
+                <DialogTitle>Select Week</DialogTitle>
+              </DialogHeader>
+
+              <Input
+                placeholder="Search weeks..."
+                value={weekSearchTerm}
+                onChange={(e) => setWeekSearchTerm(e.target.value)}
+                autoFocus
+                className="mb-4"
+              />
+
+              <ul className="max-h-72 overflow-auto border rounded-md border-gray-200">
+                {filteredWeeks.length === 0 && (
+                  <li className="px-3 py-2 text-muted-foreground">
+                    No weeks found
+                  </li>
+                )}
+                {filteredWeeks.map((w) => (
+                  <li
+                    key={w.value}
+                    onClick={() => onSelectWeek(w.value)}
+                    className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
+                      w.value === `week-${week}` ||
+                      (week === "1" && w.value === "current") ||
+                      (week === "2" && w.value === "next")
+                        ? "font-bold"
+                        : ""
+                    }`}
+                  >
+                    {w.label}
+                  </li>
+                ))}
+              </ul>
+
+              <DialogFooter>
+                <Button
+                  variant="outline"
+                  onClick={() => setIsWeekModalOpen(false)}
                 >
-                  {w.label}
-                </li>
-              ))}
-            </ul>
-
-            <DialogFooter>
+                  Close
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        ) : (
+          <Sheet open={isWeekModalOpen} onOpenChange={setIsWeekModalOpen}>
+            <SheetTrigger asChild>
               <Button
                 variant="outline"
-                onClick={() => setIsWeekModalOpen(false)}
+                className="font-bold fade-in-bottom-10s"
               >
-                Close
+                <Calendar />
+                {selectedWeekLabel}
               </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+            </SheetTrigger>
+
+            <SheetContent side="bottom" className="h-[85vh] w-full p-0">
+              <div className="flex h-full flex-col">
+                <SheetHeader className="px-4 pt-4 pb-2 shrink-0">
+                  <SheetTitle>Select Week</SheetTitle>
+                </SheetHeader>
+
+                <div className="flex flex-1 flex-col overflow-hidden px-4 pt-2">
+                  <Input
+                    placeholder="Search weeks..."
+                    value={weekSearchTerm}
+                    onChange={(e) => setWeekSearchTerm(e.target.value)}
+                    className="mb-4 shrink-0"
+                  />
+
+                  <ul className="flex-1 min-h-0 overflow-auto border rounded-md border-gray-200">
+                    {filteredWeeks.length === 0 && (
+                      <li className="px-3 py-2 text-muted-foreground">
+                        No weeks found
+                      </li>
+                    )}
+                    {filteredWeeks.map((w) => (
+                      <li
+                        key={w.value}
+                        onClick={() => onSelectWeek(w.value)}
+                        className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
+                          w.value === `week-${week}` ||
+                          (week === "1" && w.value === "current") ||
+                          (week === "2" && w.value === "next")
+                            ? "font-bold"
+                            : ""
+                        }`}
+                      >
+                        {w.label}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="px-4 pb-4 pt-3 shrink-0 pb-[env(safe-area-inset-bottom)]">
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => setIsWeekModalOpen(false)}
+                  >
+                    Close
+                  </Button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        )}
       </div>
 
       {/* Empty state (only when not loading, a room is selected, and no entries) */}
@@ -464,7 +707,8 @@ export default function RoomTimetable() {
         <div className="flex flex-col items-center justify-center py-16 text-center text-muted-foreground fade-in-bottom-12s">
           <CircleAlert className="h-12 w-12 mb-4" />
           <p>
-            Please select the Department, Room and Week you would like to display from the fields above.
+            Please select the Department, Room and Week you would like to
+            display from the fields above.
           </p>
         </div>
       )}
@@ -516,21 +760,23 @@ export default function RoomTimetable() {
                         </p>
                       </CardHeader>
                       <CardContent className="text-sm">
-                          <div className="flex flex-wrap items-center gap-2">
-                            <span className="font-medium">Groups:</span>
-                            {(entry.Groups || "")
-                              .split(";")
-                              .map((g) => g.trim())
-                              .filter(Boolean)
-                              .map((g, idx) => (
-                                <Badge
-                                  key={`${day}-${idx}-${g}`}
-                                  className={`text-black  ${dayBgClasses[day] || "bg-muted"}`}
-                                >
-                                  {g}
-                                </Badge>
-                              ))}
-                          </div>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="font-medium">Groups:</span>
+                          {(entry.Groups || "")
+                            .split(";")
+                            .map((g) => g.trim())
+                            .filter(Boolean)
+                            .map((g, idx) => (
+                              <Badge
+                                key={`${day}-${idx}-${g}`}
+                                className={`text-black  ${
+                                  dayBgClasses[day] || "bg-muted"
+                                }`}
+                              >
+                                {g}
+                              </Badge>
+                            ))}
+                        </div>
                       </CardContent>
                     </Card>
                   ))}
