@@ -19,7 +19,7 @@ export function LoginForm({
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <div>
-        <Card className="bg-gradient-to-r from-foreground/5 via-foreground/10 to-foreground/5 backdrop-blur-md rounded-xl border border-foreground/10">
+        <Card className="bg-gradient-to-r from-foreground/5 via-foreground/10 to-foreground/5 backdrop-blur-md rounded-xl border border-foreground/10 fade-in-bottom-05s">
           <CardHeader className="text-center">
             <CardTitle className="text-xl">Welcome</CardTitle>
             <CardDescription>
@@ -74,7 +74,7 @@ export function LoginForm({
         </Card>
       </div>
 
-      <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
+      <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4 fade-in-bottom-10s">
         By clicking continue, you agree to this app storing your name, email and
         profile picture.
       </div>

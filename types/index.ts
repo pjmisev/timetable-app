@@ -10,7 +10,6 @@ export interface BenefitProps {
 export interface FAQItemProps {
   question: string;
   answer: string;
-  category: string;
 }
 
 export interface SocialLinkProps {

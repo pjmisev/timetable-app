@@ -15,12 +15,6 @@ export function FAQItem({ question, answer, category }: FAQItemProps) {
         className="relative overflow-hidden rounded-xl border p-6 transition-all duration-300
           dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-700/50"
       >
-        <Badge
-          variant="secondary"
-          className="absolute top-2 right-2 text-xs font-medium bg-cyan-700 text-slate-300"
-        >
-          {category}
-        </Badge>
         <button
           onClick={toggleOpen}
           className="flex items-center w-full text-left"

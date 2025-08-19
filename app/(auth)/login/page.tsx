@@ -25,7 +25,7 @@ export default async function LoginPage() {
 
       <div className="relative w-full max-w-sm flex flex-col items-center justify-center gap-6 z-10">
         <div className="flex items-center gap-2 self-center font-medium">
-          <Link href="/" className="text-lg font-semibold">
+          <Link href="/" className="text-lg font-semibold fade-in-bottom">
             Timetable App by PJmisev
           </Link>
         </div>

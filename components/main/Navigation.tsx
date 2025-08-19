@@ -20,7 +20,7 @@ import { signOut } from "@/lib/auth";
 
 export function Navigation() {
   return (
-    <nav className="fixed w-full top-0 z-50 px-4 py-3">
+    <nav className="fixed w-full top-0 z-50 px-4 py-3 fade-in">
       <div className="max-w-7xl mx-auto flex items-center justify-center">
         <div className="flex items-center gap-4">
           <NavigationMenu className="hidden md:block">

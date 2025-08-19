@@ -16,6 +16,8 @@ import {
 import { Badge } from "@/components/ui/badge";
 import departments from "./data/departments.json";
 import rooms from "./data/rooms.json";
+import Swal from "sweetalert2";
+import { Building, Calendar, CalendarX, CircleAlert, Cuboid } from "lucide-react";
 
 interface TimetableEntry {
   Day: string;
@@ -181,15 +183,19 @@ export default function RoomTimetable() {
     setSelectedDepartment(deptId);
     setSelectedRoom("");
     setIsDeptModalOpen(false);
-    setDeptSearchTerm("");
     updateUrlParams(deptId, "", week);
+    setTimeout(() => {
+    setDeptSearchTerm("");
+  }, 1000);
   }
 
   function onSelectRoom(roomId: string) {
     setSelectedRoom(roomId);
     setIsRoomModalOpen(false);
-    setRoomSearchTerm("");
     updateUrlParams(selectedDepartment, roomId, week);
+    setTimeout(() => {
+      setRoomSearchTerm("");
+    }, 1000);
   }
 
   function onSelectWeek(weekVal: string) {
@@ -218,6 +224,13 @@ export default function RoomTimetable() {
 
     async function fetchTimetable() {
       setLoading(true);
+      Swal.fire({
+        title: "Loading timetable...",
+        allowOutsideClick: false,
+        didOpen: () => {
+          Swal.showLoading();
+        },
+      });
       try {
         const params = new URLSearchParams();
         params.set("roomId", selectedRoom);
@@ -231,16 +244,25 @@ export default function RoomTimetable() {
         if (!res.ok) {
           setTimetableData([]);
           setLoading(false);
+          Swal.close();
           return;
         }
 
         const data = await res.json();
         setTimetableData(data);
       } catch (error) {
+        setLoading(false);
+        Swal.fire({
+          title: "An error has occurred.",
+          text: "Please try again later.",
+          icon: "error",
+          confirmButtonText: "Close",
+        });
         console.error("Fetch timetable error:", error);
         setTimetableData([]);
       } finally {
         setLoading(false);
+        Swal.close();
       }
     }
 
@@ -273,13 +295,21 @@ export default function RoomTimetable() {
     Sunday: "bg-gray-100",
   };
 
+  const hasAnyEntries = useMemo(
+    () =>
+      Object.values(groupedData).some(
+        (arr) => Array.isArray(arr) && arr.length > 0
+      ),
+    [groupedData]
+  );
+
   return (
     <div className="container mx-auto px-4 py-6">
-      <div className="grid grid-cols-1 sm:grid-cols-[max-content_max-content_max-content] gap-4 mb-8 items-end">
+      <div className="grid grid-cols-1 sm:grid-cols-[max-content_max-content_max-content] gap-4 mb-8 items-end justify-center">
         {/* Department Modal */}
         <Dialog open={isDeptModalOpen} onOpenChange={setIsDeptModalOpen}>
-          <DialogTrigger asChild>
-            <Button variant="outline">{selectedDepartmentName}</Button>
+          <DialogTrigger className="fade-in-bottom-05s" asChild>
+            <Button variant="outline" className="font-bold"><Building />{selectedDepartmentName}</Button>
           </DialogTrigger>
           <DialogContent className="max-w-md max-h-[500px] overflow-auto">
             <DialogHeader>
@@ -326,8 +356,8 @@ export default function RoomTimetable() {
 
         {/* Room Modal */}
         <Dialog open={isRoomModalOpen} onOpenChange={setIsRoomModalOpen}>
-          <DialogTrigger asChild>
-            <Button variant="outline">{selectedRoomName}</Button>
+          <DialogTrigger asChild className="fade-in-bottom-07s">
+            <Button variant="outline" className="font-bold"><Cuboid />{selectedRoomName}</Button>
           </DialogTrigger>
           <DialogContent className="max-w-md max-h-[500px] overflow-auto">
             <DialogHeader>
@@ -378,8 +408,8 @@ export default function RoomTimetable() {
 
         {/* Week Modal */}
         <Dialog open={isWeekModalOpen} onOpenChange={setIsWeekModalOpen}>
-          <DialogTrigger asChild>
-            <Button variant="outline">{selectedWeekLabel}</Button>
+          <DialogTrigger asChild className="fade-in-bottom-10s">
+            <Button variant="outline" className="font-bold"><Calendar />{selectedWeekLabel}</Button>
           </DialogTrigger>
           <DialogContent className="max-w-md max-h-[500px] overflow-auto">
             <DialogHeader>
@@ -429,51 +459,87 @@ export default function RoomTimetable() {
         </Dialog>
       </div>
 
-      {/* Timetable display */}
-      {loading && <p>Loading timetable...</p>}
+      {/* Empty state (only when not loading, a room is selected, and no entries) */}
+      {!loading && !selectedRoom && !hasAnyEntries && (
+        <div className="flex flex-col items-center justify-center py-16 text-center text-muted-foreground fade-in-bottom-12s">
+          <CircleAlert className="h-12 w-12 mb-4" />
+          <p>
+            Please select the Department, Room and Week you would like to display from the fields above.
+          </p>
+        </div>
+      )}
 
-      {daysOrder.map((day) => {
-        const entries = groupedData[day];
-        if (!entries || entries.length === 0) return null;
+      {/* Empty state (only when not loading, a room is selected, and no entries) */}
+      {!loading && selectedRoom && !hasAnyEntries && (
+        <div className="flex flex-col items-center justify-center py-16 text-center text-muted-foreground fade-in-bottom">
+          <CalendarX className="h-12 w-12 mb-4" />
+          <p>
+            No timetable found. It may be unavailable or your parameters are
+            incorrect. please try again.
+          </p>
+        </div>
+      )}
 
-        return (
-          <div key={day} className="mb-6">
-            <h2
-              className={`text-xl font-semibold mb-3 px-3 py-2 rounded-md ${
-                dayBgClasses[day] || "bg-muted"
-              }`}
-            >
-              {day}
-            </h2>
-            <div className="grid gap-4">
-              {entries.map((entry, i) => (
-                <Card key={`${day}-${i}`}>
-                  <CardHeader className="relative">
-                    <CardTitle className="text-base sm:text-lg">
-                      <Badge
-                        className={`text-black ${
-                          dayBgClasses[day] || "bg-muted"
-                        }`}
-                      >
-                        {entry.Start} - {entry.End}
-                      </Badge>
-                      <p className="pt-2">{entry.Description}</p>
-                    </CardTitle>
-                    <p className="text-sm text-muted-foreground">
-                      <span className="font-bold">{entry.Staff}</span> -{" "}
-                      {entry.Type}
-                    </p>
-                  </CardHeader>
-                  <CardContent className="text-sm">
-                    <p>Group: {entry.Groups}</p>
-                    <p className="text-muted-foreground"></p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        );
-      })}
+      {/* Timetable display (only when entries exist) */}
+      {hasAnyEntries && (
+        <>
+          {daysOrder.map((day) => {
+            const entries = groupedData[day];
+            if (!entries || entries.length === 0) return null;
+
+            return (
+              <div key={day} className="mb-6 fade-in-bottom">
+                <h2
+                  className={`text-xl font-semibold mb-3 px-3 py-2 rounded-md ${
+                    dayBgClasses[day] || "bg-muted"
+                  }`}
+                >
+                  {day}
+                </h2>
+                <div className="grid gap-4">
+                  {entries.map((entry, i) => (
+                    <Card key={`${day}-${i}`}>
+                      <CardHeader className="relative">
+                        <CardTitle className="text-base sm:text-lg">
+                          <Badge
+                            className={`text-black ${
+                              dayBgClasses[day] || "bg-muted"
+                            }`}
+                          >
+                            {entry.Start} - {entry.End}
+                          </Badge>
+                          <p className="pt-2">{entry.Description}</p>
+                        </CardTitle>
+                        <p className="text-sm text-muted-foreground">
+                          <span className="font-bold">{entry.Staff}</span> -{" "}
+                          {entry.Type}
+                        </p>
+                      </CardHeader>
+                      <CardContent className="text-sm">
+                          <div className="flex flex-wrap items-center gap-2">
+                            <span className="font-medium">Groups:</span>
+                            {(entry.Groups || "")
+                              .split(";")
+                              .map((g) => g.trim())
+                              .filter(Boolean)
+                              .map((g, idx) => (
+                                <Badge
+                                  key={`${day}-${idx}-${g}`}
+                                  className={`text-black  ${dayBgClasses[day] || "bg-muted"}`}
+                                >
+                                  {g}
+                                </Badge>
+                              ))}
+                          </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </>
+      )}
     </div>
   );
 }

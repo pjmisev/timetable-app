@@ -23,19 +23,19 @@ export function Hero({ id }: AnimatedProps) {
       </div>
       <div className="relative w-full max-w-4xl mx-auto text-center px-4">
         <div className="relative">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground/90 to-foreground/80 pb-2">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground/90 to-foreground/80 pb-2 fade-in-bottom">
             Timetable App
             <br />
             by PJmisev
           </h1>
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-transparent via-foreground/30 to-transparent rounded-full"></div>
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-transparent via-foreground/30 to-transparent rounded-full fade-in-bottom"></div>
         </div>
-        <p className="text-base sm:text-lg md:text-xl text-foreground/70 mb-8 w-full max-w-2xl mx-auto mt-8 sm:mt-12">
+        <p className="text-base sm:text-lg md:text-xl text-foreground/70 mb-8 w-full max-w-2xl mx-auto mt-8 sm:mt-12 fade-in-bottom-05s">
           A free, easy to use, better designed alternative to the timetable app
           provided at everyone's favourite Louth university ;)
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative fade-in-bottom-10s">
           <div className="w-full sm:w-auto">
             <Button className="w-full sm:w-auto bg-gradient-to-r from-foreground via-foreground to-foreground/90 text-background hover:opacity-90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-all duration-300">
               <Link href="/login" className="flex items-center gap-3">
