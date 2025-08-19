@@ -30,7 +30,7 @@ export function Footer() {
       </div>
       <div className="container relative z-10 mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center" variants={itemVariants}>
+          <div className="text-center">
             <div className="relative h-px mb-8">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400 dark:via-gray-600 to-transparent animate-pulse" />

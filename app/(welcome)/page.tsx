@@ -6,7 +6,7 @@ export default async function Welcome() {
   return (
     <div className="min-h-screen bg-background transition-colors duration-300">
       <Hero id="top" />
-      <FAQ id="faq" />
+      <FAQ />
       <Footer />
     </div>
   );

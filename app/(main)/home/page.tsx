@@ -1,4 +1,3 @@
-import { FAQ } from "@/components/main/sections/faq/Faq";
 import { Footer } from "@/components/main/sections/Footer";
 import { Hero } from "@/components/main/sections/Hero";
 import { auth } from "@/lib/auth";
