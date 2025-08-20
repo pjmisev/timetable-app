@@ -11,7 +11,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-background transition-colors duration-300">
+    <div className="min-h-screen">
       <Hero id="top" />
       <Footer />
     </div>

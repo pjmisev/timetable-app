@@ -9,7 +9,7 @@ export default async function RoomPage() {
   if (!session) redirect("/login");
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Hero id="top" />
       <RoomTimetable />
       <Footer />

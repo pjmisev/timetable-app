@@ -4,7 +4,7 @@ import { Hero } from "@/components/welcome/sections/Hero";
 
 export default async function Welcome() {
   return (
-    <div className="min-h-screen bg-background transition-colors duration-300">
+    <div className="min-h-screen">
       <Hero id="top" />
       <FAQ />
       <Footer />

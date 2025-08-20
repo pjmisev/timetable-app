@@ -239,6 +239,18 @@ export default function RoomTimetable() {
     async function fetchTimetable() {
       setLoading(true);
       Swal.fire({
+        customClass: {
+          popup: 'my-swal',               // ← matches CSS above
+          title: '',                      // optional, we style globally
+          htmlContainer: '',              // optional
+          confirmButton: 'btn-primary',   // ← our classes
+          cancelButton: 'btn-outline',
+        },
+        buttonsStyling: false,            // ← let our classes control the buttons
+
+        // These use your CSS variables and auto-switch with dark mode
+        background: 'var(--popover)',
+        color: 'var(--popover-foreground)',
         title: "Loading timetable...",
         allowOutsideClick: false,
         didOpen: () => {
@@ -267,6 +279,18 @@ export default function RoomTimetable() {
       } catch (error) {
         setLoading(false);
         Swal.fire({
+          customClass: {
+            popup: 'my-swal',               // ← matches CSS above
+            title: '',                      // optional, we style globally
+            htmlContainer: '',              // optional
+            confirmButton: 'btn-primary',   // ← our classes
+            cancelButton: 'btn-outline',
+          },
+          buttonsStyling: false,            // ← let our classes control the buttons
+
+          // These use your CSS variables and auto-switch with dark mode
+          background: 'var(--popover)',
+          color: 'var(--popover-foreground)',
           title: "An error has occurred.",
           text: "Please try again later.",
           icon: "error",
@@ -300,13 +324,13 @@ export default function RoomTimetable() {
     )?.label || "Select Week";
 
   const dayBgClasses: Record<string, string> = {
-    Monday: "bg-red-100",
-    Tuesday: "bg-yellow-100",
-    Wednesday: "bg-green-100",
-    Thursday: "bg-blue-100",
-    Friday: "bg-purple-100",
-    Saturday: "bg-pink-100",
-    Sunday: "bg-gray-100",
+    Monday:    "bg-red-100       dark:bg-red-900/30",
+    Tuesday:   "bg-yellow-100    dark:bg-yellow-900/30",
+    Wednesday: "bg-green-100     dark:bg-emerald-900/30",
+    Thursday:  "bg-blue-100      dark:bg-blue-900/30",
+    Friday:    "bg-purple-100    dark:bg-purple-900/30",
+    Saturday:  "bg-pink-100      dark:bg-pink-900/30",
+    Sunday:    "bg-gray-100      dark:bg-gray-800/50",
   };
 
   const hasAnyEntries = useMemo(
@@ -448,16 +472,6 @@ export default function RoomTimetable() {
                     ))}
                   </ul>
                 </div>
-
-                <div className="px-4 pb-4 pt-3 mb-4 shrink-0 pb-[env(safe-area-inset-bottom)]">
-                  <Button
-                    variant="outline"
-                    className="w-full"
-                    onClick={() => setIsDeptModalOpen(false)}
-                  >
-                    Close
-                  </Button>
-                </div>
               </div>
             </SheetContent>
           </Sheet>
@@ -566,16 +580,6 @@ export default function RoomTimetable() {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                <div className="px-4 pb-4 pt-3 shrink-0 pb-[env(safe-area-inset-bottom)]">
-                  <Button
-                    variant="outline"
-                    className="w-full mb-4"
-                    onClick={() => setIsDeptModalOpen(false)}
-                  >
-                    Close
-                  </Button>
                 </div>
               </div>
             </SheetContent>
@@ -686,16 +690,6 @@ export default function RoomTimetable() {
                     ))}
                   </ul>
                 </div>
-
-                <div className="px-4 pb-4 pt-3 shrink-0 pb-[env(safe-area-inset-bottom)]">
-                  <Button
-                    variant="outline"
-                    className="w-full"
-                    onClick={() => setIsWeekModalOpen(false)}
-                  >
-                    Close
-                  </Button>
-                </div>
               </div>
             </SheetContent>
           </Sheet>
@@ -746,7 +740,7 @@ export default function RoomTimetable() {
                       <CardHeader className="relative">
                         <CardTitle className="text-base sm:text-lg">
                           <Badge
-                            className={`text-black ${
+                            className={`text-black dark:text-white ${
                               dayBgClasses[day] || "bg-muted"
                             }`}
                           >
@@ -769,7 +763,7 @@ export default function RoomTimetable() {
                             .map((g, idx) => (
                               <Badge
                                 key={`${day}-${idx}-${g}`}
-                                className={`text-black  ${
+                                className={`text-black dark:text-white ${
                                   dayBgClasses[day] || "bg-muted"
                                 }`}
                               >
