@@ -1,75 +1,5 @@
 [
   {
-    "id": "%23SPLUS8CE137",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Chinese",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS8CE139",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - English",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS8CE13A",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - French",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS8CE13B",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - German",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS8CE13C",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Image Editing",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS8CE138",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Intercultural",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS8CE13D",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Spanish",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS07F52A",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - Chinese",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS07F52C",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - English",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS07F52D",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - French",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS07F52F",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - Image Editing",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS07F52B",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - Intercultural",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS07F530",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - Spanish",
-    "departmentId": "bbus"
-  },
-  {
-    "id": "%23SPLUS07F52E",
-    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4- German",
-    "departmentId": "bbus"
-  },
-  {
     "id": "BBBSP%5F8%5F1a",
     "name": "Bachelor of Business Studies (Hons) - Part-Time - Year 1",
     "departmentId": "bbus"
@@ -562,387 +492,422 @@
   {
     "id": "BBAAF%5FB%5F1a",
     "name": "Accounting & Finance Year 1 - Group A- Sem 1(English)",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBAAF%5FB%5F1b",
     "name": "Accounting & Finance Year 1 - Group B- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBAAF%5FB%5F1c",
     "name": "Accounting & Finance Year 1 - Group C- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBAAF%5FB%5F1d",
     "name": "Accounting & Finance Year 1 - Group D- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS422DE8",
     "name": "Accounting & Finance Year 1 - Group E- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBAAF%5FB%5F2b",
     "name": "Accounting & Finance Year 2 - Group B- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBAAF%5FB%5F2a",
     "name": "Accounting & Finance Year 2 - Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBAAF%5FB%5F3a",
     "name": "Accounting & Finance Year 3 - Group A- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBAAF%5FB%5F3b",
     "name": "Accounting & Finance Year 3 - Group B- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS243E66",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- Chinese",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS243E6B",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- Cul",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS243E68",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- English",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS243E67",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- French",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS243E6E",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- Ger",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS243E6A",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- Marketing",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS243E69",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- Spanish",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS33A791",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - English",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS33A792",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - French",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS33A795",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - German",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS33A78E",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - Intercul",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS33A78F",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - Life",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS33A790",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - Spanish",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS33A78D",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2- Chinese",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE137",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Chinese",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE139",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - English",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE13A",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - French",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE13B",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - German",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE13C",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Image Editing",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE138",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Intercultural",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE13D",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Spanish",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS07F52C",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - English",
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS53E8BB",
     "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - Media",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
-    "id": "BGLOM%5F8%5F4a",
-    "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - Chinese",
-    "departmentId": "bfmp"
+    "id": "%23SPLUS07F530",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - Spanish",
+    "departmentId": "bmfp"
   },
   {
     "id": "BGLOM%5F8%5F4b",
     "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - English",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS07F53E",
+    "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - Ethics",
+    "departmentId": "bmfp"
   },
   {
     "id": "BGLOM%5F8%5F4c",
     "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - Ethics",
-    "departmentId": "bfmp"
-  },
-  {
-    "id": "BGLOM%5F8%5F4d",
-    "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - French",
-    "departmentId": "bfmp"
-  },
-  {
-    "id": "%23SPLUS39821F",
-    "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - German",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS8A16C7",
     "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - Marketing",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS1F7763",
     "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - Media",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BGLOM%5F8%5F4e",
     "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - Spanish",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F1q",
     "name": "BA in Digital Marketing & Public Relations Year 1- Chinese",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F1s",
     "name": "BA in Digital Marketing & Public Relations Year 1- English",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F1a",
     "name": "BA in Digital Marketing & Public Relations Year 1- French",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F1b",
     "name": "BA in Digital Marketing & Public Relations Year 1- German",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F1r",
     "name": "BA in Digital Marketing & Public Relations Year 1- Intercul",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F1c",
     "name": "BA in Digital Marketing & Public Relations Year 1- Mrkt",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F1e",
     "name": "BA in Digital Marketing & Public Relations Year 1- Spanish",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS9885B4",
     "name": "BA in Digital Marketing & Public Relations Year 2 - Chinese",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F2b",
     "name": "BA in Digital Marketing & Public Relations Year 2 - English",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F2c",
     "name": "BA in Digital Marketing & Public Relations Year 2 - French",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS88CD83",
     "name": "BA in Digital Marketing & Public Relations Year 2 - German",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F2a",
     "name": "BA in Digital Marketing & Public Relations Year 2 - Intercul",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F2e",
     "name": "BA in Digital Marketing & Public Relations Year 2 - Life",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMPR%5F7%5F2f",
     "name": "BA in Digital Marketing & Public Relations Year 2 - Spanish",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS659AA0",
     "name": "BA in Digital Marketing & Public Relations Year 3 - Chinese",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMCP%5F7%5F3b",
     "name": "BA in Digital Marketing & Public Relations Year 3 - English",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMCP%5F7%5F3d",
     "name": "BA in Digital Marketing & Public Relations Year 3 - French",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUSFC8870",
     "name": "BA in Digital Marketing & Public Relations Year 3 - German",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMCP%5F7%5F3c",
     "name": "BA in Digital Marketing & Public Relations Year 3 - Image Editing",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMCP%5F7%5F3a",
     "name": "BA in Digital Marketing & Public Relations Year 3 - Intercultural",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BDMCP%5F7%5F3f",
     "name": "BA in Digital Marketing & Public Relations Year 3 - Spanish",
-    "department极": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F1a",
     "name": "Business (3-year Hons) Level 8 Year 1 - GroupA(English)-Sem1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F1b",
     "name": "Business (3-year Hons) Level 8 Year 1 - GroupB-Sem1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F1c",
     "name": "Business (3-year Hons) Level 8 Year 1 - GroupC-Sem1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F1d",
     "name": "Business (3-year Hons) Level 8 Year 1 - GroupD-Sem1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F2a",
     "name": "Business (3-year Hons) Level 8 Year 2- Economics- Sem1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
-    "极": "BBUST%5F8%5F2b",
+    "id": "BBUST%5F8%5F2b",
     "name": "Business (3-year Hons) Level 8 Year 2- English- Sem1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
-    "id": "BBUST%5F极%5F2f",
+    "id": "BBUST%5F8%5F2f",
     "name": "Business (3-year Hons) Level 8 Year 2- Life- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F2c",
     "name": "Business (3-year Hons) Level 8 Year 2- Marketing- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F2d",
-    "name": "Business (3-year Hons) Level 8 Year 2- SCM- Sem 极",
-    "departmentId": "bfmp"
+    "name": "Business (3-year Hons) Level 8 Year 2- SCM- Sem 1",
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F3f",
     "name": "Business (3-year Hons) Level 8 Year 3- Bus Planning- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F3a",
     "name": "Business (3-year Hons) Level 8 Year 3- English- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F3b",
     "name": "Business (3-year Hons) Level 8 Year 3- Finance- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F3h",
     "name": "Business (3-year Hons) Level 8 Year 3- IT- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F3c",
     "name": "Business (3-year Hons) Level 8 Year 3- International- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F3e",
     "name": "Business (3-year Hons) Level 8 Year 3- Marketing- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F3d",
     "name": "Business (3-year Hons) Level 8 Year 3- MgtAcc- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBUST%5F8%5F3g",
-    "name": "Business (极-year Hons) Level 8 Year 3- SHRM- Sem 1",
-    "departmentId": "bfmp"
+    "name": "Business (3-year Hons) Level 8 Year 3- SHRM- Sem 1",
+    "departmentId": "bmfp"
   },
   {
     "id": "BBBST%5FB%5F4i",
     "name": "Business Year 4 - Level8 (Add-On) - English- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBBST%5FB%5F4a",
     "name": "Business Year 4 - Level8 (Add-On) - Finance- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBBST%5FB%5F4e",
-    "极": "Business Year 4 - Level8 (Add-On) - French- Sem 1",
-    "departmentId": "bfmp"
+    "name": "Business Year 4 - Level8 (Add-On) - French- Sem 1",
+    "departmentId": "bmfp"
   },
   {
     "id": "%23SPLUS243E57",
     "name": "Business Year 4 - Level8 (Add-On) - German- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBBST%5FB%5F4c",
     "name": "Business Year 4 - Level8 (Add-On) - HR- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBBST%5FB%5F4d",
     "name": "Business Year 4 - Level8 (Add-On) - IT- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BBBST%5FB%5F4h",
     "name": "Business Year 4 - Level8 (Add-On) - Spanish- Sem 1",
-    "departmentId": "bfmp"
+    "departmentId": "bmfp"
   },
   {
     "id": "BCULS%5F6%5F1a",
@@ -962,7 +927,7 @@
   {
     "id": "BCULA%5F7%5F3d",
     "name": "Culinary Arts (BA) - Year 3 - Sem 1",
-    "department极": "bhos"
+    "departmentId": "bhos"
   },
   {
     "id": "BCULE%5F8%5F4a",
@@ -1000,7 +965,7 @@
     "departmentId": "bhos"
   },
   {
-    "id": "BEVNT%5F极%5F3p",
+    "id": "BEVNT%5F7%5F3p",
     "name": "Event Management Year 3 - ERASMUS English- Sem 1",
     "departmentId": "bhos"
   },
@@ -1010,7 +975,7 @@
     "departmentId": "bhos"
   },
   {
-    "id": "BEVNT%5F7%5极3a",
+    "id": "BEVNT%5F7%5F3a",
     "name": "Event Management Year 3 - Intercultural-Sem 1",
     "departmentId": "bhos"
   },
@@ -1046,7 +1011,7 @@
   },
   {
     "id": "BHPMG%5F7%5F2a",
-    "极": "Hospitality Management Year 2 - English- Sem 1",
+    "name": "Hospitality Management Year 2 - English- Sem 1",
     "departmentId": "bhos"
   },
   {
@@ -1081,7 +1046,7 @@
   },
   {
     "id": "BHPMG%5F8%5F4a",
-    "name": "Hospitality Management Year 极 - English - Sem 1",
+    "name": "Hospitality Management Year 4 - English - Sem 1",
     "departmentId": "bhos"
   },
   {
@@ -1160,7 +1125,7 @@
     "departmentId": "bhum"
   },
   {
-    "id": "HARTS%5F8%5极3a",
+    "id": "HARTS%5F8%5F3a",
     "name": "Bachelor of Arts in Humanities Year 3- Sem 1 - English Major",
     "departmentId": "bhum"
   },
@@ -1231,7 +1196,7 @@
   },
   {
     "id": "HSOCA%5F8%5F2a",
-    "name": "Social Care Year 2 - Group A- Sem 极",
+    "name": "Social Care Year 2 - Group A- Sem 1",
     "departmentId": "bhum"
   },
   {
@@ -1300,7 +1265,7 @@
     "departmentId": "eben"
   },
   {
-    "id": "%23SPLUS3F4极74",
+    "id": "%23SPLUS3F4F74",
     "name": "Architectural Technology - Level 8 - Stage 4 - Sem 1",
     "departmentId": "eben"
   },
@@ -1330,7 +1295,7 @@
     "departmentId": "eben"
   },
   {
-    "id": "ECIVL%5F8%5极4a",
+    "id": "ECIVL%5F8%5F4a",
     "name": "Bachelor of Science (Hons) in Civil Engineering (Add-on) Stage 4 - Sem 1",
     "departmentId": "eben"
   },
@@ -1400,6 +1365,11 @@
     "departmentId": "eben"
   },
   {
+    "id": "%23SPLUSA19BEF",
+    "name": "Construction Management Level 7/8 - Stage 1b - Sem 1",
+    "departmentId": "eben"
+  },
+  {
     "id": "%23SPLUS941F07",
     "name": "MSc in Building Surveying - Level 9 - Stage 1 Sem 1",
     "departmentId": "eben"
@@ -1441,7 +1411,7 @@
   },
   {
     "id": "EELEG%5F8%5F4",
-    "name": "Bachelor of Engineering (Hons) in Electical & Electronic Engineering - Stage 4 - Sem 极",
+    "name": "Bachelor of Engineering (Hons) in Electical & Electronic Engineering - Stage 4 - Sem 1",
     "departmentId": "eeme"
   },
   {
@@ -1456,7 +1426,7 @@
   },
   {
     "id": "EEGEN%5F8%5F1b",
-    "name": "Bachelor of Engineering (极ons) in Engineering (Common Entry) - Stage 1b - Sem 1",
+    "name": "Bachelor of Engineering (Hons) in Engineering (Common Entry) - Stage 1b - Sem 1",
     "departmentId": "eeme"
   },
   {
@@ -1487,7 +1457,7 @@
   {
     "id": "EELES%5F7%5F2a",
     "name": "Bachelor of Engineering in Electrical and Electronic Systems (Level 7) - Stage 2 - Sem 1",
-    "departmentId": "极eme"
+    "departmentId": "eeme"
   },
   {
     "id": "EELES%5F7%5F3a",
@@ -1500,13 +1470,13 @@
     "departmentId": "eeme"
   },
   {
-    "id": "EMCHL%5F7%5极1a",
+    "id": "EMCHL%5F7%5F1a",
     "name": "Mechanical Engineering (level 7) - Stage 1a - Sem 1",
     "departmentId": "eeme"
   },
   {
     "id": "EMCHL%5F7%5F2a",
-    "name": "极echanical Engineering (level 7) - Stage 2 - Sem 1",
+    "name": "Mechanical Engineering (level 7) - Stage 2 - Sem 1",
     "departmentId": "eeme"
   },
   {
@@ -1536,7 +1506,7 @@
   },
   {
     "id": "CELEC%5FT%5F4x",
-    "name": "Electrical Term 极 Phase 4 - Group ELT14AY",
+    "name": "Electrical Term 1 Phase 4 - Group ELT14AY",
     "departmentId": "eetr"
   },
   {
@@ -1595,7 +1565,7 @@
     "departmentId": "eetr"
   },
   {
-    "id": "%23极PLUSC7DEEE",
+    "id": "%23SPLUSC7DEEE",
     "name": "Motor Mechanic Term 1 Phase 4 - Group MET1P4AY",
     "departmentId": "eetr"
   },
@@ -1622,7 +1592,7 @@
   {
     "id": "%23SPLUSE1AEFD",
     "name": "Plumbing Term 1 Phase 4 - Group PLT1P4e",
-    "department极": "eetr"
+    "departmentId": "eetr"
   },
   {
     "id": "%23SPLUSE1AEFE",
@@ -1660,7 +1630,7 @@
     "departmentId": "icam"
   },
   {
-    "id": "IMAUD%5F8%5F极a",
+    "id": "IMAUD%5F8%5F2a",
     "name": "BA (Hons) in Audio & Music Production - Level 8 -Year 2a- Sem 3",
     "departmentId": "icam"
   },
@@ -1677,7 +1647,7 @@
   {
     "id": "IMAUD%5F8%5F4a",
     "name": "BA (Hons) in Audio & Music Production - Level 8 -Year 4a- Sem 7",
-    "department极": "icam"
+    "departmentId": "icam"
   },
   {
     "id": "IMAUD%5F8%5F4b",
@@ -1781,22 +1751,17 @@
   },
   {
     "id": "%23SPLUS2AACF2",
-    "name": "BA (Hons) in Music & Performance Technologies - Year 极b- Sem 1 - Level 8",
+    "name": "BA (Hons) in Music & Performance Technologies - Year 1b- Sem 1 - Level 8",
     "departmentId": "icam"
   },
   {
     "id": "%23SPLUS44C9A1",
-    "name": "BA (极ons) in Music & Performance Technologies - Year 2a- Sem 3 - Level 8",
+    "name": "BA (Hons) in Music & Performance Technologies - Year 2a- Sem 3 - Level 8",
     "departmentId": "icam"
   },
   {
     "id": "%23SPLUS44C9A2",
     "name": "BA (Hons) in Music & Performance Technologies - Year 2b- Sem 3 - Level 8",
-    "departmentId": "极cam"
-  },
-  {
-    "id": "IMMUC%5F8%5F3",
-    "极": "BA (Hons) in Music - Year 3 - Sem 5",
     "departmentId": "icam"
   },
   {
@@ -1816,7 +1781,7 @@
   },
   {
     "id": "IMPMA%5F7%5F1c",
-    "name": "BA in Audio and Music Production - Level 7 -Year 1极- Sem 1",
+    "name": "BA in Audio and Music Production - Level 7 -Year 1c- Sem 1",
     "departmentId": "icam"
   },
   {
@@ -1841,7 +1806,7 @@
   },
   {
     "id": "IMMED%5F7%5F1a",
-    "name": "极A in Creative Media Level 7 - Year 1a - Sem 1",
+    "name": "BA in Creative Media Level 7 - Year 1a - Sem 1",
     "departmentId": "icam"
   },
   {
@@ -1865,7 +1830,7 @@
     "departmentId": "icam"
   },
   {
-    "id": "IMMED%5F7%5极3b",
+    "id": "IMMED%5F7%5F3b",
     "name": "BA in Creative Media Level 7 - Year 3b - Sem 5",
     "departmentId": "icam"
   },
@@ -1886,7 +1851,7 @@
   },
   {
     "id": "%23SPLUS44C9A4",
-    "name": "BA in Music & Performance Technologies - Year 2b - Sem 3 - Level 极",
+    "name": "BA in Music & Performance Technologies - Year 2b - Sem 3 - Level 7",
     "departmentId": "icam"
   },
   {
@@ -1900,7 +1865,7 @@
     "departmentId": "icam"
   },
   {
-    "id": "IMTFP%极7%5F2a",
+    "id": "IMTFP%5F7%5F2a",
     "name": "Bachelor of Arts in Theatre and Film Practice Year 2a- Sem 1",
     "departmentId": "icam"
   },
@@ -1935,11 +1900,6 @@
     "departmentId": "icam"
   },
   {
-    "id": "%23SPLUSB42A53",
-    "name": "Master of Arts in Creative Practice",
-    "departmentId": "icam"
-  },
-  {
     "id": "ICCSO%5F7%5F2a",
     "name": "BSc (Hons) in Computing Systems & Operations - Year 2 Level 7",
     "departmentId": "icsm"
@@ -1951,7 +1911,7 @@
   },
   {
     "id": "%23SPLUS3E61CB",
-    "name": "B极c (Hons) in Computing Systems & Operations - Year 3 - Level 8",
+    "name": "BSc (Hons) in Computing Systems & Operations - Year 3 - Level 8",
     "departmentId": "icsm"
   },
   {
@@ -1970,7 +1930,7 @@
     "departmentId": "icsm"
   },
   {
-    "id": "%23SPLUS46BF6极",
+    "id": "%23SPLUS46BF6E",
     "name": "BSc (Hons) in Mathematics & Data Science - Year 4",
     "departmentId": "icsm"
   },
@@ -2056,7 +2016,7 @@
   },
   {
     "id": "IVMDV%5F8%5F1b",
-    "name": "Level 8:B极c (Hons) in Computing in Games Development Year 1 Group 1b - Sem 1",
+    "name": "Level 8:BSc (Hons) in Computing in Games Development Year 1 Group 1b - Sem 1",
     "departmentId": "ivhc"
   },
   {
@@ -2110,7 +2070,7 @@
     "departmentId": "ivhc"
   },
   {
-    "id": "IVSOF%5F8%5极3a",
+    "id": "IVSOF%5F8%5F3a",
     "name": "Level 8:BSc (Hons) in Computing in Software Development Year 3 Group 3a- Sem 1",
     "departmentId": "ivhc"
   },
@@ -2140,7 +2100,7 @@
     "departmentId": "ivhc"
   },
   {
-    "id": "DK%5FIVGER%5F9%5极1a",
+    "id": "DK%5FIVGER%5F9%5F1a",
     "name": "MSc in Computing in Games & Extend Reality - Semester 1",
     "departmentId": "ivhc"
   },
@@ -2155,7 +2115,7 @@
     "departmentId": "ivhc"
   },
   {
-    "id": "%23SP极LUS2B5A4A",
+    "id": "%23SPLUS2B5A4A",
     "name": "MSc in Digital Health Innovation",
     "departmentId": "ivhc"
   },
@@ -2190,7 +2150,7 @@
     "departmentId": "ngen"
   },
   {
-    "id": "NASUS%5F8%5极3a",
+    "id": "NASUS%5F8%5F3a",
     "name": "Agriculture Year 3 - Group A - Sem 1",
     "departmentId": "ngen"
   },
@@ -2217,7 +2177,7 @@
   {
     "id": "NNTHL%5F8%5F1a",
     "name": "Bachelor of Science (Hons) in Nutrition & Health Year 1 - Group A",
-    "department极": "ngen"
+    "departmentId": "ngen"
   },
   {
     "id": "%23SPLUS772776",
@@ -2230,7 +2190,7 @@
     "departmentId": "ngen"
   },
   {
-    "极": "%23SPLUSAB0209",
+    "id": "%23SPLUSAB0209",
     "name": "Bachelor of Science (Hons) in Nutrition & Health Year 2 - Group B",
     "departmentId": "ngen"
   },
@@ -2246,11 +2206,11 @@
   },
   {
     "id": "NLBIO%5F8%5F3b",
-    "name": "Biopharmaceutical Science Level 8 - Year 3 - Group 极b",
+    "name": "Biopharmaceutical Science Level 8 - Year 3 - Group 3b",
     "departmentId": "ngen"
   },
   {
-    "id": "%23极PLUS232CE0",
+    "id": "%23SPLUS232CE0",
     "name": "Biopharmaceutical Science Level 8 - Year 3 - Group 3c",
     "departmentId": "ngen"
   },
@@ -2261,7 +2221,7 @@
   },
   {
     "id": "%23SPLUSFE37AD",
-    "极": "Biopharmaceutical Science Year 4 - Group B - Sem 极",
+    "name": "Biopharmaceutical Science Year 4 - Group B - Sem 1",
     "departmentId": "ngen"
   },
   {
@@ -2316,7 +2276,7 @@
   },
   {
     "id": "NAMAB%5F9%5F5a",
-    "name": "MSc Agricultural Biotechnology - Sem 极",
+    "name": "MSc Agricultural Biotechnology - Sem 1",
     "departmentId": "ngen"
   },
   {
@@ -2332,6 +2292,11 @@
   {
     "id": "NLPHS%5F7%5F3a",
     "name": "Pharmaceutical Science Year 3 - Group 3a - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUS232E39",
+    "name": "Pharmaceutical Science with Regulatory Affairs (add-on)",
     "departmentId": "ngen"
   },
   {
@@ -2366,7 +2331,7 @@
   },
   {
     "id": "%23SPLUS9DE287",
-    "name": "Science Year 1 Group E SEM 极",
+    "name": "Science Year 1 Group E SEM 1",
     "departmentId": "ngen"
   },
   {
@@ -2425,7 +2390,7 @@
     "departmentId": "nnur"
   },
   {
-    "id": "NNLME%5F8%5极4a",
+    "id": "NNLME%5F8%5F4a",
     "name": "BA (Hons) in Leadership and Management for the Early Years Sector",
     "departmentId": "nnur"
   },
@@ -2446,7 +2411,7 @@
   },
   {
     "id": "NNAEC%5F7%5F3a",
-    "极": "BA in Applied Childhood Studies (Part Time) - Year 3",
+    "name": "BA in Applied Childhood Studies (Part Time) - Year 3",
     "departmentId": "nnur"
   },
   {
@@ -2460,18 +2425,8 @@
     "departmentId": "nnur"
   },
   {
-    "id": "DK%5FNNCBS%5F9",
-    "name": "Certificate in Introduction to Cognitive Behavioural Therapy Skills",
-    "departmentId": "nnur"
-  },
-  {
     "id": "NNLMI%5F8%5F1a",
     "name": "Certificate in Leadership Management and Quality Initiative in Intellectual Disabilities",
-    "departmentId": "nnur"
-  },
-  {
-    "id": "NNBCE%5F9%5F5a",
-    "name": "Certificate in Newborn Clinical Examination",
     "departmentId": "nnur"
   },
   {
@@ -2495,7 +2450,7 @@
     "departmentId": "nnur"
   },
   {
-    "id": "NNCP极%5F8%5F1a",
+    "id": "NNCPC%5F8%5F1a",
     "name": "Contemporary Palliative Care Practice",
     "departmentId": "nnur"
   },
@@ -2536,7 +2491,7 @@
   },
   {
     "id": "NNGEN%5F8%5F1d",
-    "name": "General Nursing Year 1 - Group D - Sem 极",
+    "name": "General Nursing Year 1 - Group D - Sem 1",
     "departmentId": "nnur"
   },
   {
@@ -2550,9 +2505,9 @@
     "departmentId": "nnur"
   },
   {
-    "id": "NNGEN%5F极%5F2b",
+    "id": "NNGEN%5F8%5F2b",
     "name": "General Nursing Year 2 - Group B - Sem 1",
-    "departmentId": "极nur"
+    "departmentId": "nnur"
   },
   {
     "id": "NNGEN%5F8%5F2c",
@@ -2591,7 +2546,7 @@
   },
   {
     "id": "NGNUR%5F8%5F4a",
-    "name": "General Nursing Year 极 - Group A - Sem 1",
+    "name": "General Nursing Year 4 - Group A - Sem 1",
     "departmentId": "nnur"
   },
   {
@@ -2616,7 +2571,7 @@
   },
   {
     "id": "NMWIF%5F8%5F3l",
-    "name": "General/Midwifery/MentalHl极/Intellectual Nursing Year 3- Practical Group 2",
+    "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 2",
     "departmentId": "nnur"
   },
   {
@@ -2635,9 +2590,9 @@
     "departmentId": "nnur"
   },
   {
-    "id": "NINDS%5F8%5极3k",
+    "id": "NINDS%5F8%5F3k",
     "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 6",
-    "department极": "nnur"
+    "departmentId": "nnur"
   },
   {
     "id": "NINDS%5F8%5F3l",
@@ -2646,7 +2601,7 @@
   },
   {
     "id": "NINDS%5F8%5F3p",
-    "极": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 8",
+    "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 8",
     "departmentId": "nnur"
   },
   {
@@ -2665,7 +2620,7 @@
     "departmentId": "nnur"
   },
   {
-    "id": "%23SPLUS1404C极",
+    "id": "%23SPLUS1404C4",
     "name": "Intellectual Disability Nursing Year 1 - Group C - Sem 1",
     "departmentId": "nnur"
   },
@@ -2731,7 +2686,7 @@
   },
   {
     "id": "%23SPLUS1404B7",
-    "name": "Mental Health Nursing Year 极 - Group C - Sem 1",
+    "name": "Mental Health Nursing Year 1 - Group C - Sem 1",
     "departmentId": "nnur"
   },
   {
@@ -2742,11 +2697,6 @@
   {
     "id": "NNMTL%5F8%5F2b",
     "name": "Mental Health Nursing Year 2 - B - Sem 1",
-    "departmentId": "nnur"
-  },
-  {
-    "id": "%23SPLUS8DDB16",
-    "name": "Mental Health Nursing Year 2 - C - Sem 1",
     "departmentId": "nnur"
   },
   {
@@ -2806,7 +2756,7 @@
   },
   {
     "id": "NMWIF%5F8%5F4a",
-    "name": "极idwifery Year 4 - Group A - Sem 1",
+    "name": "Midwifery Year 4 - Group A - Sem 1",
     "departmentId": "nnur"
   },
   {
