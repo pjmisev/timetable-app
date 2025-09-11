@@ -9,6 +9,8 @@ import Link from "next/link";
 export async function Hero({ id }: AnimatedProps) {
   const session = await auth();
 
+  console.log(session);
+
   return (
     <section
       id={id}
@@ -29,23 +31,35 @@ export async function Hero({ id }: AnimatedProps) {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative fade-in-bottom-10s">
           <div className="w-full sm:w-auto">
-            <Button className="w-full sm:w-auto bg-gradient-to-r from-foreground via-foreground to-foreground/90 text-background hover:opacity-90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-all duration-300">
-              <Link href="/class" className="flex items-center gap-3">
-                <GraduationCap className="w-5 h-5" />
-                <span>Class Timetable</span>
-              </Link>
-            </Button>
+            <Link
+              href={`/class${
+                session?.user.savedClass
+                  ? `?departmentId=${
+                      session.user.savedDepartment
+                    }&classId=${encodeURI(session.user.savedClass)}`
+                  : null
+              }`}
+            >
+              <Button className="w-full sm:w-auto bg-gradient-to-r from-foreground via-foreground to-foreground/90 text-background hover:opacity-90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-all duration-300">
+                <div className="flex items-center gap-3">
+                  <GraduationCap className="w-5 h-5" />
+                  <span>Class Timetable</span>
+                </div>
+              </Button>
+            </Link>
           </div>
           <div className="w-full sm:w-auto">
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto border-foreground/20 text-foreground hover:bg-foreground/10 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-all duration-300"
-            >
-              <Link href="/room" className="flex items-center gap-3">
-                <School className="w-5 h-5" />
-                <span>Room Timetable</span>
-              </Link>
-            </Button>
+            <Link href="/room">
+              <Button
+                variant="outline"
+                className="w-full sm:w-auto border-foreground/20 text-foreground hover:bg-foreground/10 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-all duration-300"
+              >
+                <div className="flex items-center gap-3">
+                  <School className="w-5 h-5" />
+                  <span>Room Timetable</span>
+                </div>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

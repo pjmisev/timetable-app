@@ -15,14 +15,14 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import departments from "./data/departments.json";
-import rooms from "./data/rooms.json";
+import classes from "./data/classes.json";
 import Swal from "sweetalert2";
 import {
-  Building,
   Calendar,
   CalendarX,
   CircleAlert,
-  Cuboid,
+  Users,
+  BookOpen,
 } from "lucide-react";
 import {
   Sheet,
@@ -38,10 +38,10 @@ interface TimetableEntry {
   Description: string;
   Type: string;
   Weeks: string;
-  Groups: string;
   Start: string;
   End: string;
   Staff: string;
+  Location: string;
 }
 
 interface WeekOption {
@@ -50,27 +50,60 @@ interface WeekOption {
   weekNumber?: number;
 }
 
-export default function RoomTimetable() {
+export default function ClassTimetable({
+  savedDepartment,
+  savedClass,
+}: {
+  savedDepartment?: string;
+  savedClass?: string;
+}) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  // States for selection
-  const [selectedDepartment, setSelectedDepartment] = useState(
-    searchParams.get("departmentId") || ""
-  );
-  const [selectedRoom, setSelectedRoom] = useState(
-    searchParams.get("roomId") || ""
-  );
+  const qpDepartment = searchParams.get("departmentId");
+  const qpClass = searchParams.get("classId");
+
+  const [selectedDepartment, setSelectedDepartment] = useState<string>(() => {
+    return qpDepartment || savedDepartment || "";
+  });
+
+  const [selectedClass, setSelectedClass] = useState<string>(() => {
+    if (qpClass) return qpClass;
+    if (
+      !qpDepartment ||
+      (savedDepartment && qpDepartment === savedDepartment)
+    ) {
+      return savedClass || "";
+    }
+    return "";
+  });
+
+  useEffect(() => {
+    const hasQDept = !!qpDepartment;
+    const hasQClass = !!qpClass;
+
+    if (!hasQDept && savedDepartment && !selectedDepartment) {
+      setSelectedDepartment(savedDepartment);
+    }
+
+    const canUseSavedClass =
+      !hasQDept || (savedDepartment && qpDepartment === savedDepartment);
+
+    if (!hasQClass && savedClass && !selectedClass && canUseSavedClass) {
+      setSelectedClass(savedClass);
+    }
+  }, [savedDepartment, savedClass]);
+
   const [week, setWeek] = useState(searchParams.get("week") || "");
 
   // Modals open states
   const [isDeptModalOpen, setIsDeptModalOpen] = useState(false);
-  const [isRoomModalOpen, setIsRoomModalOpen] = useState(false);
+  const [isClassModalOpen, setIsClassModalOpen] = useState(false);
   const [isWeekModalOpen, setIsWeekModalOpen] = useState(false);
 
   // Search terms for filtering
   const [deptSearchTerm, setDeptSearchTerm] = useState("");
-  const [roomSearchTerm, setRoomSearchTerm] = useState("");
+  const [classSearchTerm, setClassSearchTerm] = useState("");
   const [weekSearchTerm, setWeekSearchTerm] = useState("");
 
   // Timetable data + loading state
@@ -85,18 +118,18 @@ export default function RoomTimetable() {
     );
   }, [deptSearchTerm]);
 
-  // Filter rooms by department and search term
-  const filteredRooms = useMemo(() => {
+  // Filter classes by department and search term
+  const filteredClasses = useMemo(() => {
     let filtered = selectedDepartment
-      ? rooms.filter((r) => r.departmentId === selectedDepartment)
-      : rooms;
+      ? classes.filter((c) => c.departmentId === selectedDepartment)
+      : classes;
 
-    if (!roomSearchTerm) return filtered;
+    if (!classSearchTerm) return filtered;
 
-    return filtered.filter((r) =>
-      r.name.toLowerCase().includes(roomSearchTerm.toLowerCase())
+    return filtered.filter((c) =>
+      c.name.toLowerCase().includes(classSearchTerm.toLowerCase())
     );
-  }, [selectedDepartment, roomSearchTerm]);
+  }, [selectedDepartment, classSearchTerm]);
 
   // Generate weeks list
   const weeksList = useMemo(() => {
@@ -182,12 +215,12 @@ export default function RoomTimetable() {
   // Update URL params in the browser
   function updateUrlParams(
     departmentId: string,
-    roomId: string,
+    classId: string,
     weekVal: string
   ) {
     const params = new URLSearchParams();
     if (departmentId) params.set("departmentId", departmentId);
-    if (roomId) params.set("roomId", roomId);
+    if (classId) params.set("classId", classId);
     if (weekVal) params.set("week", weekVal);
     router.push(`?${params.toString()}`);
   }
@@ -195,7 +228,7 @@ export default function RoomTimetable() {
   // Handlers
   function onSelectDepartment(deptId: string) {
     setSelectedDepartment(deptId);
-    setSelectedRoom("");
+    setSelectedClass("");
     setIsDeptModalOpen(false);
     updateUrlParams(deptId, "", week);
     setTimeout(() => {
@@ -203,12 +236,12 @@ export default function RoomTimetable() {
     }, 1000);
   }
 
-  function onSelectRoom(roomId: string) {
-    setSelectedRoom(roomId);
-    setIsRoomModalOpen(false);
-    updateUrlParams(selectedDepartment, roomId, week);
+  function onSelectClass(classId: string) {
+    setSelectedClass(classId);
+    setIsClassModalOpen(false);
+    updateUrlParams(selectedDepartment, classId, week);
     setTimeout(() => {
-      setRoomSearchTerm("");
+      setClassSearchTerm("");
     }, 1000);
   }
 
@@ -224,14 +257,14 @@ export default function RoomTimetable() {
     }
 
     setWeek(weekToSet);
-    updateUrlParams(selectedDepartment, selectedRoom, weekToSet);
+    updateUrlParams(selectedDepartment, selectedClass, weekToSet);
     setIsWeekModalOpen(false);
     setWeekSearchTerm("");
   }
 
-  // Fetch timetable when selectedRoom or week changes
+  // Fetch timetable when selectedClass or week changes
   useEffect(() => {
-    if (!selectedRoom) {
+    if (!selectedClass) {
       setTimetableData([]);
       return;
     }
@@ -240,15 +273,13 @@ export default function RoomTimetable() {
       setLoading(true);
       Swal.fire({
         customClass: {
-          popup: "my-swal", // ← matches CSS above
-          title: "", // optional, we style globally
-          htmlContainer: "", // optional
-          confirmButton: "btn-primary", // ← our classes
+          popup: "my-swal",
+          title: "",
+          htmlContainer: "",
+          confirmButton: "btn-primary",
           cancelButton: "btn-outline",
         },
-        buttonsStyling: false, // ← let our classes control the buttons
-
-        // These use your CSS variables and auto-switch with dark mode
+        buttonsStyling: false,
         background: "var(--popover)",
         color: "var(--popover-foreground)",
         title: "Loading timetable...",
@@ -259,10 +290,11 @@ export default function RoomTimetable() {
       });
       try {
         const params = new URLSearchParams();
-        params.set("roomId", selectedRoom);
+        if (selectedDepartment) params.set("departmentId", selectedDepartment);
+        params.set("classId", selectedClass);
         if (week) params.set("week", week);
 
-        const res = await fetch(`/api/timetable/room?${params.toString()}`, {
+        const res = await fetch(`/api/timetable/class?${params.toString()}`, {
           credentials: "include",
           cache: "no-store",
         });
@@ -280,15 +312,13 @@ export default function RoomTimetable() {
         setLoading(false);
         Swal.fire({
           customClass: {
-            popup: "my-swal", // ← matches CSS above
-            title: "", // optional, we style globally
-            htmlContainer: "", // optional
-            confirmButton: "btn-primary", // ← our classes
+            popup: "my-swal",
+            title: "",
+            htmlContainer: "",
+            confirmButton: "btn-primary",
             cancelButton: "btn-outline",
           },
-          buttonsStyling: false, // ← let our classes control the buttons
-
-          // These use your CSS variables and auto-switch with dark mode
+          buttonsStyling: false,
           background: "var(--popover)",
           color: "var(--popover-foreground)",
           title: "An error has occurred.",
@@ -305,15 +335,15 @@ export default function RoomTimetable() {
     }
 
     fetchTimetable();
-  }, [selectedRoom, week]);
+  }, [selectedClass, week]);
 
   // Display names for buttons
   const selectedDepartmentName =
     departments.find((d) => d.id === selectedDepartment)?.name ||
     "Select Department";
 
-  const selectedRoomName =
-    rooms.find((r) => r.id === selectedRoom)?.name || "Select Room";
+  const selectedClassName =
+    classes.find((c) => c.id === selectedClass)?.name || "Select Class";
 
   const selectedWeekLabel =
     weeksList.find(
@@ -368,7 +398,7 @@ export default function RoomTimetable() {
     return isDesktop;
   }
 
-  const isDesktop = useIsDesktop(); // true for ≥640px
+  const isDesktop = useIsDesktop();
 
   return (
     <div className="container mx-auto px-4 py-6">
@@ -381,8 +411,8 @@ export default function RoomTimetable() {
                 variant="outline"
                 className="font-bold fade-in-bottom-05s whitespace-normal h-auto min-h-10 py-2 px-3 text-wrap"
               >
-                <Building />
-                {selectedDepartmentName}
+                <Users className="shrink-0" />
+                <span className="text-left">{selectedDepartmentName}</span>
               </Button>
             </DialogTrigger>
             <DialogContent className="max-w-md max-h-[500px] overflow-auto">
@@ -434,8 +464,8 @@ export default function RoomTimetable() {
                 variant="outline"
                 className="font-bold fade-in-bottom-05s whitespace-normal h-auto min-h-10 py-2 px-3 text-wrap"
               >
-                <Building />
-                {selectedDepartmentName}
+                <Users className="shrink-0" />
+                <span className="text-left">{selectedDepartmentName}</span>
               </Button>
             </SheetTrigger>
 
@@ -477,50 +507,50 @@ export default function RoomTimetable() {
           </Sheet>
         )}
 
-        {/* Room Modal */}
+        {/* Class Modal */}
         {isDesktop ? (
-          <Dialog open={isRoomModalOpen} onOpenChange={setIsRoomModalOpen}>
-            <DialogTrigger asChild>
+          <Dialog open={isClassModalOpen} onOpenChange={setIsClassModalOpen}>
+            <DialogTrigger asChild className="fade-in-bottom-07s">
               <Button
                 variant="outline"
                 className="font-bold fade-in-bottom-07s whitespace-normal h-auto min-h-10 py-2 px-3 text-wrap"
               >
-                <Cuboid />
-                {selectedRoomName}
+                <BookOpen className="shrink-0" />
+                <span className="text-left">{selectedClassName}</span>
               </Button>
             </DialogTrigger>
             <DialogContent className="max-w-md max-h-[500px] overflow-auto">
               <DialogHeader>
-                <DialogTitle>Select Room</DialogTitle>
+                <DialogTitle>Select Class</DialogTitle>
               </DialogHeader>
 
               <Input
                 placeholder={
                   selectedDepartment
-                    ? "Search rooms..."
+                    ? "Search classes..."
                     : "Select a department first"
                 }
-                value={roomSearchTerm}
-                onChange={(e) => setRoomSearchTerm(e.target.value)}
+                value={classSearchTerm}
+                onChange={(e) => setClassSearchTerm(e.target.value)}
                 autoFocus
                 className="mb-4"
               />
 
               <ul className="max-h-72 overflow-auto border rounded-md border-gray-200">
-                {filteredRooms.length === 0 && (
+                {filteredClasses.length === 0 && (
                   <li className="px-3 py-2 text-muted-foreground">
-                    No rooms found
+                    No classes found
                   </li>
                 )}
-                {filteredRooms.map((room) => (
+                {filteredClasses.map((cls) => (
                   <li
-                    key={room.id}
-                    onClick={() => onSelectRoom(room.id)}
+                    key={cls.id}
+                    onClick={() => onSelectClass(cls.id)}
                     className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
-                      room.id === selectedRoom ? "font-bold" : ""
+                      cls.id === selectedClass ? "font-bold" : ""
                     }`}
                   >
-                    {room.name}
+                    {cls.name}
                   </li>
                 ))}
               </ul>
@@ -528,7 +558,7 @@ export default function RoomTimetable() {
               <DialogFooter>
                 <Button
                   variant="outline"
-                  onClick={() => setIsRoomModalOpen(false)}
+                  onClick={() => setIsClassModalOpen(false)}
                 >
                   Close
                 </Button>
@@ -536,50 +566,50 @@ export default function RoomTimetable() {
             </DialogContent>
           </Dialog>
         ) : (
-          <Sheet open={isRoomModalOpen} onOpenChange={setIsRoomModalOpen}>
+          <Sheet open={isClassModalOpen} onOpenChange={setIsClassModalOpen}>
             <SheetTrigger asChild>
               <Button
                 variant="outline"
-                className="font-bold fade-in-bottom-05s whitespace-normal h-auto min-h-10 py-2 px-3 text-wrap"
+                className="font-bold fade-in-bottom-07s whitespace-normal h-auto min-h-10 py-2 px-3 text-wrap"
               >
-                <Cuboid />
-                {selectedRoomName}
+                <BookOpen className="shrink-0" />
+                <span className="text-left">{selectedClassName}</span>
               </Button>
             </SheetTrigger>
 
             <SheetContent side="bottom" className="h-[85vh] w-full p-0">
               <div className="flex h-full flex-col">
                 <SheetHeader className="px-4 pt-4 pb-2 shrink-0">
-                  <SheetTitle>Select Room</SheetTitle>
+                  <SheetTitle>Select Class</SheetTitle>
                 </SheetHeader>
 
                 <div className="flex flex-1 flex-col overflow-hidden px-4 pt-2">
                   <Input
                     placeholder={
                       selectedDepartment
-                        ? "Search rooms..."
+                        ? "Search classes..."
                         : "Select a department first"
                     }
-                    value={roomSearchTerm}
-                    onChange={(e) => setRoomSearchTerm(e.target.value)}
+                    value={classSearchTerm}
+                    onChange={(e) => setClassSearchTerm(e.target.value)}
                     className="mb-4 shrink-0"
                   />
 
                   <ul className="flex-1 min-h-0 overflow-auto border rounded-md border-gray-200">
-                    {filteredRooms.length === 0 && (
+                    {filteredClasses.length === 0 && (
                       <li className="px-3 py-2 text-muted-foreground">
-                        No rooms found
+                        No classes found
                       </li>
                     )}
-                    {filteredRooms.map((room) => (
+                    {filteredClasses.map((cls) => (
                       <li
-                        key={room.id}
-                        onClick={() => onSelectRoom(room.id)}
+                        key={cls.id}
+                        onClick={() => onSelectClass(cls.id)}
                         className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
-                          room.id === selectedRoom ? "font-bold" : ""
+                          cls.id === selectedClass ? "font-bold" : ""
                         }`}
                       >
-                        {room.name}
+                        {cls.name}
                       </li>
                     ))}
                   </ul>
@@ -591,13 +621,13 @@ export default function RoomTimetable() {
 
         {isDesktop ? (
           <Dialog open={isWeekModalOpen} onOpenChange={setIsWeekModalOpen}>
-            <DialogTrigger asChild>
+            <DialogTrigger asChild className="fade-in-bottom-10s">
               <Button
                 variant="outline"
                 className="font-bold fade-in-bottom-10s whitespace-normal h-auto min-h-10 py-2 px-3 text-wrap"
               >
-                <Calendar />
-                {selectedWeekLabel}
+                <Calendar className="shrink-0" />
+                <span className="text-left">{selectedWeekLabel}</span>
               </Button>
             </DialogTrigger>
 
@@ -654,8 +684,8 @@ export default function RoomTimetable() {
                 variant="outline"
                 className="font-bold fade-in-bottom-10s whitespace-normal h-auto min-h-10 py-2 px-3 text-wrap"
               >
-                <Calendar />
-                {selectedWeekLabel}
+                <Calendar className="shrink-0" />
+                <span className="text-left">{selectedWeekLabel}</span>
               </Button>
             </SheetTrigger>
 
@@ -702,19 +732,19 @@ export default function RoomTimetable() {
         )}
       </div>
 
-      {/* Empty state (only when not loading, a room is selected, and no entries) */}
-      {!loading && !selectedRoom && !hasAnyEntries && (
+      {/* Empty state (only when not loading, a class is selected, and no entries) */}
+      {!loading && !selectedClass && !hasAnyEntries && (
         <div className="flex flex-col items-center justify-center py-16 text-center text-muted-foreground fade-in-bottom-12s">
           <CircleAlert className="h-12 w-12 mb-4" />
           <p>
-            Please select the Department, Room and Week you would like to
+            Please select the Department, Class and Week you would like to
             display from the fields above.
           </p>
         </div>
       )}
 
-      {/* Empty state (only when not loading, a room is selected, and no entries) */}
-      {!loading && selectedRoom && !hasAnyEntries && (
+      {/* Empty state (only when not loading, a class is selected, and no entries) */}
+      {!loading && selectedClass && !hasAnyEntries && (
         <div className="flex flex-col items-center justify-center py-16 text-center text-muted-foreground fade-in-bottom">
           <CalendarX className="h-12 w-12 mb-4" />
           <p>
@@ -761,21 +791,14 @@ export default function RoomTimetable() {
                       </CardHeader>
                       <CardContent className="text-sm">
                         <div className="flex flex-wrap items-center gap-2">
-                          <span className="font-medium">Groups:</span>
-                          {(entry.Groups || "")
-                            .split(";")
-                            .map((g) => g.trim())
-                            .filter(Boolean)
-                            .map((g, idx) => (
-                              <Badge
-                                key={`${day}-${idx}-${g}`}
-                                className={`text-black dark:text-white ${
-                                  dayBgClasses[day] || "bg-muted"
-                                }`}
-                              >
-                                {g}
-                              </Badge>
-                            ))}
+                          <span className="font-medium">Location:</span>
+                          <Badge
+                            className={`text-black dark:text-white ${
+                              dayBgClasses[day] || "bg-muted"
+                            }`}
+                          >
+                            {entry.Location}
+                          </Badge>
                         </div>
                       </CardContent>
                     </Card>

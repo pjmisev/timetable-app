@@ -29,34 +29,37 @@ export function Hero({ id }: AnimatedProps) {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative fade-in-bottom-10s">
           <div className="w-full sm:w-auto">
-            <Button className="w-full sm:w-auto bg-gradient-to-r from-foreground via-foreground to-foreground/90 text-background hover:opacity-90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-all duration-300">
-              <Link href="/login" className="flex items-center gap-3">
-                <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </Button>
+            <Link href="/login">
+              <Button className="w-full sm:w-auto bg-gradient-to-r from-foreground via-foreground to-foreground/90 text-background hover:opacity-90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-all duration-300">
+                <div className="flex items-center gap-3">
+                  <span>Get Started</span>
+                  <ArrowRight className="w-5 h-5" />
+                </div>
+              </Button>
+            </Link>
           </div>
           <div className="w-full sm:w-auto">
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto border-foreground/20 text-foreground hover:bg-foreground/10 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-all duration-300"
+            <Link
+              href="https://github.com/pjmisev/timetable-app"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Link
-                href="https://github.com/pjmisev/timetable-app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3"
+              <Button
+                variant="outline"
+                className="w-full sm:w-auto border-foreground/20 text-foreground hover:bg-foreground/10 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-all duration-300"
               >
-                <Image
-                  src="/img/auth/github.svg"
-                  height={20}
-                  width={20}
-                  alt="Github Logo"
-                  className="w-5 h-5"
-                />
-                <span>Source Code</span>
-              </Link>
-            </Button>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src="/img/auth/github.svg"
+                    height={20}
+                    width={20}
+                    alt="Github Logo"
+                    className="w-5 h-5"
+                  />
+                  <span>Source Code</span>
+                </div>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
