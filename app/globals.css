@@ -1,0 +1,311 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+html {
+  background-color: var(--background);
+
+  background-image:
+    linear-gradient(to bottom, transparent 72%, var(--background) 100%),
+    radial-gradient(65vmax 50vmax at 8% 12%, rgba(255,110,199,0.28), transparent 60%),
+    radial-gradient(75vmax 55vmax at 92% 16%, rgba(110,181,255,0.24), transparent 65%),
+    radial-gradient(70vmax 50vmax at 12% 88%, rgba(255,216,120,0.18), transparent 65%),
+    radial-gradient(55vmax 45vmax at 94% 86%, rgba(171,236,214,0.22), transparent 60%);
+
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top center, top center, top center, top center, top center;
+  background-size: 100% 100dvh, 100% 100dvh, 100% 100dvh, 100% 100dvh, 100% 100dvh;
+}
+
+body { background: transparent !important; }
+
+html.dark,
+body.dark {
+  background-color: var(--background);
+  background-image:
+    linear-gradient(to bottom, transparent 72%, var(--background) 100%),
+    radial-gradient(65vmax 50vmax at 8% 12%, rgba(255,110,199,0.18), transparent 60%),
+    radial-gradient(75vmax 55vmax at 92% 16%, rgba(110,181,255,0.16), transparent 65%),
+    radial-gradient(70vmax 50vmax at 12% 88%, rgba(255,216,120,0.12), transparent 65%),
+    radial-gradient(55vmax 45vmax at 94% 86%, rgba(171,236,214,0.14), transparent 60%);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top center, top center, top center, top center, top center;
+  background-size: 100% 100dvh, 100% 100dvh, 100% 100dvh, 100% 100dvh, 100% 100dvh;
+}
+
+body::before { content: none !important; }
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jura);
+  --font-mono: var(--font-jura);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.65rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary: oklch(55.495% 0.12571 239.331);
+  --primary-foreground: oklch(0.969 0.016 293.756);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(55.495% 0.12571 239.331);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-primary: oklch(55.495% 0.12571 239.331);
+  --sidebar-primary-foreground: oklch(0.969 0.016 293.756);
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(55.495% 0.12571 239.331);
+}
+
+.dark {
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(55.495% 0.12571 239.331);
+  --primary-foreground: oklch(0.969 0.016 293.756);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(55.495% 0.12571 239.331);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(55.495% 0.12571 239.331);
+  --sidebar-primary-foreground: oklch(0.969 0.016 293.756);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(55.495% 0.12571 239.331);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2025-8-19 13:41:59
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-bottom {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-in-bottom-02s {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+}
+
+.fade-in-bottom-05s {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
+}
+
+.fade-in-bottom-07s {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.7s both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.7s both;
+}
+
+.fade-in-bottom-10s {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+}
+
+.fade-in-bottom-12s {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.2s both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.2s both;
+}
+
+.fade-in-bottom-15s {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2025-8-19 13:55:20
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/* SweetAlert2 x shadcn/tailwind theme — always last in the file */
+html .swal2-container .swal2-popup.my-swal {
+  /* shadcn tokens: these swap when html.dark toggles */
+  background-color: var(--popover) !important;
+  color: var(--popover-foreground) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg, 0.75rem) !important;
+  box-shadow: 0 10px 30px oklch(0 0 0 / 0.15) !important;
+}
+
+html .swal2-container .swal2-title {
+  font-size: 1.125rem !important; /* text-lg */
+  font-weight: 700 !important;
+  color: var(--foreground) !important;
+}
+
+html .swal2-container .swal2-html-container {
+  color: color-mix(in oklch, var(--foreground) 82%, transparent) !important;
+}
+
+/* Buttons — disable SA2’s styling and use Tailwind look */
+html .swal2-container .swal2-actions {
+  gap: 0.5rem !important;
+}
+
+/* When buttonsStyling: false, SA2 won’t inject its own button styles */
+html .swal2-container .btn-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.5rem 0.875rem; border-radius: 0.5rem;
+  background: var(--primary); color: var(--primary-foreground);
+  border: 1px solid color-mix(in oklch, var(--primary) 70%, transparent);
+}
+html .swal2-container .btn-primary:hover { background: color-mix(in oklch, var(--primary) 90%, black 0%); }
+
+html .swal2-container .btn-outline {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.5rem 0.875rem; border-radius: 0.5rem;
+  background: var(--muted); color: var(--muted-foreground);
+  border: 1px solid var(--border);
+}
+html .swal2-container .btn-outline:hover { background: color-mix(in oklch, var(--muted) 85%, transparent); }
+
+/* Icons adapt to theme */
+html .swal2-container .swal2-icon {
+  box-shadow: none !important;
+  border-color: var(--border) !important;
+}

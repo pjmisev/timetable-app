@@ -1,0 +1,12 @@
+[
+  { "id": "hospitality", "name": "Hospitality Building" },
+  { "id": "lirc", "name": "Learning Information Resource Center" },
+  { "id": "mpc", "name": "Multi Purpose Center" },
+  { "id": "ntb", "name": "New Theatre Building" },
+  { "id": "north", "name": "North Block" },
+  { "id": "nhsb", "name": "Nursing Health Sciences Building" },
+  { "id": "outreach", "name": "Outreach Location" },
+  { "id": "pjc", "name": "PJ Carroll's" },
+  { "id": "south", "name": "South Block" },
+  { "id": "west", "name": "West Block" }
+]

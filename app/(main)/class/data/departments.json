@@ -1,0 +1,14 @@
+[
+  { "id": "bbus", "name": "Business Studies" },
+  { "id": "bfmp", "name": "Management & Financial Studies" },
+  { "id": "bhos", "name": "Hospitality Studies" },
+  { "id": "bhum", "name": "Humanities" },
+  { "id": "eben", "name": "Department of the Built Environment" },
+  { "id": "ebsv", "name": "Building & Surveying" },
+  { "id": "eeme", "name": "Electronics & Mechanical Engineering" },
+  { "id": "eetr", "name": "Engineering Trades" },
+  { "id": "icsm", "name": "Department of Creative Arts, Media & Music" },
+  { "id": "ivhc", "name": "Department of Visual & Human-Centered Computing" },
+  { "id": "ngen", "name": "Health & Science" },
+  { "id": "nnur", "name": "Nursing, Midwifery & Early Years" }
+]

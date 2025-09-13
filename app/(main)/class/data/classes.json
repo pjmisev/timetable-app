@@ -1,0 +1,2777 @@
+[
+  {
+    "id": "BBBSP%5F8%5F1a",
+    "name": "Bachelor of Business Studies (Hons) - Part-Time - Year 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBBSP%5F8%5F2a",
+    "name": "Bachelor of Business Studies (Hons) - Part-Time - Year 2",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBBSP%5F8%5F3a",
+    "name": "Bachelor of Business Studies (Hons) - Part-Time - Year 3",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBBSP%5F8%5F4a",
+    "name": "Bachelor of Business Studies (Hons) - Part-Time - Year 4",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F1a",
+    "name": "Business & Management Year 1 - Chinese- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F1c",
+    "name": "Business & Management Year 1 - English- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F1d",
+    "name": "Business & Management Year 1 - French- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F1y",
+    "name": "Business & Management Year 1 - German- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F1f",
+    "name": "Business & Management Year 1 - Intercultural- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F1e",
+    "name": "Business & Management Year 1 - Spanish- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F1g",
+    "name": "Business & Management Year 1 - Tourism- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F2x",
+    "name": "Business & Management Year 2 - Chinese- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F2c",
+    "name": "Business & Management Year 2 - English- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F2d",
+    "name": "Business & Management Year 2 - French- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS88CD81",
+    "name": "Business & Management Year 2 - German- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F2h",
+    "name": "Business & Management Year 2 - Intercultural- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F2g",
+    "name": "Business & Management Year 2 - Spanish- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F2i",
+    "name": "Business & Management Year 2 - Tourism- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F3g",
+    "name": "Business & Management Year 3 - Chinese- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F3c",
+    "name": "Business & Management Year 3 - English- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F3d",
+    "name": "Business & Management Year 3 - French- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUSFC8872",
+    "name": "Business & Management Year 3 - German- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F3a",
+    "name": "Business & Management Year 3 - Intercultural- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F3f",
+    "name": "Business & Management Year 3 - Spanish- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSMG%5F7%5F3b",
+    "name": "Business & Management Year 3 - Tourism- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F1x",
+    "name": "Business & Technology Year 1 - Chinese-Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F1a",
+    "name": "Business & Technology Year 1 - English- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F1b",
+    "name": "Business & Technology Year 1 - French- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F1p",
+    "name": "Business & Technology Year 1 - German-Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F1e",
+    "name": "Business & Technology Year 1 - Intercultural - Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F1c",
+    "name": "Business & Technology Year 1 - Spanish- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F1f",
+    "name": "Business & Technology Year 1 - Tourism- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F2x",
+    "name": "Business & Technology Year 2 - Chinese- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F2a",
+    "name": "Business & Technology Year 2 - English- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F2b",
+    "name": "Business & Technology Year 2 - French- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS88CD82",
+    "name": "Business & Technology Year 2 - German- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F2e",
+    "name": "Business & Technology Year 2 - Society- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F2c",
+    "name": "Business & Technology Year 2 - Spanish- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F2f",
+    "name": "Business & Technology Year 2 - Tourism- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F3a",
+    "name": "Business & Technology Year 3 - Chinese- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F3b",
+    "name": "Business & Technology Year 3 - English- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F3c",
+    "name": "Business & Technology Year 3 - French- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUSFC8871",
+    "name": "Business & Technology Year 3 - German- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F3d",
+    "name": "Business & Technology Year 3 - PR- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F3e",
+    "name": "Business & Technology Year 3 - Society- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F3f",
+    "name": "Business & Technology Year 3 - Spanish- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBSTY%5F7%5F3g",
+    "name": "Business & Technology Year 3 - Tourism- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F338",
+    "name": "Business with Management (Hons) 1 - English- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F337",
+    "name": "Business with Management (Hons) Year 1 - Chinese- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F339",
+    "name": "Business with Management (Hons) Year 1 - French- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F33A",
+    "name": "Business with Management (Hons) Year 1 - German- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F33B",
+    "name": "Business with Management (Hons) Year 1 - Intercultural- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F33C",
+    "name": "Business with Management (Hons) Year 1 - Spanish- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F33D",
+    "name": "Business with Management (Hons) Year 1 - Tourism- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F33E",
+    "name": "Business with Management (Hons) Year 2 - Chinese- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F33F",
+    "name": "Business with Management (Hons) Year 2 - English- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F340",
+    "name": "Business with Management (Hons) Year 2 - French- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F341",
+    "name": "Business with Management (Hons) Year 2 - German- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F342",
+    "name": "Business with Management (Hons) Year 2 - Intercultural- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F343",
+    "name": "Business with Management (Hons) Year 2 - Spanish- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F344",
+    "name": "Business with Management (Hons) Year 2 - Tourism- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS9B514F",
+    "name": "Business with Management Year 3 (Hons) Advanced Entry - Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BACCT%5F6%5F1a",
+    "name": "Cert in Accounting - Sept- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BCOMS%5F6%5F1a",
+    "name": "Cert in Communication Skills- Sept- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BANAS%5F7%5F1a",
+    "name": "Cert in Data Analytics for Business - Sept- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BCETL%5F7%5F1a",
+    "name": "Cert in Employment Law - Sept- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BMNGT%5F6%5F1a",
+    "name": "Cert in Management - Sept- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BMFUN%5F6%5F1a",
+    "name": "Cert in Management Fundamentals - Sept- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BINTL%5F7%5F3e",
+    "name": "ERASMUS - General - Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BINTL%5F7%5F3a",
+    "name": "ERASMUS - Option - French - Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BINTL%5F7%5F3b",
+    "name": "ERASMUS - Option - Spanish - Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBUSS%5F8%5F1a",
+    "name": "Higher Diploma in Business - Sem 1 (Eng)",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBUSS%5F8%5F1m",
+    "name": "Higher Diploma in Business - Sem 1 (IT)",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F329",
+    "name": "International Business with Digitalisation Year 1 - Chinese-Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F32A",
+    "name": "International Business with Digitalisation Year 1 - English- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F32B",
+    "name": "International Business with Digitalisation Year 1 - French- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F32C",
+    "name": "International Business with Digitalisation Year 1 - German-Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F32D",
+    "name": "International Business with Digitalisation Year 1 - Intercultural - Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F32F",
+    "name": "International Business with Digitalisation Year 1 - Spanish- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F32E",
+    "name": "International Business with Digitalisation Year 1 - Tourism- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F330",
+    "name": "International Business with Digitalisation Year 2 - Chinese- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F331",
+    "name": "International Business with Digitalisation Year 2 - English- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F332",
+    "name": "International Business with Digitalisation Year 2 - French- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F333",
+    "name": "International Business with Digitalisation Year 2 - German- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F334",
+    "name": "International Business with Digitalisation Year 2 - Society- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F335",
+    "name": "International Business with Digitalisation Year 2 - Spanish- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUS56F336",
+    "name": "International Business with Digitalisation Year 2 - Tourism- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUSC978E4",
+    "name": "International Business with Digitalisation Year 3 - Chinese - Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUSC978E6",
+    "name": "International Business with Digitalisation Year 3 - English- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUSC978E9",
+    "name": "International Business with Digitalisation Year 3 - French Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUSC978EB",
+    "name": "International Business with Digitalisation Year 3 - German - Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUSC978EC",
+    "name": "International Business with Digitalisation Year 3 - PR- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUSC978ED",
+    "name": "International Business with Digitalisation Year 3 - Society- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUSC978EE",
+    "name": "International Business with Digitalisation Year 3 -Spanish- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUSC978EF",
+    "name": "International Business with Digitalisation Year 3 -Tourism - Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBUSS%5F9%5F5a",
+    "name": "MBS in Entrepreneurship & Marketing (Masters)- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "%23SPLUSB85476",
+    "name": "Postgraduate Diploma in Strategic Data Analytics for Business - JanStart - Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BSTDA%5F9%5F5a",
+    "name": "Postgraduate Diploma in Strategic Data Analytics for Business - Sept- Sem 1",
+    "departmentId": "bbus"
+  },
+  {
+    "id": "BBAAF%5FB%5F1a",
+    "name": "Accounting & Finance Year 1 - Group A- Sem 1(English)",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBAAF%5FB%5F1b",
+    "name": "Accounting & Finance Year 1 - Group B- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBAAF%5FB%5F1c",
+    "name": "Accounting & Finance Year 1 - Group C- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBAAF%5FB%5F1d",
+    "name": "Accounting & Finance Year 1 - Group D- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS422DE8",
+    "name": "Accounting & Finance Year 1 - Group E- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBAAF%5FB%5F2b",
+    "name": "Accounting & Finance Year 2 - Group B- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBAAF%5FB%5F2a",
+    "name": "Accounting & Finance Year 2 - Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBAAF%5FB%5F3a",
+    "name": "Accounting & Finance Year 3 - Group A- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBAAF%5FB%5F3b",
+    "name": "Accounting & Finance Year 3 - Group B- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS243E66",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- Chinese",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS243E6B",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- Cul",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS243E68",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- English",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS243E67",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- French",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS243E6E",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- Ger",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS243E6A",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- Marketing",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS243E69",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 1- Spanish",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS33A791",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - English",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS33A792",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - French",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS33A795",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - German",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS33A78E",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - Intercul",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS33A78F",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - Life",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS33A790",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2 - Spanish",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS33A78D",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 2- Chinese",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE137",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Chinese",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE139",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - English",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE13A",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - French",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE13B",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - German",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE13C",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Image Editing",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE138",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Intercultural",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8CE13D",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 3 - Spanish",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS07F52C",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - English",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS53E8BB",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - Media",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS07F530",
+    "name": "BA (Hons) in Digital Marketing & Strategic Communication Year 4 - Spanish",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BGLOM%5F8%5F4b",
+    "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - English",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS07F53E",
+    "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - Ethics",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BGLOM%5F8%5F4c",
+    "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - Ethics",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS8A16C7",
+    "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - Marketing",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS1F7763",
+    "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - Media",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BGLOM%5F8%5F4e",
+    "name": "BA (Hons) in Global Marketing & Strategic Communication Year 4 - Sem 1 - Spanish",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F1q",
+    "name": "BA in Digital Marketing & Public Relations Year 1- Chinese",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F1s",
+    "name": "BA in Digital Marketing & Public Relations Year 1- English",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F1a",
+    "name": "BA in Digital Marketing & Public Relations Year 1- French",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F1b",
+    "name": "BA in Digital Marketing & Public Relations Year 1- German",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F1r",
+    "name": "BA in Digital Marketing & Public Relations Year 1- Intercul",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F1c",
+    "name": "BA in Digital Marketing & Public Relations Year 1- Mrkt",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F1e",
+    "name": "BA in Digital Marketing & Public Relations Year 1- Spanish",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS9885B4",
+    "name": "BA in Digital Marketing & Public Relations Year 2 - Chinese",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F2b",
+    "name": "BA in Digital Marketing & Public Relations Year 2 - English",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F2c",
+    "name": "BA in Digital Marketing & Public Relations Year 2 - French",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS88CD83",
+    "name": "BA in Digital Marketing & Public Relations Year 2 - German",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F2a",
+    "name": "BA in Digital Marketing & Public Relations Year 2 - Intercul",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F2e",
+    "name": "BA in Digital Marketing & Public Relations Year 2 - Life",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMPR%5F7%5F2f",
+    "name": "BA in Digital Marketing & Public Relations Year 2 - Spanish",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS659AA0",
+    "name": "BA in Digital Marketing & Public Relations Year 3 - Chinese",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMCP%5F7%5F3b",
+    "name": "BA in Digital Marketing & Public Relations Year 3 - English",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMCP%5F7%5F3d",
+    "name": "BA in Digital Marketing & Public Relations Year 3 - French",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUSFC8870",
+    "name": "BA in Digital Marketing & Public Relations Year 3 - German",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMCP%5F7%5F3c",
+    "name": "BA in Digital Marketing & Public Relations Year 3 - Image Editing",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMCP%5F7%5F3a",
+    "name": "BA in Digital Marketing & Public Relations Year 3 - Intercultural",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BDMCP%5F7%5F3f",
+    "name": "BA in Digital Marketing & Public Relations Year 3 - Spanish",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F1a",
+    "name": "Business (3-year Hons) Level 8 Year 1 - GroupA(English)-Sem1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F1b",
+    "name": "Business (3-year Hons) Level 8 Year 1 - GroupB-Sem1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F1c",
+    "name": "Business (3-year Hons) Level 8 Year 1 - GroupC-Sem1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F1d",
+    "name": "Business (3-year Hons) Level 8 Year 1 - GroupD-Sem1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F2a",
+    "name": "Business (3-year Hons) Level 8 Year 2- Economics- Sem1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F2b",
+    "name": "Business (3-year Hons) Level 8 Year 2- English- Sem1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F2f",
+    "name": "Business (3-year Hons) Level 8 Year 2- Life- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F2c",
+    "name": "Business (3-year Hons) Level 8 Year 2- Marketing- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F2d",
+    "name": "Business (3-year Hons) Level 8 Year 2- SCM- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F3f",
+    "name": "Business (3-year Hons) Level 8 Year 3- Bus Planning- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F3a",
+    "name": "Business (3-year Hons) Level 8 Year 3- English- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F3b",
+    "name": "Business (3-year Hons) Level 8 Year 3- Finance- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F3h",
+    "name": "Business (3-year Hons) Level 8 Year 3- IT- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F3c",
+    "name": "Business (3-year Hons) Level 8 Year 3- International- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F3e",
+    "name": "Business (3-year Hons) Level 8 Year 3- Marketing- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F3d",
+    "name": "Business (3-year Hons) Level 8 Year 3- MgtAcc- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBUST%5F8%5F3g",
+    "name": "Business (3-year Hons) Level 8 Year 3- SHRM- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBBST%5FB%5F4i",
+    "name": "Business Year 4 - Level8 (Add-On) - English- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBBST%5FB%5F4a",
+    "name": "Business Year 4 - Level8 (Add-On) - Finance- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBBST%5FB%5F4e",
+    "name": "Business Year 4 - Level8 (Add-On) - French- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "%23SPLUS243E57",
+    "name": "Business Year 4 - Level8 (Add-On) - German- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBBST%5FB%5F4c",
+    "name": "Business Year 4 - Level8 (Add-On) - HR- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBBST%5FB%5F4d",
+    "name": "Business Year 4 - Level8 (Add-On) - IT- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BBBST%5FB%5F4h",
+    "name": "Business Year 4 - Level8 (Add-On) - Spanish- Sem 1",
+    "departmentId": "bmfp"
+  },
+  {
+    "id": "BCULS%5F6%5F1a",
+    "name": "Certificate in Culinary Skills - Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BCULA%5F7%5F1b",
+    "name": "Culinary Arts (BA) - Year 1 - Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BCULA%5F7%5F2a",
+    "name": "Culinary Arts (BA) - Year 2 - Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BCULA%5F7%5F3d",
+    "name": "Culinary Arts (BA) - Year 3 - Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BCULE%5F8%5F4a",
+    "name": "Culinary Enterprise (BA Hons) Year 4 - Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F7%5F1a",
+    "name": "Event Management Year 1 - English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F7%5F1f",
+    "name": "Event Management Year 1 - InterCul- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F7%5F1e",
+    "name": "Event Management Year 1 - Tourism- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F7%5F2b",
+    "name": "Event Management Year 2 - English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F7%5F2a",
+    "name": "Event Management Year 2 - Intercultural- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F7%5F2f",
+    "name": "Event Management Year 2 - Tourism- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F7%5F3p",
+    "name": "Event Management Year 3 - ERASMUS English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F7%5F3b",
+    "name": "Event Management Year 3 - English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F7%5F3a",
+    "name": "Event Management Year 3 - Intercultural-Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F7%5F3h",
+    "name": "Event Management Year 3 - Tourism- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F8%5F4a",
+    "name": "Event Management Year 4 - English - Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F8%5F4c",
+    "name": "Event Management Year 4 - Tourism - Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BHPMG%5F7%5F1a",
+    "name": "Hospitality Management Year 1 - English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BHPMG%5F7%5F1c",
+    "name": "Hospitality Management Year 1 - InterCul- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BHPMG%5F7%5F1e",
+    "name": "Hospitality Management Year 1 - Tourism- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BHPMG%5F7%5F2a",
+    "name": "Hospitality Management Year 2 - English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BHPMG%5F7%5F2e",
+    "name": "Hospitality Management Year 2 - Intercultural- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BHPMG%5F7%5F2d",
+    "name": "Hospitality Management Year 2 - Tourism- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BEVNT%5F7%5F3q",
+    "name": "Hospitality Management Year 3 - ERASMUS English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BHPMG%5F7%5F3a",
+    "name": "Hospitality Management Year 3 - English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BHPMG%5F7%5F3x",
+    "name": "Hospitality Management Year 3 - Intercultural- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BHPMG%5F7%5F3f",
+    "name": "Hospitality Management Year 3 - Tourism- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BHPMG%5F8%5F4a",
+    "name": "Hospitality Management Year 4 - English - Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "BHPMG%5F8%5F4c",
+    "name": "Hospitality Management Year 4 - Tourism - Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "%23SPLUS4FF6E0",
+    "name": "International Tourism Management Year 1 - English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "%23SPLUSA833DE",
+    "name": "International Tourism Management Year 1 - Lang & Cul- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "%23SPLUS890FA2",
+    "name": "International Tourism Management Year 2 - English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "%23SPLUS890FA3",
+    "name": "International Tourism Management Year 2 - Lang & Cul- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "%23SPLUS3EDF69",
+    "name": "International Tourism Management Year 3 - English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "%23SPLUSDC1FEB",
+    "name": "International Tourism Management Year 3 - Lang & Cul- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "%23SPLUS243E8B",
+    "name": "Marketing & International Tourism Management Year 1 - English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "%23SPLUS243E8A",
+    "name": "Marketing & International Tourism Management Year 1 - Lang & Cul- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "%23SPLUSA41D43",
+    "name": "Marketing & International Tourism Management Year 2 - English- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "%23SPLUSA41D42",
+    "name": "Marketing & International Tourism Management Year 2 - Lang & Cul- Sem 1",
+    "departmentId": "bhos"
+  },
+  {
+    "id": "HARTS%5F8%5F1a",
+    "name": "Bachelor of Arts in Humanities Year 1- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HARTS%5F8%5F2a",
+    "name": "Bachelor of Arts in Humanities Year 2- Sem 1 - English Major",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HARTS%5F8%5F2b",
+    "name": "Bachelor of Arts in Humanities Year 2- Sem 1 - Hist & Arch Major",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HARTS%5F8%5F2c",
+    "name": "Bachelor of Arts in Humanities Year 2- Sem 1 - Politics Major",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HARTS%5F8%5F3a",
+    "name": "Bachelor of Arts in Humanities Year 3- Sem 1 - English Major",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HARTS%5F8%5F3b",
+    "name": "Bachelor of Arts in Humanities Year 3- Sem 1 - History Major",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HARTS%5F8%5F3c",
+    "name": "Bachelor of Arts in Humanities Year 3- Sem 1 - Politics Major",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "BFSIE%5F6%5F1w",
+    "name": "Cert in Foundation Studies - Sept Intake - (Computing)",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "BFSIE%5F6%5F1r",
+    "name": "Cert in Foundation Studies - Sept Intake - (Science)",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HCYWO%5F7%5F1a",
+    "name": "Community Youth Work Year 1- Sem 1 Group A",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "%23SPLUSB48C69",
+    "name": "Community Youth Work Year 1- Sem 1 Group B",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "%23SPLUSEEF452",
+    "name": "Community Youth Work Year 2- Part-time",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HCYWO%5F7%5F2a",
+    "name": "Community Youth Work Year 2- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "%23SPLUS14045D",
+    "name": "Community Youth Work Year 3 - Part-Time - Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HCYWO%5F7%5F3a",
+    "name": "Community Youth Work Year 3- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HYOWO%5F8%5F4a",
+    "name": "Community Youth Work Year 4- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSOCA%5F8%5F1a",
+    "name": "Social Care Year 1 - Group A- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSOCA%5F8%5F1b",
+    "name": "Social Care Year 1 - Group B- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSOCA%5F8%5F2a",
+    "name": "Social Care Year 2 - Group A- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSOCA%5F8%5F2b",
+    "name": "Social Care Year 2 - Group B- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSOCA%5F8%5F3a",
+    "name": "Social Care Year 3 - Group A- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSOCA%5F8%5F3b",
+    "name": "Social Care Year 3 - Group B- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSOCA%5F8%5F4a",
+    "name": "Social Care Year 4 - Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSEAE%5F7%5F1a",
+    "name": "Sport,Exercise and Enterprise Year 1 - Group A- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSEAE%5F7%5F1c",
+    "name": "Sport,Exercise and Enterprise Year 1 - Group B- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "%23SPLUS73A864",
+    "name": "Sport,Exercise and Enterprise Year 1 - Group C - Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSEAE%5F7%5F2a",
+    "name": "Sport,Exercise and Enterprise Year 2 - Group A- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSEAE%5F7%5F2b",
+    "name": "Sport,Exercise and Enterprise Year 2 - Group B- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSEAE%5F7%5F3a",
+    "name": "Sport,Exercise and Enterprise Year 3 - All- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "HSEAE%5F8%5F4a",
+    "name": "Sport,Exercise and Enterprise Year 4 - All- Sem 1",
+    "departmentId": "bhum"
+  },
+  {
+    "id": "EARCT%5F7%5F2a",
+    "name": "Architectural Technology - Level 7/8 - Stage 2 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "EARCT%5F7%5F3a",
+    "name": "Architectural Technology - Level 7/8 - Stage 3",
+    "departmentId": "eben"
+  },
+  {
+    "id": "%23SPLUS3F4F74",
+    "name": "Architectural Technology - Level 8 - Stage 4 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "EARCT%5F7%5F1a",
+    "name": "Architectural Technology Level 7/8 - Stage 1a - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "EARCT%5F7%5F1b",
+    "name": "Architectural Technology Level 7/8 - Stage 1b - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "ECENG%5F8%5F2a",
+    "name": "Bachelor of Engineering (Hons) in Civil Engineering - Stage 2 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "ECENG%5F8%5F3a",
+    "name": "Bachelor of Engineering (Hons) in Civil Engineering - Stage 3 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "ECENG%5F8%5F4a",
+    "name": "Bachelor of Engineering (Hons) in Civil Engineering - Stage 4 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "ECIVL%5F8%5F4a",
+    "name": "Bachelor of Science (Hons) in Civil Engineering (Add-on) Stage 4 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "%23SPLUS93FFA1",
+    "name": "Bachelor of Science (Hons) in Civil Engineering (Part-Time Year 1) - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "%23SPLUS93FFA2",
+    "name": "Bachelor of Science (Hons) in Civil Engineering (Part-Time Year 2) - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "EBSUR%5F8%5F4a",
+    "name": "Building Surveying - Stage 4 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "EBSUR%5F8%5F1",
+    "name": "Building Surveying Level 7/8 - Stage 1 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "EBSUR%5F8%5F2a",
+    "name": "Building Surveying Level 7/8 - Stage 2 - Sem 3",
+    "departmentId": "eben"
+  },
+  {
+    "id": "EBSUR%5F8%5F3a",
+    "name": "Building Surveying Level 7/8 - Stage 3 - Sem 5",
+    "departmentId": "eben"
+  },
+  {
+    "id": "ECIVL%5F7%5F1a",
+    "name": "Civil Engineering - Stage 1 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "ECIVL%5F7%5F2a",
+    "name": "Civil Engineering - Stage 2 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "ECIVL%5F7%5F3a",
+    "name": "Civil Engineering - Stage 3 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "ECMGT%5F7%5F2a",
+    "name": "Construction Management - Level 7/8 - Stage 2 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "ECMGT%5F7%5F3a",
+    "name": "Construction Management - Level 7/8 - Stage 3 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "ECMGT%5F8%5F4",
+    "name": "Construction Management - Stage 4 - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "ECMGT%5F7%5F1",
+    "name": "Construction Management Level 7/8 - Stage 1a - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "%23SPLUSA19BEF",
+    "name": "Construction Management Level 7/8 - Stage 1b - Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "%23SPLUS941F07",
+    "name": "MSc in Building Surveying - Level 9 - Stage 1 Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "%23SPLUS7E2617",
+    "name": "MSc in Building Surveying - Level 9 - Stage 2 Sem 1",
+    "departmentId": "eben"
+  },
+  {
+    "id": "%23SPLUS1A485D",
+    "name": "Quantity Surveying Level 7/8 Stage 1a",
+    "departmentId": "eben"
+  },
+  {
+    "id": "%23SPLUS12BD9A",
+    "name": "Quantity Surveying Level 7/8 Stage 1b",
+    "departmentId": "eben"
+  },
+  {
+    "id": "%23SPLUSD0DA1B",
+    "name": "Quantity Surveying Level 7/8 Stage 2a",
+    "departmentId": "eben"
+  },
+  {
+    "id": "%23SPLUSD0DA1C",
+    "name": "Quantity Surveying Level 7/8 Stage 2b",
+    "departmentId": "eben"
+  },
+  {
+    "id": "EENTR%5F8%5F4g",
+    "name": "BSc (Hons) in Engineering Innovation and Entrepreneurship - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EELEG%5F8%5F2a",
+    "name": "Bachelor of Engineering (Hons) in Electical & Electronic Engineering - Stage 2 - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EELEG%5F8%5F4",
+    "name": "Bachelor of Engineering (Hons) in Electical & Electronic Engineering - Stage 4 - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EELEG%5F8%5F3a",
+    "name": "Bachelor of Engineering (Hons) in Electrical & Electronic Engineering -Stage 3 - Sem 5",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EEGEN%5F8%5F1a",
+    "name": "Bachelor of Engineering (Hons) in Engineering (Common Entry) - Stage 1a - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EEGEN%5F8%5F1b",
+    "name": "Bachelor of Engineering (Hons) in Engineering (Common Entry) - Stage 1b - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "%23SPLUS93FF84",
+    "name": "Bachelor of Engineering (Hons) in Engineering (Common Entry) - Stage 1c - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EMENG%5F8%5F2c",
+    "name": "Bachelor of Engineering (Hons) in Mechanical Engineering - Stage 2 - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EMENG%5F8%5F3a",
+    "name": "Bachelor of Engineering (Hons) in Mechanical Engineering - Stage 3 - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EMENG%5F8%5F4c",
+    "name": "Bachelor of Engineering (Hons) in Mechanical Engineering - Stage 4 - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EELES%5F7%5F1a",
+    "name": "Bachelor of Engineering in Electrical and Electronic Systems (Level 7) - Stage 1 - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EELES%5F7%5F2a",
+    "name": "Bachelor of Engineering in Electrical and Electronic Systems (Level 7) - Stage 2 - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EELES%5F7%5F3a",
+    "name": "Bachelor of Engineering in Electrical and Electronic Systems (Level 7) - Stage 3 - Sem 5",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "%23SPLUS0B18CC",
+    "name": "Manufacturing Engineering (Apprenticeship) Level 6 - Stage 1- Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EMCHL%5F7%5F1a",
+    "name": "Mechanical Engineering (level 7) - Stage 1a - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EMCHL%5F7%5F2a",
+    "name": "Mechanical Engineering (level 7) - Stage 2 - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EMCHL%5F7%5F3a",
+    "name": "Mechanical Engineering (level 7) - Stage 3 - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "EMCHL%5F7%5F1b",
+    "name": "Mechanical Engineering - Stage 1b - Sem 1",
+    "departmentId": "eeme"
+  },
+  {
+    "id": "CCAJO%5FT%5F4a",
+    "name": "Carpentry & Joinery Term 1 Phase 4 - Group CJT14A",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CCAJO%5FT%5F4b",
+    "name": "Carpentry & Joinery Term 1 Phase 4 - Group CJT14B",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CELEC%5FT%5F4a",
+    "name": "Electrical Term 1 Phase 4 - Group ELT14AX",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CELEC%5FT%5F4x",
+    "name": "Electrical Term 1 Phase 4 - Group ELT14AY",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CELEC%5FT%5F4k",
+    "name": "Electrical Term 1 Phase 4 - Group ELT14BX",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CELEC%5FT%5F4p",
+    "name": "Electrical Term 1 Phase 4 - Group ELT14BY",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CELEC%5FT%5F6q",
+    "name": "Electrical Term 1 Phase 6 - Group - ELT16AX",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CELEC%5FT%5F6r",
+    "name": "Electrical Term 1 Phase 6 - Group - ELT16AY",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "%23SPLUSF75AB4",
+    "name": "Electrical Term 1 Phase 6 - Group - ELT16BX",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "%23SPLUSF75AB5",
+    "name": "Electrical Term 1 Phase 6 - Group - ELT16BY",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CELEC%5FT%5F6x",
+    "name": "Electrical Term 1 Phase 6 - Group ELT16CX",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CELEC%5FT%5F6y",
+    "name": "Electrical Term 1 Phase 6 - Group ELT16CY",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "%23SPLUSD1FC63",
+    "name": "Electrical Term 1 Phase 6 - Group ELT16DX",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "%23SPLUSD1FC7A",
+    "name": "Electrical Term 1 Phase 6 - Group ELT16DY",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "EMOME%5FT%5F4a",
+    "name": "Motor Mechanic Term 1 Phase 4 - Group MET1P4AX",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "%23SPLUSC7DEEE",
+    "name": "Motor Mechanic Term 1 Phase 4 - Group MET1P4AY",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CPLUM%5FT%5F4",
+    "name": "Plumbing Term 1 Phase 4 - Group PLT1P4a",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CPLUM%5FT%5F4x",
+    "name": "Plumbing Term 1 Phase 4 - Group PLT1P4b",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "%23SPLUS0603B8",
+    "name": "Plumbing Term 1 Phase 4 - Group PLT1P4c",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "%23SPLUS0603B9",
+    "name": "Plumbing Term 1 Phase 4 - Group PLT1P4d",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "%23SPLUSE1AEFD",
+    "name": "Plumbing Term 1 Phase 4 - Group PLT1P4e",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "%23SPLUSE1AEFE",
+    "name": "Plumbing Term 1 Phase 4 - Group PLT1P4f",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CPLUM%5FT%5F6p",
+    "name": "Plumbing Term 1 Phase 6 - Group PLT1P6a",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "CPLUM%5FT%5F6r",
+    "name": "Plumbing Term 1 Phase 6 - Group PLT1P6b",
+    "departmentId": "eetr"
+  },
+  {
+    "id": "IMAUD%5F8%5F1a",
+    "name": "BA (Hons) in Audio & Music Production - Level 8 -Year 1a- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMAUD%5F8%5F1b",
+    "name": "BA (Hons) in Audio & Music Production - Level 8 -Year 1b- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMAUD%5F8%5F1c",
+    "name": "BA (Hons) in Audio & Music Production - Level 8 -Year 1c- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMAUD%5F8%5F1d",
+    "name": "BA (Hons) in Audio & Music Production - Level 8 -Year 1d- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMAUD%5F8%5F2a",
+    "name": "BA (Hons) in Audio & Music Production - Level 8 -Year 2a- Sem 3",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMAUD%5F8%5F2b",
+    "name": "BA (Hons) in Audio & Music Production - Level 8 -Year 2b- Sem 3",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMAUD%5F8%5F3",
+    "name": "BA (Hons) in Audio & Music Production - Level 8 -Year 3- Sem 5",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMAUD%5F8%5F4a",
+    "name": "BA (Hons) in Audio & Music Production - Level 8 -Year 4a- Sem 7",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMAUD%5F8%5F4b",
+    "name": "BA (Hons) in Audio & Music Production - Level 8 -Year 4b- Sem 7",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F8%5F1a",
+    "name": "BA (Hons) in Creative Media - Level 8 - Year 1a - Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F8%5F1b",
+    "name": "BA (Hons) in Creative Media Level 8 - Year 1b - Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F8%5F2a",
+    "name": "BA (Hons) in Creative Media Level 8 - Year 2a - Sem 3",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F8%5F2b",
+    "name": "BA (Hons) in Creative Media Level 8 - Year 2b - Sem 3",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F8%5F3a",
+    "name": "BA (Hons) in Creative Media Level 8 - Year 3a - Sem 5",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F8%5F3b",
+    "name": "BA (Hons) in Creative Media Level 8 - Year 3b - Sem 5",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F8%5F4",
+    "name": "BA (Hons) in Creative Media Level 8 -Year 4a - Sem 7",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS16C746",
+    "name": "BA (Hons) in Creative Media Level 8 -Year 4b - Sem 7",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMDRP%5F8%5F4a",
+    "name": "BA (Hons) in Drama & Performance Add-on - Year 4a",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS16C745",
+    "name": "BA (Hons) in Drama & Performance Add-on - Year 4b",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMILM%5F8%5F1a",
+    "name": "BA (Hons) in Film and Television Production - Sem 1 - Group 1a",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMILM%5F8%5F1b",
+    "name": "BA (Hons) in Film and Television Production - Sem 1 - Group 1b",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMILM%5F8%5F2a",
+    "name": "BA (Hons) in Film and Television Production - Sem 3 - Group 2a",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMILM%5F8%5F2b",
+    "name": "BA (Hons) in Film and Television Production - Sem 3 - Group 2b",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMILM%5F8%5F3a",
+    "name": "BA (Hons) in Film and Television Production - Sem 5 - Group 3a",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMILM%5F8%5F3b",
+    "name": "BA (Hons) in Film and Television Production - Sem 5 - Group 3b",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMILM%5F8%5F4a",
+    "name": "BA (Hons) in Film and Television Production - Sem 7a",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS16C749",
+    "name": "BA (Hons) in Film and Television Production - Sem 7b",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUSA13374",
+    "name": "BA (Hons) in Music & Performance Technologies - Year 1a- Sem 1 - Level 8",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS2AACF2",
+    "name": "BA (Hons) in Music & Performance Technologies - Year 1b- Sem 1 - Level 8",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS44C9A1",
+    "name": "BA (Hons) in Music & Performance Technologies - Year 2a- Sem 3 - Level 8",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS44C9A2",
+    "name": "BA (Hons) in Music & Performance Technologies - Year 2b- Sem 3 - Level 8",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMUC%5F8%5F4",
+    "name": "BA (Hons) in Music - Year 4 - Sem 7",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMPMA%5F7%5F1a",
+    "name": "BA in Audio and Music Production - Level 7 -Year 1a- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMPMA%5F7%5F1b",
+    "name": "BA in Audio and Music Production - Level 7 -Year 1b- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMPMA%5F7%5F1c",
+    "name": "BA in Audio and Music Production - Level 7 -Year 1c- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMPMA%5F7%5F1d",
+    "name": "BA in Audio and Music Production - Level 7 -Year 1d- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMPMA%5F7%5F2a",
+    "name": "BA in Audio and Music Production - Level 7 -Year 2a- Sem 3",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMPMA%5F7%5F2b",
+    "name": "BA in Audio and Music Production - Level 7 -Year 2b- Sem 3",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMPMA%5F7%5F3",
+    "name": "BA in Audio and Music Production - Level 7 -Year 3- Sem 5",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F7%5F1a",
+    "name": "BA in Creative Media Level 7 - Year 1a - Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F7%5F1b",
+    "name": "BA in Creative Media Level 7 - Year 1b - Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F7%5F2a",
+    "name": "BA in Creative Media Level 7 - Year 2a - Sem 3",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F7%5F2b",
+    "name": "BA in Creative Media Level 7 - Year 2b - Sem 3",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F7%5F3a",
+    "name": "BA in Creative Media Level 7 - Year 3a - Sem 5",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMMED%5F7%5F3b",
+    "name": "BA in Creative Media Level 7 - Year 3b - Sem 5",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUSA13376",
+    "name": "BA in Music & Performance Technologies - Year 1a - Sem 1 - Level 7",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS2AACF1",
+    "name": "BA in Music & Performance Technologies - Year 1b - Sem 1 - Level 7",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS44C9A3",
+    "name": "BA in Music & Performance Technologies - Year 2a - Sem 3 - Level 7",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS44C9A4",
+    "name": "BA in Music & Performance Technologies - Year 2b - Sem 3 - Level 7",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS070FC1",
+    "name": "BA in Musical Theatre Level 7 - Year 3 - Sem 5",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMTFP%5F7%5F1a",
+    "name": "Bachelor of Arts in Theatre and Film Practice Year 1- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMTFP%5F7%5F2a",
+    "name": "Bachelor of Arts in Theatre and Film Practice Year 2a- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMTFP%5F7%5F2b",
+    "name": "Bachelor of Arts in Theatre and Film Practice Year 2b- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMTFP%5F7%5F3",
+    "name": "Bachelor of Arts in Theatre and Film Practice Year 3- Sem 1",
+    "departmentId": "icam"
+  },
+  {
+    "id": "IMDIG%5F7%5F1",
+    "name": "Certificate in Digital Media Design Group A - Jan Start",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS8DEBE9",
+    "name": "Certificate in Digital Media Design Group B - Jan Start",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUSCD29E4",
+    "name": "Certificate in User Experience - January Start",
+    "departmentId": "icam"
+  },
+  {
+    "id": "%23SPLUS8DEBEB",
+    "name": "Certificate in User Experience - Sept Start",
+    "departmentId": "icam"
+  },
+  {
+    "id": "ICCSO%5F7%5F2a",
+    "name": "BSc (Hons) in Computing Systems & Operations - Year 2 Level 7",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "ICCSO%5F8%5F2a",
+    "name": "BSc (Hons) in Computing Systems & Operations - Year 2 Level 8",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "%23SPLUS3E61CB",
+    "name": "BSc (Hons) in Computing Systems & Operations - Year 3 - Level 8",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "%23SPLUS46BF3F",
+    "name": "BSc (Hons) in Computing Systems & Operations - Year 4 - Level 8",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "%23SPLUS93AD2D",
+    "name": "BSc (Hons) in Mathematics & Data Science - Year 2",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "%23SPLUS3E6201",
+    "name": "BSc (Hons) in Mathematics & Data Science - Year 3",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "%23SPLUS46BF6E",
+    "name": "BSc (Hons) in Mathematics & Data Science - Year 4",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "ICCSO%5F7%5F3a",
+    "name": "BSc in Computing Systems & Operations - Year 3 - Level 7",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "ICCSO%5F8%5F1a",
+    "name": "BSc/BSc (Hons) in Computing Systems & Operations - Year 1 - Group A",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "ICCSO%5F7%5F1a",
+    "name": "BSc/BSc (Hons) in Computing Systems & Operations - Year 1 - Group B",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "ICCDA%5F8%5F1a",
+    "name": "Certificate in Data Analytics (Part-Time)",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "ICPRO%5F6%5F1a",
+    "name": "Certificate in Programming (Part-Time - Semester 1)",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "iICSNJ%5F8%5F2a",
+    "name": "HDip in Networking & Systems (Part-Time - Semester 4)",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "ICOMP%5F7%5F1d",
+    "name": "Level 7:BSc in Computing Year 1 Group 171 - Sem 1",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "ICOMP%5F7%5F2e",
+    "name": "Level 7:BSc in Computing Year 2 Software Development (K27S) - Sem 3",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "ICOMP%5F7%5F3e",
+    "name": "Level 7:BSc in Computing Year 3 Software Development - Sem 5",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "ICCOM%5F8%5F4a",
+    "name": "Level 8:BSc (Hons) in Computing in Cloud Computing - Sem 1",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "%23SPLUS349F1E",
+    "name": "MSc in Data Analytics - Group A",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "%23SPLUS3348BC",
+    "name": "Postgraduate Certificate in LLM & Agentic AI",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "ICSDA%5F9%5F5x",
+    "name": "Postgraduate Diploma in Applied Data Science Semester 2",
+    "departmentId": "icsm"
+  },
+  {
+    "id": "DK%5FMCDAJ%5F7%5F1",
+    "name": "Certificate in 2D/3D Digital Animation Production (January 2025 Intake)",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "DK%5FMCDAP%5F7%5F1a",
+    "name": "Certificate in 2D/3D Digital Animation Production (September 2025 Intake)",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVMDV%5F8%5F1a",
+    "name": "Level 8:BSc (Hons) in Computing in Games Development Year 1 Group 1a - Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVMDV%5F8%5F1b",
+    "name": "Level 8:BSc (Hons) in Computing in Games Development Year 1 Group 1b - Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVMDV%5F8%5F2a",
+    "name": "Level 8:BSc (Hons) in Computing in Games Development Year 2 Group 2- Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVMDV%5F8%5F3a",
+    "name": "Level 8:BSc (Hons) in Computing in Games Development Year 3a - Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "%23SPLUS2C1235",
+    "name": "Level 8:BSc (Hons) in Computing in Games Development Year 3b - Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVMDV%5F8%5F4a",
+    "name": "Level 8:BSc (Hons) in Computing in Games Development Year 4a - Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "%23SPLUSBD5D99",
+    "name": "Level 8:BSc (Hons) in Computing in Games Development Year 4b - Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVSOF%5F8%5F1a",
+    "name": "Level 8:BSc (Hons) in Computing in Software Development Year 1 Group 1a - Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVSOF%5F8%5F1b",
+    "name": "Level 8:BSc (Hons) in Computing in Software Development Year 1 Group 1b - Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVSOF%5F8%5F1c",
+    "name": "Level 8:BSc (Hons) in Computing in Software Development Year 1 Group 1c - Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVSOF%5F8%5F2a",
+    "name": "Level 8:BSc (Hons) in Computing in Software Development Year 2 Group 2a- Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVSOF%5F8%5F2b",
+    "name": "Level 8:BSc (Hons) in Computing in Software Development Year 2 Group 2b - Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVSOF%5F8%5F3a",
+    "name": "Level 8:BSc (Hons) in Computing in Software Development Year 3 Group 3a- Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVSOF%5F8%5F3b",
+    "name": "Level 8:BSc (Hons) in Computing in Software Development Year 3 Group 3b - Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVSOF%5F8%5F4a",
+    "name": "Level 8:BSc (Hons) in Computing in Software Development Year 4 Group 4a- Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "IVSOF%5F8%5F4b",
+    "name": "Level 8:BSc (Hons) in Computing in Software Development Year 4 Group 4b- Sem 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "DK%5FIVMCAP%5F9%5F1a",
+    "name": "MSc in Computing in Computer Animation - Semester 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "DK%5FIVMCAP%5F9%5F2a",
+    "name": "MSc in Computing in Computer Animation - Semester 3",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "DK%5FIVGER%5F9%5F1a",
+    "name": "MSc in Computing in Games & Extend Reality - Semester 1",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "DK%5FIVGER%5F9%5F2a",
+    "name": "MSc in Computing in Games & Extend Reality - Semester 3",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "%23SPLUSE1860D",
+    "name": "MSc in Computing in Medical Device Software Engineering (Jan 2025 Intake) Semester 2",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "%23SPLUS2B5A4A",
+    "name": "MSc in Digital Health Innovation",
+    "departmentId": "ivhc"
+  },
+  {
+    "id": "NACOM%5F8%5F1a",
+    "name": "Agriculture Year 1 - Group A - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NACOM%5F8%5F1b",
+    "name": "Agriculture Year 1 - Group B - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NACOM%5F8%5F2a",
+    "name": "Agriculture Year 2 - Group AGRI2a - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUS65E411",
+    "name": "Agriculture Year 2 - Group AGRI2c - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NACOM%5F8%5F2b",
+    "name": "Agriculture Year 2 - Group B - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUS65E412",
+    "name": "Agriculture Year 2 - Group D - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NASUS%5F8%5F3a",
+    "name": "Agriculture Year 3 - Group A - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NASUS%5F8%5F3b",
+    "name": "Agriculture Year 3 - Group B - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NASUS%5F8%5F4a",
+    "name": "Agriculture Year 4 - Group A - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NASUS%5F8%5F4b",
+    "name": "Agriculture Year 4 - Group B - Sem1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NAVET%5F8%5F4a",
+    "name": "Bachelor of Science (Hons) in Advanced Veterinary Nursing - Group a",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NNTHL%5F8%5F1a",
+    "name": "Bachelor of Science (Hons) in Nutrition & Health Year 1 - Group A",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUS772776",
+    "name": "Bachelor of Science (Hons) in Nutrition & Health Year 1- Group B",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUSE84676",
+    "name": "Bachelor of Science (Hons) in Nutrition & Health Year 2 - Group A",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUSAB0209",
+    "name": "Bachelor of Science (Hons) in Nutrition & Health Year 2 - Group B",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUS80C8DD",
+    "name": "Bachelor of Science (Hons) in Nutrition & Health Year 3",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLBIO%5F8%5F3a",
+    "name": "Biopharmaceutical Science Level 8 - Year 3 - Group 3a",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLBIO%5F8%5F3b",
+    "name": "Biopharmaceutical Science Level 8 - Year 3 - Group 3b",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUS232CE0",
+    "name": "Biopharmaceutical Science Level 8 - Year 3 - Group 3c",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLBIO%5F8%5F4a",
+    "name": "Biopharmaceutical Science Year 4 - Group A - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUSFE37AD",
+    "name": "Biopharmaceutical Science Year 4 - Group B - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLBIO%5F7%5F2a",
+    "name": "Bioscience Year 2 - Group 2a - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLBIO%5F7%5F3a",
+    "name": "Bioscience Year 3 - Level 7 - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUS1F9272",
+    "name": "Certificate in Environmental Biotechnology (level 9) - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLPHA%5F8%5F1a",
+    "name": "Health & Physical Activity Year 1 - Group A - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLPHA%5F8%5F1b",
+    "name": "Health & Physical Activity Year 1 - Group B - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLPHA%5F8%5F2a",
+    "name": "Health & Physical Activity Year 2 - Group A - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLPHA%5F8%5F2b",
+    "name": "Health & Physical Activity Year 2 - Group B - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLPHA%5F8%5F3a",
+    "name": "Health & Physical Activity Year 3 - Group A - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLPHA%5F8%5F4a",
+    "name": "Health & Physical Activity Year 4 - Group A - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLPHA%5F8%5F4b",
+    "name": "Health & Physical Activity Year 4 - Group B - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NAMAB%5F9%5F5a",
+    "name": "MSc Agricultural Biotechnology - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLPHS%5F7%5F2a",
+    "name": "Pharmaceutical Science Year 2 - Group 2a - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUS9FD9BD",
+    "name": "Pharmaceutical Science Year 2 - Group 2b - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLPHS%5F7%5F3a",
+    "name": "Pharmaceutical Science Year 3 - Group 3a - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUS232E39",
+    "name": "Pharmaceutical Science with Regulatory Affairs (add-on)",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLCOM%5F8%5F2a",
+    "name": "Science L8 - Year 2 - Group2a",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLCOM%5F8%5F2b",
+    "name": "Science L8 - Year 2 - Group2b",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLCOM%5F7%5F1a",
+    "name": "Science Year 1 Group A SEM 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLCOM%5F7%5F1b",
+    "name": "Science Year 1 Group B SEM 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLCOM%5F7%5F1c",
+    "name": "Science Year 1 Group C SEM 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NLCOM%5F7%5F1d",
+    "name": "Science Year 1 Group D SEM 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUS9DE287",
+    "name": "Science Year 1 Group E SEM 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NAVET%5F7%5F1a",
+    "name": "Veterinary Nursing Year 1 - Group A - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NAVET%5F7%5F1b",
+    "name": "Veterinary Nursing Year 1 - Group B - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NAVET%5F7%5F2a",
+    "name": "Veterinary Nursing Year 2 - Group A - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NAVET%5F7%5F2b",
+    "name": "Veterinary Nursing Year 2 - Group B - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NAVET%5F7%5F3a",
+    "name": "Veterinary Nursing Year 3 - Group A - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NAVET%5F7%5F3b",
+    "name": "Veterinary Nursing Year 3 - Group B - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "%23SPLUS93981D",
+    "name": "Veterinary Nursing Year 3 - Group C - Sem 1",
+    "departmentId": "ngen"
+  },
+  {
+    "id": "NNECS%5F8%5F1a",
+    "name": "BA (Hons) Early Childhood Studies Year 1 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNECS%5F8%5F1b",
+    "name": "BA (Hons) Early Childhood Studies Year 1 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNECS%5F8%5F1c",
+    "name": "BA (Hons) Early Childhood Studies Year 1 - Group C - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNLME%5F8%5F4c",
+    "name": "BA (Hons) in Leadership and Management for the Early Years Sector (Cork)",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNLME%5F8%5F4a",
+    "name": "BA (Hons) in Leadership and Management for the Early Years Sector",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNAEC%5F7%5F2c",
+    "name": "BA in Applied Childhood Studies (Part Time) (Cork) - Year 2",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNAEC%5F7%5F3b",
+    "name": "BA in Applied Childhood Studies (Part Time) (Cork) - Year 3",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNAEC%5F7%5F2a",
+    "name": "BA in Applied Childhood Studies (Part Time) - Year 2",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNAEC%5F7%5F3a",
+    "name": "BA in Applied Childhood Studies (Part Time) - Year 3",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNASE%5F9%5F1a",
+    "name": "Certificate in Comprehensive Advanced Health Assessment",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNURV%5F8%5F1a",
+    "name": "Certificate in Fundamentals of Understanding and Responding to Domestic,Sexual and Gender-Based Violence",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNLMI%5F8%5F1a",
+    "name": "Certificate in Leadership Management and Quality Initiative in Intellectual Disabilities",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "%23SPLUSE1FE82",
+    "name": "Certificate in Professional Nursing - Stage 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNSAC%5F7%5F1a",
+    "name": "Certificate in School Age Childcare",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "%23SPLUSBEED40",
+    "name": "Certificate in Skills for Independent Living - Stage 2",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "%23SPLUS2D88C9",
+    "name": "Certificate in Trauma Informed Care",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNCPC%5F8%5F1a",
+    "name": "Contemporary Palliative Care Practice",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNECS%5F8%5F2a",
+    "name": "Early Childhood Studies Year 2 - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNECS%5F8%5F3a",
+    "name": "Early Childhood Studies Year 3 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNECS%5F8%5F3b",
+    "name": "Early Childhood Studies Year 3 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNECS%5F8%5F4a",
+    "name": "Early Childhood Studies Year 4 - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNGEN%5F8%5F1a",
+    "name": "General Nursing Year 1 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNGEN%5F8%5F1b",
+    "name": "General Nursing Year 1 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNGEN%5F8%5F1c",
+    "name": "General Nursing Year 1 - Group C - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNGEN%5F8%5F1d",
+    "name": "General Nursing Year 1 - Group D - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNGEN%5F8%5F1e",
+    "name": "General Nursing Year 1 - Group E - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNGEN%5F8%5F2a",
+    "name": "General Nursing Year 2 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNGEN%5F8%5F2b",
+    "name": "General Nursing Year 2 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNGEN%5F8%5F2c",
+    "name": "General Nursing Year 2 - Group C - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNGEN%5F8%5F2d",
+    "name": "General Nursing Year 2 - Group D - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "%23SPLUS8DDAE4",
+    "name": "General Nursing Year 2 - Group E - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NGNUR%5F8%5F3a",
+    "name": "General Nursing Year 3 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NGNUR%5F8%5F3b",
+    "name": "General Nursing Year 3 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NGNUR%5F8%5F3c",
+    "name": "General Nursing Year 3 - Group C - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NGNUR%5F8%5F3d",
+    "name": "General Nursing Year 3 - Group D - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NGNUR%5F8%5F4a",
+    "name": "General Nursing Year 4 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NGNUR%5F8%5F4b",
+    "name": "General Nursing Year 4 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NGNUR%5F8%5F4c",
+    "name": "General Nursing Year 4 - Group C - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "%23SPLUS63BB04",
+    "name": "General Nursing Year 4 - Group D - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NMWIF%5F8%5F3k",
+    "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NMWIF%5F8%5F3l",
+    "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 2",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NMWIF%5F8%5F3w",
+    "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 3",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NMWIF%5F8%5F3p",
+    "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 4",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NMWIF%5F8%5F3j",
+    "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 5",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NINDS%5F8%5F3k",
+    "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 6",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NINDS%5F8%5F3l",
+    "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 7",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NINDS%5F8%5F3p",
+    "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 8",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NMWIF%5F8%5F3q",
+    "name": "General/Midwifery/MentalHlth/Intellectual Nursing Year 3- Practical Group 9",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNIDN%5F8%5F1a",
+    "name": "Intellectual Disability Nursing Year 1 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNIDN%5F8%5F1b",
+    "name": "Intellectual Disability Nursing Year 1 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "%23SPLUS1404C4",
+    "name": "Intellectual Disability Nursing Year 1 - Group C - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNIDN%5F8%5F2a",
+    "name": "Intellectual Disability Nursing Year 2 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNIDN%5F8%5F2b",
+    "name": "Intellectual Disability Nursing Year 2 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNIDN%5F8%5F3a",
+    "name": "Intellectual Disability Nursing Year 3 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNIDN%5F8%5F3b",
+    "name": "Intellectual Disability Nursing Year 3 - Group INDS3b - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNIDN%5F8%5F4a",
+    "name": "Intellectual Disability Nursing Year 4 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NINDS%5F8%5F4b",
+    "name": "Intellectual Disability Nursing Year 4 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "DK%5FNNMPP%5F9%5F5a",
+    "name": "MSc in Community Mental Health - Stage 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "%23SPLUS362E4F",
+    "name": "MSc in Community Mental Health - Stage 2",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "DK%5FNNPRO%5F9a",
+    "name": "MSc in Professional Nursing - Stage 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "%23SPLUSE1FE7F",
+    "name": "MSc in Professional Nursing - Stage 2",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNMTL%5F8%5F1a",
+    "name": "Mental Health Nursing Year 1 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNMTL%5F8%5F1b",
+    "name": "Mental Health Nursing Year 1 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "%23SPLUS1404B7",
+    "name": "Mental Health Nursing Year 1 - Group C - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "%23SPLUS1404FD",
+    "name": "Mental Health Nursing Year 1 - Group D - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNMTL%5F8%5F2b",
+    "name": "Mental Health Nursing Year 2 - B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNMTL%5F8%5F2a",
+    "name": "Mental Health Nursing Year 2 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNMTL%5F8%5F3a",
+    "name": "Mental Health Nursing Year 3 - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NPNUR%5F8%5F4a",
+    "name": "Mental Health Nursing Year 4 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNHDS%5F8%5F1a",
+    "name": "Midwifery Diploma - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNHDS%5F8%5F1b",
+    "name": "Midwifery Diploma - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNMID%5F8%5F1a",
+    "name": "Midwifery Year 1 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNMID%5F8%5F1b",
+    "name": "Midwifery Year 1 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNMID%5F8%5F2a",
+    "name": "Midwifery Year 2 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNMID%5F8%5F2b",
+    "name": "Midwifery Year 2 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNMID%5F8%5F3a",
+    "name": "Midwifery Year 3 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNMID%5F8%5F3b",
+    "name": "Midwifery Year 3 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NMWIF%5F8%5F4a",
+    "name": "Midwifery Year 4 - Group A - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NMWIF%5F8%5F4b",
+    "name": "Midwifery Year 4 - Group B - Sem 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "%23SPLUSE1FE80",
+    "name": "Post Grad Dip in Professional Nursing - Stage 1",
+    "departmentId": "nnur"
+  },
+  {
+    "id": "NNDPP%5F9%5F5a",
+    "name": "Post Graduate Diploma in Professional Practice;Professional Management of Complex Behaviour",
+    "departmentId": "nnur"
+  }
+]
