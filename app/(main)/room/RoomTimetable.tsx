@@ -99,42 +99,38 @@ export default function RoomTimetable() {
   }, [selectedDepartment, roomSearchTerm]);
 
   // Generate weeks list
-  const weeksList = useMemo(() => {
-    const today = new Date();
-    const day = today.getDay();
-    const diffToMonday = day === 0 ? -6 : 1 - day;
-    const mondayThisWeek = new Date(today);
-    mondayThisWeek.setHours(0, 0, 0, 0);
-    mondayThisWeek.setDate(today.getDate() + diffToMonday);
+  // Weeks list state
+  const [weeksList, setWeeksList] = useState<WeekOption[]>([]);
+  const [weeksLoading, setWeeksLoading] = useState(true);
 
-    const weeks: WeekOption[] = [];
-    const options: Intl.DateTimeFormatOptions = {
-      weekday: "short",
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-    };
+  // Fetch weeks list from API on component mount
+  useEffect(() => {
+    async function fetchWeeks() {
+      try {
+        setWeeksLoading(true);
+        const res = await fetch("/api/timetable/weekOptions", {
+          credentials: "include",
+          cache: "no-store",
+        });
 
-    // Special options
-    const specialOptions: WeekOption[] = [
-      { value: "current", label: "This Week", weekNumber: 1 },
-      { value: "next", label: "Next Week", weekNumber: 2 },
-    ];
-
-    // Regular weeks
-    for (let i = 1; i <= 52; i++) {
-      const monday = new Date(mondayThisWeek);
-      monday.setDate(mondayThisWeek.getDate() + (i - 1) * 7);
-
-      const labelDate = monday.toLocaleDateString("en-GB", options);
-      weeks.push({
-        value: `week-${i}`,
-        label: `w/c ${labelDate} (Wk ${i})`,
-        weekNumber: i,
-      });
+        if (res.ok) {
+          const data: WeekOption[] = await res.json();
+          console.log(data);
+          setWeeksList(data);
+        } else {
+          console.error("Failed to fetch weeks");
+          // Fallback to empty array if API fails
+          setWeeksList([]);
+        }
+      } catch (error) {
+        console.error("Error fetching weeks:", error);
+        setWeeksList([]);
+      } finally {
+        setWeeksLoading(false);
+      }
     }
 
-    return [...specialOptions, ...weeks];
+    fetchWeeks();
   }, []);
 
   // Filter weeks by search
@@ -316,12 +312,7 @@ export default function RoomTimetable() {
     rooms.find((r) => r.id === selectedRoom)?.name || "Select Room";
 
   const selectedWeekLabel =
-    weeksList.find(
-      (w) =>
-        w.value === `week-${week}` ||
-        (week === "1" && w.value === "current") ||
-        (week === "2" && w.value === "next")
-    )?.label || "Select Week";
+    weeksList.find((w) => w.value === week)?.label || "Select Week";
 
   const dayBgClasses: Record<string, string> = {
     Monday: "bg-red-100       dark:bg-red-900/30",
@@ -591,13 +582,16 @@ export default function RoomTimetable() {
 
         {isDesktop ? (
           <Dialog open={isWeekModalOpen} onOpenChange={setIsWeekModalOpen}>
-            <DialogTrigger asChild>
+            <DialogTrigger asChild className="fade-in-bottom-10s">
               <Button
                 variant="outline"
                 className="font-bold fade-in-bottom-10s whitespace-normal h-auto min-h-10 py-2 px-3 text-wrap"
+                disabled={weeksLoading}
               >
-                <Calendar />
-                {selectedWeekLabel}
+                <Calendar className="shrink-0" />
+                <span className="text-left">
+                  {weeksLoading ? "Loading weeks..." : selectedWeekLabel}
+                </span>
               </Button>
             </DialogTrigger>
 
@@ -617,7 +611,7 @@ export default function RoomTimetable() {
               <ul className="max-h-72 overflow-auto border rounded-md border-gray-200">
                 {filteredWeeks.length === 0 && (
                   <li className="px-3 py-2 text-muted-foreground">
-                    No weeks found
+                    {weeksLoading ? "Loading weeks..." : "No weeks found"}
                   </li>
                 )}
                 {filteredWeeks.map((w) => (
@@ -625,11 +619,7 @@ export default function RoomTimetable() {
                     key={w.value}
                     onClick={() => onSelectWeek(w.value)}
                     className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
-                      w.value === `week-${week}` ||
-                      (week === "1" && w.value === "current") ||
-                      (week === "2" && w.value === "next")
-                        ? "font-bold"
-                        : ""
+                      w.value === week ? "font-bold" : ""
                     }`}
                   >
                     {w.label}
@@ -653,9 +643,12 @@ export default function RoomTimetable() {
               <Button
                 variant="outline"
                 className="font-bold fade-in-bottom-10s whitespace-normal h-auto min-h-10 py-2 px-3 text-wrap"
+                disabled={weeksLoading}
               >
-                <Calendar />
-                {selectedWeekLabel}
+                <Calendar className="shrink-0" />
+                <span className="text-left">
+                  {weeksLoading ? "Loading weeks..." : selectedWeekLabel}
+                </span>
               </Button>
             </SheetTrigger>
 
@@ -676,7 +669,7 @@ export default function RoomTimetable() {
                   <ul className="flex-1 min-h-0 overflow-auto border rounded-md border-gray-200">
                     {filteredWeeks.length === 0 && (
                       <li className="px-3 py-2 text-muted-foreground">
-                        No weeks found
+                        {weeksLoading ? "Loading weeks..." : "No weeks found"}
                       </li>
                     )}
                     {filteredWeeks.map((w) => (
@@ -684,11 +677,7 @@ export default function RoomTimetable() {
                         key={w.value}
                         onClick={() => onSelectWeek(w.value)}
                         className={`cursor-pointer px-3 py-2 border-b last:border-b-0 hover:bg-primary hover:text-white ${
-                          w.value === `week-${week}` ||
-                          (week === "1" && w.value === "current") ||
-                          (week === "2" && w.value === "next")
-                            ? "font-bold"
-                            : ""
+                          w.value === week ? "font-bold" : ""
                         }`}
                       >
                         {w.label}

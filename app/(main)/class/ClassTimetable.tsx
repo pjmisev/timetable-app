@@ -74,8 +74,9 @@ export default function ClassTimetable() {
 
         if (res.ok) {
           const data: SavedClassResponse = await res.json();
-          setSavedDepartment(data.savedDepartment || "");
-          setSavedClass(data.savedClass || "");
+          console.log(data);
+          setSavedDepartment(data?.savedDepartment || "");
+          setSavedClass(data?.savedClass || "");
         }
       } catch (error) {
         console.error("Error fetching saved class:", error);

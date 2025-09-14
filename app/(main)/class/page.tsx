@@ -1,4 +1,4 @@
-import { Hero } from "@/components/main/room/Hero";
+import { Hero } from "@/components/main/class/Hero";
 import { Footer } from "@/components/main/sections/Footer";
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";

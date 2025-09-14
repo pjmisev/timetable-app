@@ -16,12 +16,12 @@ export function Hero({ id }: AnimatedProps) {
       <div className="relative w-full max-w-4xl mx-auto text-center px-4">
         <div className="relative">
           <img
-            className="w-full md:w-auto md:h-50 pb-5 block dark:hidden mx-auto"
+            className="w-full md:w-auto md:h-50 pb-5 block dark:hidden mx-auto fade-in-bottom"
             src="/img/logo/Timetables_Logo_Black.png"
           ></img>
 
           <img
-            className="w-full md:w-auto md:h-50  pb-5 hidden dark:block mx-auto"
+            className="w-full md:w-auto md:h-50  pb-5 hidden dark:block mx-auto fade-in-bottom"
             src="/img/logo/Timetables_Logo_White.png"
           ></img>
           <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-transparent via-foreground/30 to-transparent rounded-full fade-in-bottom"></div>
