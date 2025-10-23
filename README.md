@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📅 DkIT Timetable App Alternative
 
-## Getting Started
+This project is an **alternative timetable application** for students at **Dundalk Institute of Technology (DkIT)**, developed to address common usability and design issues with the current in-house system.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 💡 Project Motivation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+As a **2nd Year Software Development student** at DkIT, I created this application over the summer break after experiencing and hearing several complaints about the existing timetable website. The goal was to build a modern, intuitive, and user-friendly alternative.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Current System Complaints Addressed:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **Poor UI/UX:** The new application features a streamlined and modern design that is intuitive to navigate.
+* **Awkward Layout:** Both list and grid views have been redesigned for better legibility and ease of reading.
+* **Repetitive Searching:** The app implements a **saved course** feature so you don't have to find your class every time.
+* **Literal Search:** The application's course search is more flexible and forgiving than the current literal-match system.
 
-## Learn More
+Initial feedback from classmates has been overwhelmingly positive, suggesting these issues have been successfully resolved.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Get Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Experience the alternative timetable app yourself!
 
-## Deploy on Vercel
+**Live Application URL:**
+[https://timetables.pjmisev.com](https://timetables.pjmisev.com)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Technical Details
+
+### Development Stack
+
+The application is built on a modern, robust, and popular technology stack:
+
+| Component | Technology | Role |
+| :--- | :--- | :--- |
+| **Frontend Framework** | **React** | Building the user interface. |
+| **Full-Stack Framework** | **Next.js** | Server-side rendering, routing, and API handling. |
+| **Backend/API** | **Node.js** | Handling server-side logic and managing the database. |
+| **Database** | **MySQL** | Storing course and timetable data. |
+
+### Hosting and Infrastructure
+
+* **Hosting:** The app is currently hosted on a **Virtual Private Server (VPS)** located in Amsterdam.
+* **Cost:** The hosting costs are currently paid for **by the developer**.
+* **Open-Source:** The entire codebase is **open-source**, promoting transparency and community contribution.
+
+**GitHub Repository:**
+[https://github.com/pjmisev/timetable-app](https://github.com/pjmisev/timetable-app)
+
+### User Data & Privacy
+
+The application offers login via **Google, Microsoft, or GitHub** to enhance the user experience.
+
+**What is stored:**
+The application *only* stores a user's **name, email address, and profile picture**.
+
+**How it's used:**
+This minimal data is used solely to link a user to their last-viewed course, allowing them to automatically fetch their timetable on return visits without having to search for it again. No other personal data or usage analytics are collected.
