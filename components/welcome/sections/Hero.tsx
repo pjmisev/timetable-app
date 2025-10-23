@@ -27,8 +27,8 @@ export function Hero({ id }: AnimatedProps) {
           <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-transparent via-foreground/30 to-transparent rounded-full fade-in-bottom"></div>
         </div>
         <p className="text-base sm:text-lg md:text-xl text-foreground/70 mb-8 w-full max-w-2xl mx-auto mt-8 sm:mt-12 fade-in-bottom-05s">
-          A free, easy to use, better designed alternative to the timetable app
-          provided at everyone's favourite Louth university ;)
+          A free, easy to use, alternative to the timetable app
+          provided at Dundalk Institute of Technology.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative fade-in-bottom-10s">

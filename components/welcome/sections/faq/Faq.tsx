@@ -7,24 +7,24 @@ import type { FAQItemProps } from "@/types";
 
 const faqs: FAQItemProps[] = [
   {
-    question: "What is the point of this application?",
+    question: "Why was this app created?",
     answer:
-      "Personally, I feel disappointed by the lack of effort put into our university's timetable app, so I decided to reverse engineer it and make my own, and most importantly make it better. Also I was just bored.",
+      "Many students at Dundalk Institute of Technology have issues with the timetable app provided by the university. The app is not user friendly, and improvements are needed. I wanted to create a better alternative that would solve these issues.",
   },
   {
-    question: "What is wrong with the original application?",
+    question: "What are the issues with the original application?",
     answer:
-      "The user interface is straight from 1999. The user experience is terrible. It doesn't remember what department and class you're in. When you do generate the timetable, the list layout is ugly, and grid view is cluttered.",
+      "The user interface is very outdated. The UI/UX is clunky and old-fashioned. It does not remember what department and class you're in. The class search is literal and you must know the exact name of your course. The timetable layouts provided are awkward and hard-to-read... etc.",
   },
   {
     question: "What technologies are used in this application?",
     answer:
-      "The app is written in React, NextJS and the data is stored in an SQLite database. Authentication is managed by Auth JS. The server is hosted on a privately owned VPS from Hetzner.",
+      "The app is written in React, NextJS and data is stored in a MySQL database. Authentication is managed using AuthJS. The server is hosted on a privately owned VPS from Hetzner based in Amsterdam, Netherlands. The source code is available on GitHub.",
   },
   {
     question: "Any future plans for this application?",
     answer:
-      "I'm hoping to add features as time goes on, such as customisable views, exporting timetables, etc. If the university staff are interested, I am always up for a bit of teamwork and helping implement this app into their own systems. All of my source code is available on GitHub as linked above and can be inspected by anyone.",
+      "I'm hoping to add features as time goes on, such as customisable views, exporting timetables, etc. If the development team at Dundalk Institute of Technology are interested, I am always up for some teamwork and helping implement this app into their own systems. All of my source code is available on GitHub as linked above and can be inspected by anyone.",
   },
 ];
 
@@ -44,14 +44,14 @@ export function FAQ() {
           </div>
 
           <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">
-            Questions That{" "}
+            Commonly Asked{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-pink-600 dark:from-cyan-600 dark:to-cyan-700">
-              Nobody Asked
+              Questions
             </span>
           </h2>
 
           <p className="text-xl text-slate-600 dark:text-slate-400">
-            But here they are anyway.
+            A quick answer to some of the most commonly asked questions about this app.
           </p>
         </div>
 
