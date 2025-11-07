@@ -1,4 +1,4 @@
-name: Deploy Devtables App to Prod Server Environment
+name: Deploy Next.js to CloudPanel Server
 
 on:
   push:
@@ -10,6 +10,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    # Define environment variables if your app needs them during the build (optional)
+    # env:
+    #   NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -17,10 +21,10 @@ jobs:
       - name: Set up Node.js environment
         uses: actions/setup-node@v4
         with:
-          node-version: '22.18'
+          node-version: '22.18' # IMPORTANT: Change to your actual Node.js version
           cache: 'npm'
 
-      # Install dependencies and build the Next.js application
+      # Install dependencies and build the Next.js application locally (on the GitHub runner)
       - name: Install dependencies and build
         run: |
           npm install
@@ -33,6 +37,16 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            # --- FIX: Load NVM/Node/NPM/PM2 paths for the non-interactive SSH session ---
+            # CloudPanel uses NVM, so we source the NVM script to load Node/npm/pm2 into the PATH.
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            
+            # Fallback to .bashrc/user profile if NVM isn't correctly sourced
+            if ! command -v npm &> /dev/null; then
+              source ~/.bashrc || source ~/.profile
+            fi
+
             # --- Server-Side Deployment Commands ---
             
             # 1. Define your site directory (MUST match your CloudPanel site root)
@@ -42,17 +56,19 @@ jobs:
             # 2. Navigate to the deployment folder
             cd $DEPLOY_PATH
             
-            # 3. Pull the latest code (ensures the server directory is up-to-date)
+            # 3. Pull the latest code (this is now working, but essential to run)
             git pull origin main
             
-            # 4. Install production dependencies (if you skipped build locally, you'd run npm install)
+            # 4. Install production dependencies 
             npm install --production
             
-            # 5. Re-run the Next.js build (Next.js artifacts/files are created here)
+            # 5. Re-run the Next.js build 
             npm run build
             
             # 6. Service Management using PM2
             PM2_APP_NAME="devtables-app"
+            
+            # The full command to start the app, including arguments for 'next start -p 3002'
             PM2_START_COMMAND='node_modules/next/dist/bin/next --name "$PM2_APP_NAME" -- start -p 3002'
             
             # Check if the PM2 process already exists and is running
@@ -60,13 +76,15 @@ jobs:
               echo "Process $PM2_APP_NAME is running. Restarting..."
             
               # Restart the existing PM2 process to load the new code
-              # --update-env ensures new environment variables are loaded if any
               pm2 restart "$PM2_APP_NAME" --update-env
             else
               echo "Process $PM2_APP_NAME not found. Starting new process..."
             
               # Start the new PM2 process on port 3002
               pm2 start $PM2_START_COMMAND
+            
+              # Save the PM2 process list so it persists after reboot
+              pm2 save
             fi
             
             echo "Deployment and service update complete for $PM2_APP_NAME."
