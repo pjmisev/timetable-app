@@ -10,10 +10,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    # Define environment variables if your app needs them during the build (optional)
-    # env:
-    #   NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -38,51 +34,48 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             # --- FIX: Load NVM/Node/NPM/PM2 paths for the non-interactive SSH session ---
-            # CloudPanel uses NVM, so we source the NVM script to load Node/npm/pm2 into the PATH.
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             
-            # Fallback to .bashrc/user profile if NVM isn't correctly sourced
+            # Fallback for npm/pm2 path
             if ! command -v npm &> /dev/null; then
               source ~/.bashrc || source ~/.profile
             fi
 
             # --- Server-Side Deployment Commands ---
             
-            # 1. Define your site directory (MUST match your CloudPanel site root)
-            # Replace 'your-domain.com' with your actual domain/directory name
+            # 1. Define your site directory
+            # Replace 'your-domain.com' with your actual directory name
             DEPLOY_PATH="/home/${{ secrets.SSH_USERNAME }}/htdocs/devtables.pjmisev.com" 
             
-            # 2. Navigate to the deployment folder
             cd $DEPLOY_PATH
             
-            # 3. Pull the latest code (this is now working, but essential to run)
+            # 2. Pull the latest code
             git pull origin main
             
-            # 4. Install production dependencies 
+            # 3. Install ALL dependencies (REQUIRED for Next.js build)
             npm install
             
-            # 5. Re-run the Next.js build 
+            # 4. Run the Next.js build
             npm run build
             
-            # 6. Service Management using PM2
-            # The full command to start the app, including arguments for 'next start -p 3002'
-            PM2_START_COMMAND='node_modules/next/dist/bin/next --name "devtables-app" -- start -p 3002'
+            # 5. Service Management using PM2 (Hardcoded Name)
+            APP_NAME="devtables-app"
             
             # Check if the PM2 process already exists and is running
-            if pm2 status "devtables-app" | grep -q 'online'; then
-              echo "Process devtables-app is running. Restarting..."
+            if pm2 status "$APP_NAME" | grep -q 'online'; then
+              echo "Process $APP_NAME is running. Restarting..."
             
-              # Restart the existing PM2 process to load the new code
-              pm2 restart "devtables-app" --update-env
+              # Restart the existing PM2 process
+              pm2 restart "$APP_NAME" --update-env
             else
-              echo "Process devtables-app not found. Starting new process..."
+              echo "Process $APP_NAME not found. Starting new process..."
             
               # Start the new PM2 process on port 3002
-              pm2 start $PM2_START_COMMAND
+              pm2 start node_modules/next/dist/bin/next --name "$APP_NAME" -- start -p 3002
             
               # Save the PM2 process list so it persists after reboot
               pm2 save
             fi
             
-            echo "Deployment and service update complete for devtables-app."
+            echo "Deployment and service update complete for $APP_NAME."
