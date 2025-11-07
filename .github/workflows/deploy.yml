@@ -60,25 +60,23 @@ jobs:
             git pull origin main
             
             # 4. Install production dependencies 
-            npm install --production
+            npm install
             
             # 5. Re-run the Next.js build 
             npm run build
             
             # 6. Service Management using PM2
-            PM2_APP_NAME="devtables-app"
-            
             # The full command to start the app, including arguments for 'next start -p 3002'
-            PM2_START_COMMAND='node_modules/next/dist/bin/next --name "$PM2_APP_NAME" -- start -p 3002'
+            PM2_START_COMMAND='node_modules/next/dist/bin/next --name "devtables-app" -- start -p 3002'
             
             # Check if the PM2 process already exists and is running
-            if pm2 status "$PM2_APP_NAME" | grep -q 'online'; then
-              echo "Process $PM2_APP_NAME is running. Restarting..."
+            if pm2 status "devtables-app" | grep -q 'online'; then
+              echo "Process devtables-app is running. Restarting..."
             
               # Restart the existing PM2 process to load the new code
-              pm2 restart "$PM2_APP_NAME" --update-env
+              pm2 restart "devtables-app" --update-env
             else
-              echo "Process $PM2_APP_NAME not found. Starting new process..."
+              echo "Process devtables-app not found. Starting new process..."
             
               # Start the new PM2 process on port 3002
               pm2 start $PM2_START_COMMAND
@@ -87,4 +85,4 @@ jobs:
               pm2 save
             fi
             
-            echo "Deployment and service update complete for $PM2_APP_NAME."
+            echo "Deployment and service update complete for devtables-app."
