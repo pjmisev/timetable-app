@@ -1,0 +1,72 @@
+name: Deploy Devtables App to Prod Server Environment
+
+on:
+  push:
+    # Trigger the workflow on pushes to the main branch
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.18'
+          cache: 'npm'
+
+      # Install dependencies and build the Next.js application
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to CloudPanel Server via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # --- Server-Side Deployment Commands ---
+            
+            # 1. Define your site directory (MUST match your CloudPanel site root)
+            # Replace 'your-domain.com' with your actual domain/directory name
+            DEPLOY_PATH="/home/${{ secrets.SSH_USERNAME }}/htdocs/devtables.pjmisev.com" 
+            
+            # 2. Navigate to the deployment folder
+            cd $DEPLOY_PATH
+            
+            # 3. Pull the latest code (ensures the server directory is up-to-date)
+            git pull origin main
+            
+            # 4. Install production dependencies (if you skipped build locally, you'd run npm install)
+            npm install --production
+            
+            # 5. Re-run the Next.js build (Next.js artifacts/files are created here)
+            npm run build
+            
+            # 6. Service Management using PM2
+            PM2_APP_NAME="devtables-app"
+            PM2_START_COMMAND='node_modules/next/dist/bin/next --name "$PM2_APP_NAME" -- start -p 3002'
+            
+            # Check if the PM2 process already exists and is running
+            if pm2 status "$PM2_APP_NAME" | grep -q 'online'; then
+              echo "Process $PM2_APP_NAME is running. Restarting..."
+            
+              # Restart the existing PM2 process to load the new code
+              # --update-env ensures new environment variables are loaded if any
+              pm2 restart "$PM2_APP_NAME" --update-env
+            else
+              echo "Process $PM2_APP_NAME not found. Starting new process..."
+            
+              # Start the new PM2 process on port 3002
+              pm2 start $PM2_START_COMMAND
+            fi
+            
+            echo "Deployment and service update complete for $PM2_APP_NAME."
