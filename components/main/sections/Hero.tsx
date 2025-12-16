@@ -9,8 +9,6 @@ import Link from "next/link";
 export async function Hero({ id }: AnimatedProps) {
   const session = await auth();
 
-  console.log(session);
-
   return (
     <section
       id={id}

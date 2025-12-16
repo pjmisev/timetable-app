@@ -5,8 +5,6 @@ import { prisma } from "@/lib/prisma";
 export async function GET(request: NextRequest) {
     const session = await auth();
 
-    console.log("USER SESSION IN SAVEDCLASS: ", session);
-
     // Authentication check
     if (!session?.user) {
         return NextResponse.json(

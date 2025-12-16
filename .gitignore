@@ -41,4 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 prisma/database
-docker-compose.yml
+DOCKER_OLD/docker-compose.yml

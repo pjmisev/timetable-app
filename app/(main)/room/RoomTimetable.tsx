@@ -115,7 +115,6 @@ export default function RoomTimetable() {
 
         if (res.ok) {
           const data: WeekOption[] = await res.json();
-          console.log(data);
           setWeeksList(data);
         } else {
           console.error("Failed to fetch weeks");

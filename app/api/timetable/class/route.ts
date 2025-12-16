@@ -30,10 +30,7 @@ export async function GET(request: Request) {
 
         // Update user's saved preferences
         if (session.user.id) {
-            console.log("UPDATING FOLLOWING USER: ", session.user);
             try {
-                console.log("NEW SAVED CLASS: ", classId);
-                console.log("NEW SAVED DEPARTMENT: ", departmentId);
                 await prisma.user.update({
                     where: { id: session.user.id },
                     data: {

@@ -54,7 +54,6 @@ export default function ClassTimetable() {
 
                 if (res.ok) {
                     const data: SavedClassResponse = await res.json();
-                    console.log(data);
                     setSavedDepartment(data?.savedDepartment || "");
                     setSavedClass(data?.savedClass || "");
                 }
@@ -132,7 +131,6 @@ export default function ClassTimetable() {
 
                 if (res.ok) {
                     const data: WeekOption[] = await res.json();
-                    console.log(data);
                     setWeeksList(data);
                 } else {
                     console.error("Failed to fetch weeks");
