@@ -286,7 +286,7 @@ export default function ClassTimetable() {
         fetchTimetable();
     }, [selectedClass, week, selectedDepartment]);
 
-    // display names
+    // Display names
     const selectedDepartmentName =
         departments.find((d) => d.id === selectedDepartment)?.name || "Select Department";
 
