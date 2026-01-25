@@ -39,7 +39,7 @@ jobs:
             echo "${{ secrets.PROD_SSH_PRIVATE_KEY }}" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
 
-            echo "deploy_path=/home/${{ secrets.PROD_SSH_USERNAME }}/htdocs/YOUR-PROD-DOMAIN.com" >> $GITHUB_OUTPUT
+            echo "deploy_path=/home/${{ secrets.PROD_SSH_USERNAME }}/htdocs/timetables.pjmisev.com" >> $GITHUB_OUTPUT
             echo "pm2_app_name=devtables-prod" >> $GITHUB_OUTPUT
             echo "app_port=3000" >> $GITHUB_OUTPUT
           else
