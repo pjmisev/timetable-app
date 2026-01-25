@@ -1,4 +1,3 @@
-// app/(main)/room/RoomTimetable.tsx
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
@@ -226,7 +225,7 @@ export default function RoomTimetable() {
 
     return (
         <div className="container mx-auto px-4 py-6">
-            {/* Toolbar (matches class timetable) */}
+            {/* Toolbar */}
             <div className="mb-8 rounded-xl border bg-card/60 p-3 sm:p-4 shadow-sm">
                 <div className="flex flex-col gap-3 sm:gap-4">
                     {/* Pickers row */}
@@ -311,7 +310,7 @@ export default function RoomTimetable() {
                         </ResponsivePicker>
                     </div>
 
-                    {/* Bottom row: View (same as class) */}
+                    {/* Bottom row */}
                     <div className="flex items-center justify-between gap-3 pt-1">
                         <div className="flex items-center gap-3 w-full">
                             <div className="flex-1 sm:flex-none">

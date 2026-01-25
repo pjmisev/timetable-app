@@ -1,4 +1,3 @@
-// components/timetable/general/CalendarTimelineView.tsx
 "use client";
 
 import * as React from "react";
@@ -50,36 +49,32 @@ export function CalendarTimelineView<TEntry>({
                                                  endHour = 18,
                                                  stepMinutes = 60,
 
-                                                 // base scale (used when scaleMode="off" or before measuring)
                                                  hourHeight = 64,
                                                  gutterWidth = 64,
 
-                                                 // ✅ auto sizing (no card scroll): increases hourHeight to fit smallest-duration cards
                                                  scaleMode = "fit-content",
                                                  minHourHeight = 56,
                                                  maxHourHeight = 800,
 
-                                                 // When the week/day/class changes, pass something stable here to reset measurements.
-                                                 // Example: `${selectedClass}-${week}` or `${selectedRoom}-${week}`
                                                  resetKey,
                                              }: {
     daysOrder: string[];
     entriesByDay: Record<string, TEntry[]>;
     dayBgClasses: Record<string, string>;
 
-    getStart: (entry: TEntry) => string; // "HH:mm"
-    getEnd: (entry: TEntry) => string; // "HH:mm"
+    getStart: (entry: TEntry) => string;
+    getEnd: (entry: TEntry) => string;
     renderEvent: (entry: TEntry) => React.ReactNode;
 
     initialDay?: string;
 
     startHour?: number;
     endHour?: number;
-    stepMinutes?: number; // 60=hourly, 30=half-hour
+    stepMinutes?: number;
     hourHeight?: number;
     gutterWidth?: number;
 
-    scaleMode?: ScaleMode; // "fit-content" to grow timeline to fit cards
+    scaleMode?: ScaleMode;
     minHourHeight?: number;
     maxHourHeight?: number;
 
@@ -92,10 +87,8 @@ export function CalendarTimelineView<TEntry>({
         return { startMin: startHour * 60, endMin: endHour * 60 };
     }, [startHour, endHour]);
 
-    // Track the max required px/min across measured events
     const [measuredPxPerMin, setMeasuredPxPerMin] = React.useState<number | null>(null);
 
-    // Reset measurements when selection changes
     React.useEffect(() => {
         if (scaleMode === "off") return;
         setMeasuredPxPerMin(null);
@@ -104,10 +97,8 @@ export function CalendarTimelineView<TEntry>({
     const effectiveHourHeight = React.useMemo(() => {
         if (scaleMode === "off" || !measuredPxPerMin) return hourHeight;
 
-        // required hour height = px/min * 60
         const computed = measuredPxPerMin * 60;
 
-        // clamp so it doesn't get absurdly tall
         return Math.max(minHourHeight, Math.min(maxHourHeight, computed));
     }, [scaleMode, measuredPxPerMin, hourHeight, minHourHeight, maxHourHeight]);
 
@@ -126,7 +117,6 @@ export function CalendarTimelineView<TEntry>({
         setMeasuredPxPerMin((prev) => {
             const next = prev == null ? pxPerMin : Math.max(prev, pxPerMin);
 
-            // avoid render loops from tiny oscillations
             if (prev != null && Math.abs(next - prev) < 0.05) return prev;
 
             return next;
@@ -261,7 +251,7 @@ function WeekTimeline<TEntry>({
                     ))}
                 </div>
 
-                {/* Lines overlay spans gutter + all days (always aligned) */}
+                {/* Lines overlay */}
                 <GridLinesOverlay
                     range={range}
                     ticks={ticks}
@@ -447,23 +437,34 @@ function DayTimelineColumn<TEntry>({
 
                     const durationMin = Math.max(5, ev.endMin - ev.startMin);
 
+                    const gapX = 10;
+                    const gapY = 10;
+
+                    const left = `calc(${leftPct}% + ${gapX / 2}px)`;
+                    const width = `calc(${widthPct}% - ${gapX}px)`;
+
                     return (
                         <div
                             key={idx}
-                            className="absolute px-1 z-20"
+                            className="absolute z-20"
                             style={{
                                 top,
                                 height,
-                                left: `${leftPct}%`,
-                                width: `${widthPct}%`,
+                                left,
+                                width,
                             }}
                         >
-                            {/* IMPORTANT: no overflow scrolling; we measure and scale instead */}
-                            <div className="h-full w-full rounded-md border bg-background/95 shadow-sm p-2 overflow-hidden">
+                            <div
+                                className="absolute left-0 right-0 rounded-md border bg-background/95 shadow-sm overflow-hidden p-2"
+                                style={{
+                                    top: gapY / 2,
+                                    bottom: gapY / 2,
+                                }}
+                            >
                                 <MeasuredContent
                                     minutes={durationMin}
                                     onMeasurePxPerMin={onMeasurePxPerMin}
-                                    paddingPx={16} // accounts for p-2 top+bottom
+                                    paddingPx={16 + gapY}
                                 >
                                     {renderEvent(ev.entry)}
                                 </MeasuredContent>
@@ -471,6 +472,7 @@ function DayTimelineColumn<TEntry>({
                         </div>
                     );
                 })}
+
             </div>
         </div>
     );
@@ -495,7 +497,6 @@ function MeasuredContent({
         const el = ref.current;
 
         const report = () => {
-            // scrollHeight is "content needed"; add padding so it truly fits inside the card
             const neededPx = el.scrollHeight + paddingPx;
 
             if (!minutes || minutes <= 0) return;
@@ -524,7 +525,6 @@ function layoutOverlaps<TEntry>(events: NormalizedEvent<TEntry>[]): PlacedEvent<
     const placed: PlacedEvent<TEntry>[] = [];
     const columnEnd: number[] = [];
 
-    // assign a column (first available)
     for (const ev of events) {
         let col = 0;
         while (col < columnEnd.length && columnEnd[col] > ev.startMin) col++;
@@ -534,7 +534,6 @@ function layoutOverlaps<TEntry>(events: NormalizedEvent<TEntry>[]): PlacedEvent<
         placed.push({ ...ev, column: col, columns: 1 });
     }
 
-    // estimate overlap columns (simple, good enough for timetables)
     for (let i = 0; i < placed.length; i++) {
         const a = placed[i];
         let maxCols = 1;
