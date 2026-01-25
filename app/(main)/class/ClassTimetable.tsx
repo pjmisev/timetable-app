@@ -71,18 +71,13 @@ export default function ClassTimetable() {
     const qpClass = searchParams.get("classId");
 
     const [selectedDepartment, setSelectedDepartment] = useState<string>(() => {
-        return qpDepartment || savedDepartment || "";
+        const initialDept = qpDepartment || savedDepartment || "";
+        return departments.some(d => d.id === initialDept) ? initialDept : "";
     });
 
     const [selectedClass, setSelectedClass] = useState<string>(() => {
-        if (qpClass) return qpClass;
-        if (
-            !qpDepartment ||
-            (savedDepartment && qpDepartment === savedDepartment)
-        ) {
-            return savedClass || "";
-        }
-        return "";
+        const initialClass = qpClass || ( (!qpDepartment || qpDepartment === savedDepartment) ? savedClass : "") || "";
+        return classes.some(c => c.id === initialClass) ? initialClass : "";
     });
 
     useEffect(() => {
@@ -90,16 +85,19 @@ export default function ClassTimetable() {
         const hasQClass = !!qpClass;
 
         if (!hasQDept && savedDepartment && !selectedDepartment) {
-            setSelectedDepartment(savedDepartment);
+            if (departments.some(d => d.id === savedDepartment)) {
+                setSelectedDepartment(savedDepartment);
+            }
         }
 
-        const canUseSavedClass =
-            !hasQDept || (savedDepartment && qpDepartment === savedDepartment);
+        const canUseSavedClass = !hasQDept || (savedDepartment && qpDepartment === savedDepartment);
 
         if (!hasQClass && savedClass && !selectedClass && canUseSavedClass) {
-            setSelectedClass(savedClass);
+            if (classes.some(c => c.id === savedClass)) {
+                setSelectedClass(savedClass);
+            }
         }
-    }, [savedDepartment, savedClass]);
+    }, [savedDepartment, savedClass, departments, classes]);
 
     const [week, setWeek] = useState(searchParams.get("week") || "");
 
