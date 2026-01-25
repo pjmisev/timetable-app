@@ -1,0 +1,1288 @@
+{
+  "departments": [
+    {
+      "id": "htb",
+      "name": "Hospitality Building"
+    },
+    {
+      "id": "lirc",
+      "name": "Learning Informtion Resource Centre"
+    },
+    {
+      "id": "mpc",
+      "name": "Multi Purpose Centre"
+    },
+    {
+      "id": "tb",
+      "name": "New Theatre Building"
+    },
+    {
+      "id": "nb",
+      "name": "North Block"
+    },
+    {
+      "id": "nhsb",
+      "name": "Nursing Health Sciences Building"
+    },
+    {
+      "id": "ext",
+      "name": "Outreach location"
+    },
+    {
+      "id": "pjc",
+      "name": "PJ Carrolls"
+    },
+    {
+      "id": "pk",
+      "name": "Portacabins"
+    },
+    {
+      "id": "rdc",
+      "name": "Regional Development Centre"
+    },
+    {
+      "id": "sb",
+      "name": "South Block"
+    },
+    {
+      "id": "tc",
+      "name": "Town Campus"
+    },
+    {
+      "id": "wb",
+      "name": "West Block"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "H101",
+      "name": "H101 (70)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "H105",
+      "name": "H105 (1)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "H109%20%28TK%29",
+      "name": "H109 (TK) (16)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "H112",
+      "name": "H112 (16)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "H115%20%28Rest%29",
+      "name": "H115 (Rest) (20)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "H116",
+      "name": "H116 (70)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "H203",
+      "name": "H203 (20)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "H216",
+      "name": "H216 (45)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "H217",
+      "name": "H217 (30)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "H219",
+      "name": "H219 (30)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "H220",
+      "name": "H220 (30)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "H221%20%28A%2FS%29",
+      "name": "H221 (A/S) (15)",
+      "departmentId": "htb"
+    },
+    {
+      "id": "W153",
+      "name": "W153 (210)",
+      "departmentId": "lirc"
+    },
+    {
+      "id": "F168",
+      "name": "F168 (300)",
+      "departmentId": "mpc"
+    },
+    {
+      "id": "F172",
+      "name": "F172 (130)",
+      "departmentId": "mpc"
+    },
+    {
+      "id": "F201",
+      "name": "F201 (20)",
+      "departmentId": "mpc"
+    },
+    {
+      "id": "MacAnnaTheatre%20%28R150%29",
+      "name": "MacAnnaTheatre (R150) (176)",
+      "departmentId": "tb"
+    },
+    {
+      "id": "NC106",
+      "name": "NC106 (129)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC110",
+      "name": "NC110 (46)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC111",
+      "name": "NC111 (42)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC115",
+      "name": "NC115 (24)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC116",
+      "name": "NC116 (60)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC130",
+      "name": "NC130 (25)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC131",
+      "name": "NC131 (25)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC132",
+      "name": "NC132 (25)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC201",
+      "name": "NC201 (50)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC202",
+      "name": "NC202 (50)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC203",
+      "name": "NC203 (50)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC206",
+      "name": "NC206 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC207",
+      "name": "NC207 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC208",
+      "name": "NC208 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC211",
+      "name": "NC211 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC213",
+      "name": "NC213 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC215",
+      "name": "NC215 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC217",
+      "name": "NC217 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC218",
+      "name": "NC218 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC219",
+      "name": "NC219 (18)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC220",
+      "name": "NC220 (18)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NC222",
+      "name": "NC222 (25)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE105",
+      "name": "NE105 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE106",
+      "name": "NE106 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE107",
+      "name": "NE107 (57)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE122",
+      "name": "NE122 (45)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE125",
+      "name": "NE125 (63)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE128",
+      "name": "NE128 (66)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE175",
+      "name": "NE175 (18)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE176",
+      "name": "NE176 (18)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE177",
+      "name": "NE177 (18)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE178",
+      "name": "NE178 (36)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE179",
+      "name": "NE179 (8)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE180",
+      "name": "NE180 (8)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE201",
+      "name": "NE201 (30)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE202",
+      "name": "NE202 (50)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE203",
+      "name": "NE203 (60)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE207",
+      "name": "NE207 (22)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE210",
+      "name": "NE210 (18)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE220",
+      "name": "NE220 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE226",
+      "name": "NE226 (18)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE230",
+      "name": "NE230 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE235",
+      "name": "NE235 (60)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE238",
+      "name": "NE238 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE274",
+      "name": "NE274 (4)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE275",
+      "name": "NE275 (18)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE276",
+      "name": "NE276 (10)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE277",
+      "name": "NE277 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "NE280",
+      "name": "NE280 (20)",
+      "departmentId": "nb"
+    },
+    {
+      "id": "M111",
+      "name": "M111 (35)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M112",
+      "name": "M112 (35)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M113",
+      "name": "M113 (35)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M116",
+      "name": "M116 (20)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M117",
+      "name": "M117 (20)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M122",
+      "name": "M122 (62)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M123",
+      "name": "M123 (62)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M124",
+      "name": "M124 (60)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M125",
+      "name": "M125 (60)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M126",
+      "name": "M126 (62)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M127",
+      "name": "M127 (62)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M128",
+      "name": "M128 (150)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M212%2FM213",
+      "name": "M212/M213 (25)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M214",
+      "name": "M214 (30)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M215",
+      "name": "M215 (30)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M216",
+      "name": "M216 (20)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M217",
+      "name": "M217 (6)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M219",
+      "name": "M219 (10)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M231",
+      "name": "M231 (13)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M232",
+      "name": "M232 (13)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M233",
+      "name": "M233 (10)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M234",
+      "name": "M234 (13)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M239",
+      "name": "M239 (4)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M241",
+      "name": "M241 (13)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M312",
+      "name": "M312 (20)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "M314",
+      "name": "M314 (20)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "Sensory%20Garden%20%28M210%29",
+      "name": "Sensory Garden (M210) (40)",
+      "departmentId": "nhsb"
+    },
+    {
+      "id": "%23SPLUSF012A3",
+      "name": "#SPLUSF012A3 (60)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "%23SPLUSFABC58",
+      "name": "#SPLUSFABC58 (10000)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "AnimalCompound",
+      "name": "AnimalCompound (60)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "BHaise",
+      "name": "BHaise (60)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "DKITSport%20%28Pitch%29",
+      "name": "DKITSport (Pitch) (10000)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "F09",
+      "name": "F09 (60)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "G04",
+      "name": "G04 (60)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "G05",
+      "name": "G05 (60)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "G26",
+      "name": "G26 (60)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "G35",
+      "name": "G35 (60)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "S05",
+      "name": "S05 (60)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "S29",
+      "name": "S29 (60)",
+      "departmentId": "ext"
+    },
+    {
+      "id": "NWS3%20%28P1253%29",
+      "name": "NWS3 (P1253) (16)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "NWS4%20%28P1253%29",
+      "name": "NWS4 (P1253) (16)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1014",
+      "name": "P1014 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1015",
+      "name": "P1015 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1016",
+      "name": "P1016 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1017",
+      "name": "P1017 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1025",
+      "name": "P1025 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1027",
+      "name": "P1027 (60)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1044",
+      "name": "P1044 (16)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1045",
+      "name": "P1045 (40)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1053",
+      "name": "P1053 (60)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1054",
+      "name": "P1054 (60)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1055",
+      "name": "P1055 (60)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1056",
+      "name": "P1056 (40)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1059",
+      "name": "P1059 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1060",
+      "name": "P1060 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1063",
+      "name": "P1063 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1065",
+      "name": "P1065 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1066",
+      "name": "P1066 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1067",
+      "name": "P1067 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1068",
+      "name": "P1068 (40)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1070",
+      "name": "P1070 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1071",
+      "name": "P1071 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1076",
+      "name": "P1076 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1077",
+      "name": "P1077 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1078",
+      "name": "P1078 (30)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1079",
+      "name": "P1079 (30)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1080",
+      "name": "P1080 (60)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1081",
+      "name": "P1081 (60)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1084",
+      "name": "P1084 (60)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1086",
+      "name": "P1086 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1087",
+      "name": "P1087 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1091",
+      "name": "P1091 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1092",
+      "name": "P1092 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1094",
+      "name": "P1094 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1102",
+      "name": "P1102 (40)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1103",
+      "name": "P1103 (40)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1104",
+      "name": "P1104 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1105",
+      "name": "P1105 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1106",
+      "name": "P1106 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1107",
+      "name": "P1107 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1111",
+      "name": "P1111 (40)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1113",
+      "name": "P1113 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1114",
+      "name": "P1114 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1119",
+      "name": "P1119 (40)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1121",
+      "name": "P1121 (10)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1122",
+      "name": "P1122 (10)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1123",
+      "name": "P1123 (10)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1124",
+      "name": "P1124 (10)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1125",
+      "name": "P1125 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1126",
+      "name": "P1126 (10)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1127",
+      "name": "P1127 (10)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1129",
+      "name": "P1129 (10)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1130",
+      "name": "P1130 (10)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1132",
+      "name": "P1132 (10)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1133",
+      "name": "P1133 (10)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1135",
+      "name": "P1135 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1139",
+      "name": "P1139 (122)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1145",
+      "name": "P1145 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1147",
+      "name": "P1147 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1153",
+      "name": "P1153 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1156",
+      "name": "P1156 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1158",
+      "name": "P1158 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1159",
+      "name": "P1159 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1160",
+      "name": "P1160 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1235a",
+      "name": "P1235a (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1235b",
+      "name": "P1235b (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1238%20%28PLLab%29",
+      "name": "P1238 (PLLab) (16)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1239%20%28PLWS1%29",
+      "name": "P1239 (PLWS1) (16)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1241%20%28PLWS2%29",
+      "name": "P1241 (PLWS2) (16)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1242%20%28PLL2%29",
+      "name": "P1242 (PLL2) (16)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1243%20%28PLL1%29",
+      "name": "P1243 (PLL1) (18)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1253a",
+      "name": "P1253a (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1253b",
+      "name": "P1253b (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1272",
+      "name": "P1272 (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1274a",
+      "name": "P1274a (16)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1274b",
+      "name": "P1274b (16)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1313",
+      "name": "P1313 (110)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "P1325B",
+      "name": "P1325B (20)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "PLWS3%20%28P1280%29",
+      "name": "PLWS3 (P1280) (16)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "PLWS4%20%28P1280%29",
+      "name": "PLWS4 (P1280) (16)",
+      "departmentId": "pjc"
+    },
+    {
+      "id": "S101",
+      "name": "S101 (48)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S102",
+      "name": "S102 (60)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S110",
+      "name": "S110 (1)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S112",
+      "name": "S112 (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S122",
+      "name": "S122 (16)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S123",
+      "name": "S123 (16)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S125",
+      "name": "S125 (16)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S128",
+      "name": "S128 (30)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S129",
+      "name": "S129 (70)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S131",
+      "name": "S131 (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S134",
+      "name": "S134 (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S135",
+      "name": "S135 (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S136",
+      "name": "S136 (71)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S141",
+      "name": "S141 (60)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S142",
+      "name": "S142 (120)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S144",
+      "name": "S144 (96)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S148%20%28BB%29",
+      "name": "S148 (BB) (30)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S208%20%28Lab%29",
+      "name": "S208 (Lab) (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S209%20%28Lab%29",
+      "name": "S209 (Lab) (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S212%20%28Lab%29",
+      "name": "S212 (Lab) (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S213%20%28Lab%29",
+      "name": "S213 (Lab) (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S214%20%28Lab%29",
+      "name": "S214 (Lab) (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S215",
+      "name": "S215 (60)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S216",
+      "name": "S216 (40)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S217",
+      "name": "S217 (60)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S221%20%28Lab%29",
+      "name": "S221 (Lab) (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S223%20%28Lab%29",
+      "name": "S223 (Lab) (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S224%20%28Lab%29",
+      "name": "S224 (Lab) (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S230",
+      "name": "S230 (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S234",
+      "name": "S234 (45)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S237",
+      "name": "S237 (25)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S238",
+      "name": "S238 (45)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S241",
+      "name": "S241 (60)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S242",
+      "name": "S242 (54)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S243",
+      "name": "S243 (40)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S244",
+      "name": "S244 (20)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S245",
+      "name": "S245 (30)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S246",
+      "name": "S246 (36)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S247",
+      "name": "S247 (40)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "S249",
+      "name": "S249 (32)",
+      "departmentId": "sb"
+    },
+    {
+      "id": "NW102",
+      "name": "NW102 (16)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW104",
+      "name": "NW104 (20)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW105",
+      "name": "NW105 (16)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW108",
+      "name": "NW108 (20)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW114",
+      "name": "NW114 (15)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW115",
+      "name": "NW115 (20)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW116",
+      "name": "NW116 (15)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW118",
+      "name": "NW118 (20)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW201",
+      "name": "NW201 (25)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW202",
+      "name": "NW202 (20)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW203",
+      "name": "NW203 (10)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW204",
+      "name": "NW204 (20)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW210",
+      "name": "NW210 (40)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW213",
+      "name": "NW213 (50)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW215",
+      "name": "NW215 (50)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW219",
+      "name": "NW219 (25)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW220",
+      "name": "NW220 (50)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW226",
+      "name": "NW226 (32)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW227",
+      "name": "NW227 (32)",
+      "departmentId": "wb"
+    },
+    {
+      "id": "NW228b",
+      "name": "NW228b (18)",
+      "departmentId": "wb"
+    }
+  ]
+}
