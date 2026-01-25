@@ -14,8 +14,7 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import departments from "./data/departments.json";
-import rooms from "./data/rooms.json";
+import optionsData from "@/lib/data/rooms-options.json";
 import Swal from "sweetalert2";
 import {
   Building,
@@ -49,6 +48,9 @@ interface WeekOption {
   label: string;
   weekNumber?: number;
 }
+
+const departments = optionsData.departments;
+const rooms = optionsData.rooms;
 
 export default function RoomTimetable() {
   const router = useRouter();

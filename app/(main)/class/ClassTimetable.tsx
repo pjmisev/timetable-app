@@ -7,11 +7,13 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogTrigger,} from "@/components/ui/dialog";
 import {Badge} from "@/components/ui/badge";
-import departments from "./data/departments.json";
-import classes from "./data/classes.json";
+import optionsData from "@/lib/data/classes-options.json";
 import Swal from "sweetalert2";
 import {BookOpen, Calendar, CalendarX, CircleAlert, Users,} from "lucide-react";
 import {Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger,} from "@/components/ui/sheet";
+
+const departments = optionsData.departments;
+const classes = optionsData.classes;
 
 interface TimetableEntry {
     Day: string;
