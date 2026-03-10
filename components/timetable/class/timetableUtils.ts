@@ -38,3 +38,29 @@ export function computeDayStartEnd(grouped: Record<string, TimetableEntry[]>) {
 
     return times;
 }
+
+export function computeGlobalTimeRange(grouped: Record<string, TimetableEntry[]>) {
+    let minStartMin = Infinity;
+    let maxEndMin = -Infinity;
+
+    for (const day in grouped) {
+        const entries = grouped[day];
+        if (!entries?.length) continue;
+
+        for (const entry of entries) {
+            const startMin = timeToMinutes(entry.Start);
+            const endMin = timeToMinutes(entry.End);
+            minStartMin = Math.min(minStartMin, startMin);
+            maxEndMin = Math.max(maxEndMin, endMin);
+        }
+    }
+
+    if (minStartMin === Infinity || maxEndMin === -Infinity) {
+        return { startHour: 8, endHour: 18 };
+    }
+
+    const startHour = Math.floor(minStartMin / 60);
+    const endHour = Math.ceil(maxEndMin / 60);
+
+    return { startHour, endHour };
+}

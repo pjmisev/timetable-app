@@ -18,7 +18,7 @@ import { CalendarTimelineView } from "@/components/timetable/general/CalendarTim
 
 import { DaySection } from "@/components/timetable/class/DaySection";
 import { TimetableEntryCard } from "@/components/timetable/class/TimetableEntryCard";
-import { groupByDay, computeDayStartEnd } from "@/components/timetable/class/timetableUtils";
+import { groupByDay, computeDayStartEnd, computeGlobalTimeRange } from "@/components/timetable/class/timetableUtils";
 import type {
     Option,
     SavedClassResponse,
@@ -85,7 +85,7 @@ export default function ClassTimetable() {
     const searchParams = useSearchParams();
     const isDesktop = useIsDesktop();
 
-    const [viewMode, setViewMode] = useState<TimetableViewMode>("list");
+    const [viewMode, setViewMode] = useState<TimetableViewMode>("calendar");
 
     // query params
     const qpDepartment = searchParams.get("departmentId");
@@ -207,6 +207,7 @@ export default function ClassTimetable() {
 
     const groupedData = useMemo(() => groupByDay(timetableData), [timetableData]);
     const dayStartEndTimes = useMemo(() => computeDayStartEnd(groupedData), [groupedData]);
+    const globalTimeRange = useMemo(() => computeGlobalTimeRange(groupedData), [groupedData]);
 
     const hasAnyEntries = useMemo(
         () => Object.values(groupedData).some((arr) => Array.isArray(arr) && arr.length > 0),
@@ -459,11 +460,12 @@ export default function ClassTimetable() {
                     getStart={(e) => e.Start}
                     getEnd={(e) => e.End}
                     resetKey={`${selectedDepartment}-${selectedClass}-${week}`}
+                    weekLabel={selectedWeekLabel}
                     scaleMode="fit-content"
                     minHourHeight={56}
                     maxHourHeight={800}
-                    startHour={8}
-                    endHour={20}
+                    startHour={globalTimeRange.startHour}
+                    endHour={globalTimeRange.endHour}
                     stepMinutes={60}
                     renderEvent={(e) => (
                         <div className="h-full flex flex-col">

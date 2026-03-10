@@ -12,9 +12,9 @@ const allModes: {
     label: string;
     icon: React.ReactNode;
 }[] = [
+    { value: "calendar", label: "Calendar", icon: <CalendarDays className="h-4 w-4" /> },
     { value: "list", label: "List", icon: <LayoutList className="h-4 w-4" /> },
     { value: "week", label: "Week", icon: <Grid3X3 className="h-4 w-4" /> },
-    { value: "calendar", label: "Calendar", icon: <CalendarDays className="h-4 w-4" /> },
 ];
 
 function useIsSmUp() {

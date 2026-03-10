@@ -19,7 +19,7 @@ import { CalendarTimelineView } from "@/components/timetable/general/CalendarTim
 import { DaySection } from "@/components/timetable/room/DaySection";
 import { RoomEntryCard } from "@/components/timetable/room/RoomEntryCard";
 import type { Option, TimetableEntry, WeekOption } from "@/components/timetable/room/types";
-import { groupByDay } from "@/components/timetable/room/timetableUtils";
+import { groupByDay, computeGlobalTimeRange } from "@/components/timetable/room/timetableUtils";
 import { normalizeWeekValue } from "@/components/timetable/room/weekUtils";
 
 import { Badge } from "@/components/ui/badge";
@@ -81,7 +81,7 @@ export default function RoomTimetable() {
     const searchParams = useSearchParams();
     const isDesktop = useIsDesktop();
 
-    const [viewMode, setViewMode] = useState<TimetableViewMode>("list");
+    const [viewMode, setViewMode] = useState<TimetableViewMode>("calendar");
 
     const [selectedDepartment, setSelectedDepartment] = useState(searchParams.get("departmentId") || "");
     const [selectedRoom, setSelectedRoom] = useState(searchParams.get("roomId") || "");
@@ -140,6 +140,7 @@ export default function RoomTimetable() {
     }, [weekSearchTerm, weeksList]);
 
     const groupedData = useMemo(() => groupByDay(timetableData), [timetableData]);
+    const globalTimeRange = useMemo(() => computeGlobalTimeRange(groupedData), [groupedData]);
 
     const hasAnyEntries = useMemo(
         () => Object.values(groupedData).some((arr) => Array.isArray(arr) && arr.length > 0),
@@ -383,11 +384,12 @@ export default function RoomTimetable() {
                     getStart={(e) => e.Start}
                     getEnd={(e) => e.End}
                     resetKey={`${selectedDepartment}-${selectedRoom}-${week}`}
+                    weekLabel={selectedWeekLabel}
                     scaleMode="fit-content"
                     minHourHeight={56}
                     maxHourHeight={800}
-                    startHour={8}
-                    endHour={20}
+                    startHour={globalTimeRange.startHour}
+                    endHour={globalTimeRange.endHour}
                     stepMinutes={60}
                     renderEvent={(e) => (
                         <div className="h-full flex flex-col">

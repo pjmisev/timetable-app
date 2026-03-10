@@ -1,5 +1,11 @@
 import type { TimetableEntry } from "./types";
 
+function timeToMinutes(time: string): number {
+    if (!time) return 0;
+    const [hours, minutes] = time.split(":").map(Number);
+    return hours * 60 + minutes;
+}
+
 export function groupByDay(data: TimetableEntry[]) {
     const result: Record<string, TimetableEntry[]> = {};
     if (!Array.isArray(data) || data.length === 0) return result;
@@ -11,4 +17,30 @@ export function groupByDay(data: TimetableEntry[]) {
     }
 
     return result;
+}
+
+export function computeGlobalTimeRange(grouped: Record<string, TimetableEntry[]>) {
+    let minStartMin = Infinity;
+    let maxEndMin = -Infinity;
+
+    for (const day in grouped) {
+        const entries = grouped[day];
+        if (!entries?.length) continue;
+
+        for (const entry of entries) {
+            const startMin = timeToMinutes(entry.Start);
+            const endMin = timeToMinutes(entry.End);
+            minStartMin = Math.min(minStartMin, startMin);
+            maxEndMin = Math.max(maxEndMin, endMin);
+        }
+    }
+
+    if (minStartMin === Infinity || maxEndMin === -Infinity) {
+        return { startHour: 8, endHour: 18 };
+    }
+
+    const startHour = Math.floor(minStartMin / 60);
+    const endHour = Math.ceil(maxEndMin / 60);
+
+    return { startHour, endHour };
 }

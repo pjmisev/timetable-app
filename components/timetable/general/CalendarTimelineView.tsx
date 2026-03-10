@@ -44,6 +44,7 @@ export function CalendarTimelineView<TEntry>({
                                                  renderEvent,
 
                                                  initialDay = "Monday",
+                                                 weekLabel = "",
 
                                                  startHour = 8,
                                                  endHour = 18,
@@ -67,6 +68,7 @@ export function CalendarTimelineView<TEntry>({
     renderEvent: (entry: TEntry) => React.ReactNode;
 
     initialDay?: string;
+    weekLabel?: string;
 
     startHour?: number;
     endHour?: number;
@@ -81,13 +83,36 @@ export function CalendarTimelineView<TEntry>({
     resetKey?: string | number;
 }) {
     const isPortraitMobile = usePortraitMobile(640);
-    const [activeDay, setActiveDay] = React.useState(initialDay);
+    
+    // Get current day of week for "This Week"
+    const getCurrentDayOfWeek = React.useCallback(() => {
+        const today = new Date();
+        const dayIndex = today.getDay();
+        // Convert from JS day index (0=Sunday) to daysOrder index
+        const jsIndex = dayIndex === 0 ? 6 : dayIndex - 1; // Sunday becomes 6, Monday becomes 0, etc.
+        return jsIndex < daysOrder.length ? daysOrder[jsIndex] : initialDay;
+    }, [daysOrder, initialDay]);
+
+    // Determine initial day based on week and device
+    const getInitialDay = React.useCallback(() => {
+        if (isPortraitMobile && weekLabel?.toLowerCase().includes("this week")) {
+            return getCurrentDayOfWeek();
+        }
+        return initialDay;
+    }, [isPortraitMobile, weekLabel, initialDay, getCurrentDayOfWeek]);
+
+    const [activeDay, setActiveDay] = React.useState(getInitialDay());
 
     const range = React.useMemo<TimeRange>(() => {
         return { startMin: startHour * 60, endMin: endHour * 60 };
     }, [startHour, endHour]);
 
     const [measuredPxPerMin, setMeasuredPxPerMin] = React.useState<number | null>(null);
+
+    // Reset activeDay when week or mobile status changes
+    React.useEffect(() => {
+        setActiveDay(getInitialDay());
+    }, [resetKey, isPortraitMobile, weekLabel, getInitialDay]);
 
     React.useEffect(() => {
         if (scaleMode === "off") return;
@@ -103,13 +128,17 @@ export function CalendarTimelineView<TEntry>({
     }, [scaleMode, measuredPxPerMin, hourHeight, minHourHeight, maxHourHeight]);
 
     const totalMinutes = range.endMin - range.startMin;
-    const totalHeight = Math.max(1, (totalMinutes / 60) * effectiveHourHeight);
+    const totalHeight = Math.max(1, (totalMinutes / 60) * effectiveHourHeight) + 30; // Add padding to show final time label
 
     const dayKeys = isPortraitMobile ? [activeDay] : daysOrder;
 
     const ticks = React.useMemo(() => {
         const t: number[] = [];
-        for (let m = range.startMin; m <= range.endMin; m += stepMinutes) t.push(m);
+        for (let m = range.startMin; m < range.endMin; m += stepMinutes) t.push(m);
+        // Always include the end time to ensure the final time label is visible
+        if (t.length === 0 || t[t.length - 1] !== range.endMin) {
+            t.push(range.endMin);
+        }
         return t;
     }, [range.startMin, range.endMin, stepMinutes]);
 
@@ -122,6 +151,24 @@ export function CalendarTimelineView<TEntry>({
             return next;
         });
     }, []);
+
+    // Calculate current time for "This Week" display
+    const currentTimeMinutes = React.useMemo(() => {
+        const now = new Date();
+        return now.getHours() * 60 + now.getMinutes();
+    }, []);
+
+    const getCurrentDayName = React.useCallback(() => {
+        const today = new Date();
+        const dayIndex = today.getDay();
+        const jsIndex = dayIndex === 0 ? 6 : dayIndex - 1;
+        return jsIndex < daysOrder.length ? daysOrder[jsIndex] : undefined;
+    }, [daysOrder]);
+
+    const isThisWeek = weekLabel?.toLowerCase().includes("this week") ?? false;
+    const currentDay = getCurrentDayName();
+    const showCurrentTimeLine = isThisWeek && currentTimeMinutes >= range.startMin && currentTimeMinutes <= range.endMin;
+    const currentTimeLineTop = showCurrentTimeLine ? ((currentTimeMinutes - range.startMin) / 60) * effectiveHourHeight : undefined;
 
     return (
         <div className="fade-in-bottom">
@@ -150,6 +197,7 @@ export function CalendarTimelineView<TEntry>({
                                 getEnd={getEnd}
                                 renderEvent={renderEvent}
                                 onMeasurePxPerMin={scaleMode === "fit-content" ? updateMeasured : undefined}
+                                currentTimeLineTop={showCurrentTimeLine && activeDay === currentDay ? currentTimeLineTop : undefined}
                             />
                         </TabsContent>
                     ))}
@@ -168,6 +216,7 @@ export function CalendarTimelineView<TEntry>({
                     getEnd={getEnd}
                     renderEvent={renderEvent}
                     onMeasurePxPerMin={scaleMode === "fit-content" ? updateMeasured : undefined}
+                    currentTimeLineTop={showCurrentTimeLine ? currentTimeLineTop : undefined}
                 />
             )}
         </div>
@@ -187,6 +236,7 @@ function WeekTimeline<TEntry>({
                                   getEnd,
                                   renderEvent,
                                   onMeasurePxPerMin,
+                                  currentTimeLineTop,
                               }: {
     dayKeys: string[];
     dayBgClasses: Record<string, string>;
@@ -204,6 +254,7 @@ function WeekTimeline<TEntry>({
     renderEvent: (entry: TEntry) => React.ReactNode;
 
     onMeasurePxPerMin?: (pxPerMin: number) => void;
+    currentTimeLineTop?: number;
 }) {
     return (
         <div className="rounded-lg border overflow-hidden">
@@ -258,6 +309,32 @@ function WeekTimeline<TEntry>({
                     hourHeight={hourHeight}
                     totalHeight={totalHeight}
                 />
+                
+                {/* Current time line */}
+                {currentTimeLineTop !== undefined && (
+                    <>
+                        <svg
+                            className="pointer-events-none absolute z-30"
+                            style={{
+                                top: currentTimeLineTop,
+                                left: 0,
+                                width: 8,
+                                height: 8,
+                                transform: 'translateY(calc(-50% + 1px))',
+                            }}
+                            viewBox="0 0 8 8"
+                            preserveAspectRatio="none"
+                        >
+                            <polygon points="8,4 0,1 0,7" className="fill-red-500 dark:fill-red-700" />
+                        </svg>
+                        <div
+                            className="pointer-events-none absolute left-0 right-0 z-30"
+                            style={{ top: currentTimeLineTop, height: 1, paddingLeft: 8, transform: 'translateY(calc(-50% + 1px))' }}
+                        >
+                            <div className="h-full bg-red-500 dark:bg-red-700" />
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );
@@ -276,6 +353,7 @@ function SingleDayTimeline<TEntry>({
                                        getEnd,
                                        renderEvent,
                                        onMeasurePxPerMin,
+                                       currentTimeLineTop,
                                    }: {
     day: string;
     dayBgClass: string;
@@ -293,6 +371,7 @@ function SingleDayTimeline<TEntry>({
     renderEvent: (entry: TEntry) => React.ReactNode;
 
     onMeasurePxPerMin?: (pxPerMin: number) => void;
+    currentTimeLineTop?: number;
 }) {
     return (
         <div className="rounded-lg border overflow-hidden">
@@ -321,6 +400,32 @@ function SingleDayTimeline<TEntry>({
                 </div>
 
                 <GridLinesOverlay range={range} ticks={ticks} hourHeight={hourHeight} totalHeight={totalHeight} />
+                
+                {/* Current time line */}
+                {currentTimeLineTop !== undefined && (
+                    <>
+                        <svg
+                            className="pointer-events-none absolute z-30"
+                            style={{
+                                top: currentTimeLineTop,
+                                left: 0,
+                                width: 8,
+                                height: 8,
+                                transform: 'translateY(calc(-50% + 1px))',
+                            }}
+                            viewBox="0 0 8 8"
+                            preserveAspectRatio="none"
+                        >
+                            <polygon points="8,4 0,1 0,7" className="fill-red-500 dark:fill-red-700" />
+                        </svg>
+                        <div
+                            className="pointer-events-none absolute left-0 right-0 z-30"
+                            style={{ top: currentTimeLineTop, height: 1, paddingLeft: 8, transform: 'translateY(calc(-50% + 1px))' }}
+                        >
+                            <div className="h-full bg-red-500 dark:bg-red-700" />
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );
