@@ -109,6 +109,9 @@ export function CalendarTimelineView<TEntry>({
 
     const [measuredPxPerMin, setMeasuredPxPerMin] = React.useState<number | null>(null);
 
+    // State for auto-refreshing current time
+    const [currentTime, setCurrentTime] = React.useState(new Date());
+
     // Reset activeDay when week or mobile status changes
     React.useEffect(() => {
         setActiveDay(getInitialDay());
@@ -118,6 +121,15 @@ export function CalendarTimelineView<TEntry>({
         if (scaleMode === "off") return;
         setMeasuredPxPerMin(null);
     }, [scaleMode, resetKey, activeDay]);
+
+    // Auto-refresh current time every minute
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(new Date());
+        }, 60000); // Update every 60 seconds (1 minute)
+
+        return () => clearInterval(interval);
+    }, []);
 
     const effectiveHourHeight = React.useMemo(() => {
         if (scaleMode === "off" || !measuredPxPerMin) return hourHeight;
@@ -154,16 +166,14 @@ export function CalendarTimelineView<TEntry>({
 
     // Calculate current time for "This Week" display
     const currentTimeMinutes = React.useMemo(() => {
-        const now = new Date();
-        return now.getHours() * 60 + now.getMinutes();
-    }, []);
+        return currentTime.getHours() * 60 + currentTime.getMinutes();
+    }, [currentTime]);
 
     const getCurrentDayName = React.useCallback(() => {
-        const today = new Date();
-        const dayIndex = today.getDay();
+        const dayIndex = currentTime.getDay();
         const jsIndex = dayIndex === 0 ? 6 : dayIndex - 1;
         return jsIndex < daysOrder.length ? daysOrder[jsIndex] : undefined;
-    }, [daysOrder]);
+    }, [daysOrder, currentTime]);
 
     const isThisWeek = weekLabel?.toLowerCase().includes("this week") ?? false;
     const currentDay = getCurrentDayName();
