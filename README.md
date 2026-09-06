@@ -1,10 +1,10 @@
-# 📅 DkIT Timetable App Alternative
+# DkIT Timetable App Alternative
 
 This project is an **alternative timetable application** for students at **Dundalk Institute of Technology (DkIT)**, developed to address common usability and design issues with the current in-house system.
 
 ---
 
-## 💡 Project Motivation
+## Project Motivation
 
 As a **2nd Year Software Development student** at DkIT, I created this application over the summer break after experiencing and hearing several complaints about the existing timetable website. The goal was to build a modern, intuitive, and user-friendly alternative.
 
@@ -19,7 +19,7 @@ Initial feedback from classmates has been overwhelmingly positive, suggesting th
 
 ---
 
-## 🚀 Get Started
+## Get Started
 
 Experience the alternative timetable app yourself!
 
@@ -28,7 +28,7 @@ Experience the alternative timetable app yourself!
 
 ---
 
-## 🛠️ Technical Details
+## Technical Details
 
 ### Development Stack
 
